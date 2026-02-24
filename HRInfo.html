@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR-Info</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#f8fafc;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+  padding:20px 80px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  background:transparent;
+}
+
+/* Logo hover */
+.logo{
+  background:white;
+  padding:8px 18px;
+  border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.logo img{
+  height:55px;
+  transition:transform 0.3s ease;
+}
+
+.logo:hover img{
+  transform:scale(1.1) rotate(-3deg);
+}
+
+/* NAVIGATION */
+nav ul{
+  display:flex;
+  gap:35px;
+  list-style:none;
+  align-items:center;
+}
+
+nav ul li{
+  position:relative;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:0.3s;
+  padding:6px 0;
+}
+
+nav ul li a i{
+  font-size:14px;
+  opacity:0.9;
+}
+
+nav ul li a:hover{
+  color:#0ea5e9;
+}
+
+/* Animated underline */
+nav ul li a::after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0%;
+  height:2px;
+  background:#0ea5e9;
+  transition:0.3s;
+}
+
+nav ul li a:hover::after{
+  width:100%;
+}
+
+/* MEGA MENU */
+.mega-menu{
+  position:absolute;
+  top:50px;
+  left:50%;
+  transform:translateX(-50%) translateY(20px);
+  width:750px;
+  background:white;
+  border-radius:15px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+  padding:30px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+  opacity:0;
+  visibility:hidden;
+  transition:all 0.3s ease;
+  z-index:999;
+}
+
+.mega-parent:hover .mega-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateX(-50%) translateY(0);
+}
+
+.mega-item{
+  background:#f1f5f9;
+  padding:20px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.3s;
+}
+
+.mega-item i{
+  font-size:24px;
+  color:#3b82f6;
+  margin-bottom:10px;
+  transition:0.3s;
+}
+
+.mega-item span{
+  font-weight:600;
+  color:#111;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.mega-item:hover{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  transform:translateY(-5px);
+}
+
+.mega-item:hover i,
+.mega-item:hover span{
+  color:white;
+}
+
+/* HERO */
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 80px;
+  color:white;
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background-size: 110%;
+  animation: bgZoom 60s linear infinite;
+  overflow:hidden;
+}
+
+/* Overlay */
+.hero::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(270deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0.6) 50%, rgba(15,23,42,0.9) 100%);
+  z-index:1;
+  animation: overlayShift 20s ease-in-out infinite alternate;
+}
+
+/* Content */
+.hero-content{
+  position:relative;
+  max-width:700px;
+  padding-left:30px;
+  z-index:2;
+  animation:fadeUp 1s ease forwards;
+}
+
+/* Label animation */
+.hero-label{
+  font-size:22px;
+  font-weight:700;
+  color:#06b6d4;
+  letter-spacing:2px;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  animation:floatLabel 3s ease-in-out infinite alternate;
+}
+
+.hero-label i{
+  font-size:26px;
+  color:#facc15;
+  animation:rotateIcon 5s linear infinite;
+}
+
+@keyframes floatLabel{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-8px);}
+  100%{ transform:translateY(0);}
+}
+
+@keyframes rotateIcon{
+  0%{ transform:rotate(0deg);}
+  100%{ transform:rotate(360deg);}
+}
+
+@keyframes bgZoom {
+  0% { background-position: center center; background-size: 110%; }
+  50% { background-position: top center; background-size: 115%; }
+  100% { background-position: center center; background-size: 110%; }
+}
+
+@keyframes overlayShift {
+  0% { background: linear-gradient(270deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0.6) 50%, rgba(15,23,42,0.9) 100%);}
+  50% { background: linear-gradient(90deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.5) 50%, rgba(15,23,42,0.85) 100%);}
+  100% { background: linear-gradient(270deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0.6) 50%, rgba(15,23,42,0.9) 100%);}
+}
+
+/* Typing title */
+.animated-title{
+  font-size:52px;
+  font-weight:700;
+  margin-bottom:20px;
+  overflow:hidden;
+  white-space:nowrap;
+  display:block;
+  width:0ch;
+  animation:typing 2.5s steps(33) forwards;
+}
+
+@keyframes typing{
+  0%{ width:0ch; }
+  100%{ width:33ch; }
+}
+
+/* Description fade-in */
+.animated-desc{
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:40px;
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUpText 1s ease forwards 2.5s;
+}
+
+@keyframes fadeUpText{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Buttons */
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 36px;
+  border-radius:50px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.4s;
+  font-size:15px;
+  border:none;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  color:white;
+  box-shadow:0 8px 20px rgba(59,130,246,0.4);
+}
+
+.btn-primary:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(59,130,246,0.6);
+}
+
+.btn-outline{
+  background:transparent;
+  border:2px solid white;
+  color:white;
+}
+
+.btn-outline:hover{
+  background:white;
+  color:#0f172a;
+  transform:translateY(-5px);
+}
+
+.hero-buttons .btn{
+  opacity:0;
+  transform:translateY(20px);
+  animation:btnFadeUp 0.8s forwards;
+}
+
+.hero-buttons .btn:nth-child(1){ animation-delay:3.2s;}
+.hero-buttons .btn:nth-child(2){ animation-delay:3.5s;}
+
+@keyframes btnFadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* INTRODUCTION */
+.introduction{
+  padding:120px 80px;
+  background:#0f172a;
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+.intro-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+  max-width:1200px;
+  margin:0 auto;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:1;
+}
+
+.intro-left{
+  flex:1;
+}
+
+.intro-left h2{
+  font-size:38px;
+  margin-bottom:20px;
+  color:#06b6d4;
+}
+
+.intro-left p{
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:30px;
+  color:rgba(255,255,255,0.85);
+}
+
+.intro-left .btn-primary{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  box-shadow:0 6px 20px rgba(59,130,246,0.4);
+}
+
+.intro-left .btn-primary:hover{
+  box-shadow:0 15px 35px rgba(59,130,246,0.6);
+  transform:translateY(-5px);
+}
+
+.intro-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  position:relative;
+}
+
+.intro-animation{
+  width:100%;
+  max-width:500px;
+  position:relative;
+}
+
+.intro-animation img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.3);
+  transform: rotate(0deg);
+  animation:floatImage 6s ease-in-out infinite alternate;
+  position:relative;
+  z-index:1;
+}
+
+.float-icon{
+  position:absolute;
+  font-size:28px;
+  opacity:0.85;
+  z-index:2;
+  color:#06b6d4;
+  transition:transform 0.2s ease;
+}
+
+.icon1{ top:-25px; left:-25px; }
+.icon2{ bottom:-20px; left:10%; }
+.icon3{ top:10%; right:-25px; }
+.icon4{ bottom:0; right:15%; }
+.icon5{ top:30%; left:50%; }
+.icon6{ bottom:20%; right:50%; }
+
+/* Hide hamburger on desktop */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+}
+
+@keyframes floatImage{
+  0%{ transform:translateY(0px) rotate(0deg);}
+  50%{ transform:translateY(-18px) rotate(2deg);}
+  100%{ transform:translateY(0px) rotate(0deg);}
+}
+
+@media(max-width:1000px){
+
+  header{
+    padding:20px;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav ul{
+    position:absolute;
+    top:80px;
+    right:0;
+    background:#0f172a;
+    flex-direction:column;
+    width:100%;
+    padding:20px 0;
+    display:none;
+    text-align:center;
+  }
+
+  nav ul li{
+    padding:12px 0;
+  }
+
+  nav ul.show{
+    display:flex;
+  }
+
+  /* Disable desktop hover effect */
+  .mega-parent:hover .mega-menu{
+    opacity:1;
+    visibility:hidden;
+  }
+
+  .mega-menu{
+    position:static;
+    transform:none;
+    width:100%;
+    background:#1e293b;
+    box-shadow:none;
+    padding:15px;
+    display:none;
+    grid-template-columns:1fr;
+    opacity:1;
+    visibility:visible;
+  }
+
+  .mega-parent.active .mega-menu{
+    display:grid;
+  }
+
+  .mega-item{
+    background:#334155;
+    margin:5px 15px;
+  }
+
+  .mega-item span{
+    color:white;
+  }
+
+  .float-icon{
+    display:none;
+  }
+
+  .introduction{
+    padding:80px 20px;
+  }
+
+  .intro-container{
+    flex-direction:column-reverse;
+  }
+
+  .intro-left h2{
+    font-size:28px;
+  }
+
+  .intro-left p{
+    font-size:16px;
+  }
+
+}
+
+.hero-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top right, #0f172a 50%, transparent 100%);
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+/* ===============================
+   INTRO HEADER (Premium Dark)
+================================= */
+
+.intro-header{
+  text-align:center;
+  margin-bottom:80px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  animation:introFadeUp 1s ease forwards;
+  opacity:0;
+}
+
+/* Small badge */
+.intro-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(6,182,212,0.1);
+  border:1px solid rgba(6,182,212,0.3);
+  color:#06b6d4;
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:40px;
+  font-weight: bold;
+  font-weight:600;
+  margin-bottom:25px;
+  backdrop-filter:blur(10px);
+  animation:badgeFloat 3s ease-in-out infinite;
+}
+
+.intro-badge i{
+  font-size:40px;
+  font-weight: bold;
+}
+
+/* Main Title */
+.intro-main-title{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:20px;
+  color:white;
+  line-height:1.3;
+}
+
+.intro-main-title span{
+  color:#06b6d4;
+  position:relative;
+}
+
+/* Animated underline */
+.intro-main-title span::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:3px;
+  background:#06b6d4;
+  border-radius:5px;
+  transform:scaleX(0);
+  transform-origin:left;
+  animation:underlineExpand 1s ease forwards 0.5s;
+}
+
+/* Subtitle */
+.intro-subtitle{
+  font-size:18px;
+  color:rgba(255,255,255,0.75);
+  line-height:1.8;
+  max-width:700px;
+  margin:0 auto;
+}
+
+/* Animations */
+
+@keyframes introFadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes badgeFloat{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-6px); }
+  100%{ transform:translateY(0); }
+}
+
+@keyframes underlineExpand{
+  from{ transform:scaleX(0); }
+  to{ transform:scaleX(1); }
+}
+
+.features-section {
+  position: relative;
+  padding: 120px 8%;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #eef4ff, #f8fbff, #e6f0ff, #f0f7ff);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Watermark Logo */
+.logo-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  opacity: 0.05;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  animation: logoFloat 30s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.logo-watermark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Logo Float Animation */
+@keyframes logoFloat {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  50% { transform: translate(-48%, -52%) rotate(15deg) scale(1.05); }
+  100% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+}
+
+/* Particle Canvas */
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Section Header and Cards */
+.features-header { position: relative; z-index: 2; text-align: center; margin-bottom: 70px; animation: fadeUp 1s ease forwards; }
+.features-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,102,255,0.1); color: #0066ff; padding: 6px 18px; border-radius: 30px; font-weight: 600; margin-bottom: 20px; animation: floatBadge 3s ease-in-out infinite alternate; }
+.features-badge i { animation: rotateIcon 5s linear infinite; }
+.features-main-title { font-size: 36px; font-weight: 700; }
+.features-main-title span { color: #0066ff; }
+.features-subtitle { max-width: 700px; margin: 15px auto 0; color: #666; font-size: 16px; }
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 2; /* Ensure cards are above watermark */
+}
+.feature-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+
+  opacity: 1; /* Make sure cards are visible */
+  transform: translateY(0) rotateX(0deg) rotateY(0deg) scale(1);
+}
+.feature-card:hover { transform: translateY(-15px) scale(1.05) rotateX(2deg) rotateY(2deg); box-shadow: 0 25px 50px rgba(0,102,255,0.25); }
+.feature-icon { font-size: 32px; color: #0066ff; margin-bottom: 18px; animation: floatIcon 3s ease-in-out infinite; }
+.feature-card h3 { font-size: 18px; margin-bottom: 12px; }
+.feature-card p { font-size: 14px; color: #666; line-height: 1.6; }
+@keyframes floatIcon { 0% { transform: translateY(0px);} 50% { transform: translateY(-6px);} 100% { transform: translateY(0px);} }
+@keyframes floatBadge { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-8px);} }
+@keyframes rotateIcon { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+
+/* Employee Module Theme */
+.employee-module-section {
+  position: relative;
+  padding: 120px 8%;
+  background: linear-gradient(-45deg, #e0f0ff, #d0e7ff, #c0dfff, #d9ecff);
+  color: #003366;
+  overflow: hidden;
+}
+
+/* Particle Background */
+.particles-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Module Header */
+.module-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.module-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 102, 255, 0.15);
+  color: #0066ff;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.module-main-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #004aad;
+}
+
+.module-subtitle {
+  max-width: 750px;
+  margin: 15px auto 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #004aad;
+}
+
+/* Container */
+.module-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Feature Cards */
+.module-left { flex: 1; min-width: 350px; }
+.feature-cards { display: flex; flex-direction: column; gap: 25px; }
+
+.feature-card {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,102,255,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,102,255,0.25);
+}
+
+.feature-icon {
+  font-size: 32px;
+  color: #0066ff;
+  margin-bottom: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(15deg) scale(1.3);
+  color: #00c6ff;
+}
+
+.feature-card h3 { font-size: 20px; margin-bottom: 15px; color: #003366; }
+.feature-list { list-style: none; padding-left: 0; }
+.feature-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #003366;
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0066ff;
+  font-weight: bold;
+  font-size: 16px;
+  top: 0;
+  transform: translateY(2px);
+}
+
+/* Right Images */
+.module-right { flex: 1; min-width: 350px; display: flex; flex-direction: column; gap: 25px; }
+.image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,102,255,0.1);
+  border: 2px solid rgba(0,102,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.image-wrapper:hover {
+  border-color: rgba(0,102,255,0.6);
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0,102,255,0.25);
+}
+.zoomable-image { width: 100%; display: block; cursor: pointer; border-radius: 20px; }
+
+/* Modal Styles */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+.image-modal .modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+.image-modal .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.image-modal .close-modal:hover { color: #00c6ff; }
+/* Module Left Feature Cards */
+.module-left .feature-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.module-left .feature-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 30px rgba(0, 102, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-left .feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 102, 255, 0.2);
+}
+
+/* Card Icons */
+.module-left .feature-card .feature-icon {
+  font-size: 28px;
+  color: #0066ff;
+  margin-bottom: 15px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Tab list inside Employee List card */
+.module-left .feature-card .tab-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.module-left .feature-card .tab-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.module-left .feature-card .tab-list li i {
+  color: #0066ff;
+  min-width: 20px;
+}
+
+/* Card Title */
+.module-left .feature-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0046cc;
+}
+
+/* Card Paragraph */
+.module-left .feature-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+/* =====================================
+   PREMIUM MODULE TIMELINE (BIG STYLE)
+===================================== */
+
+.modules-timeline-section {
+  padding: 140px 8%;
+  background: linear-gradient(135deg,#f0f6ff,#e6f0ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADER */
+.timeline-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.timeline-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.timeline-header p {
+  color: #555;
+  font-size: 18px;
+}
+
+/* LAYOUT */
+.timeline-container {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE NAVIGATION */
+.timeline-nav {
+  width: 320px;
+  position: relative;
+  padding-left: 40px;
+}
+
+/* Vertical animated line */
+.timeline-nav::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom,#0066ff,#00c6ff);
+  border-radius: 10px;
+  animation: lineGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes lineGlow {
+  0% { box-shadow: 0 0 5px #0066ff; }
+  100% { box-shadow: 0 0 20px #00c6ff; }
+}
+
+/* BIG BUTTON STYLE */
+.timeline-item {
+  position: relative;
+  margin-bottom: 35px;
+  padding: 18px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,102,255,0.08);
+  transition: all 0.4s ease;
+}
+
+/* Circle dot */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  width: 18px;
+  height: 18px;
+  background: #ccc;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Hover */
+.timeline-item:hover {
+  transform: translateX(8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,102,255,0.2);
+}
+
+/* ACTIVE STYLE */
+.timeline-item.active {
+  background: linear-gradient(135deg,#0066ff,#00c6ff);
+  color: white;
+  transform: translateX(10px) scale(1.08);
+}
+
+.timeline-item.active::before {
+  background: #00c6ff;
+  transform: scale(1.6);
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+/* RIGHT CONTENT AREA */
+.timeline-content {
+  flex: 1;
+  position: relative;
+  min-height: 500px;
+}
+
+/* Animated Module Content */
+.module-content {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(50px) scale(0.95);
+  transition: all 0.6s cubic-bezier(.77,0,.18,1);
+  pointer-events: none;
+}
+
+.module-content.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Responsive */
+@media(max-width:1000px){
+  .timeline-container{
+    flex-direction: column;
+  }
+
+  .timeline-nav{
+    width:100%;
+    padding-left:30px;
+  }
+
+  .timeline-content{
+    margin-top:50px;
+  }
+}
+</style>>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo" onclick="scrollToTop()">
+      <img src="images/logo1rect.png" alt="HR Info Logo">
+    </div>
+
+    <!-- Hamburger -->
+    <i class="fas fa-bars menu-toggle"></i>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-star"></i> Features</a></li>
+
+        <li class="mega-parent">
+          <a href="#"><i class="fas fa-layer-group"></i> Modules <i class="fas fa-chevron-down small-icon"></i></a>
+         <div class="mega-menu">
+  <div class="mega-item" data-module="employee"><i class="fas fa-user-tie"></i><span>Employee</span></div>
+  <div class="mega-item" data-module="org"><i class="fas fa-sitemap"></i><span>Organization Chart</span></div>
+  <div class="mega-item" data-module="lms"><i class="fas fa-graduation-cap"></i><span>LMS</span></div>
+  <div class="mega-item" data-module="attendance"><i class="fas fa-clock"></i><span>Time & Attendance</span></div>
+  <div class="mega-item" data-module="overtime"><i class="fas fa-business-time"></i><span>Overtime</span></div>
+  <div class="mega-item" data-module="settings"><i class="fas fa-cogs"></i><span>General Settings</span></div>
+  <div class="mega-item" data-module="training"><i class="fas fa-chalkboard-teacher"></i><span>Training & Development</span></div>
+  <div class="mega-item" data-module="admin"><i class="fas fa-user-shield"></i><span>Administration</span></div>
+  <div class="mega-item" data-module="reports"><i class="fas fa-chart-line"></i><span>Reports</span></div>
+  <div class="mega-item" data-module="payslip"><i class="fas fa-file-invoice-dollar"></i><span>Payslip Generator</span></div>
+</div>
+        </li>
+
+        <li><a href="#"><i class="fas fa-briefcase"></i> Services</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-label"><i class="fas fa-star"></i> HR Info</div>
+      <h1 class="animated-title">Smart & Reliable HR Management</h1>
+      <p class="animated-desc">
+        Transform the way you manage employees, payroll, attendance, leave,
+        training and organizational structure with a secure, modern HR platform.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request Demo</button>
+        <button class="btn btn-outline"><i class="fas fa-lightbulb"></i> Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider"></div>
+
+  <section class="introduction">
+    <!-- 🔷 INTRO HEADER -->
+    <div class="intro-header">
+      <div class="intro-badge">
+        <i class="fas fa-rocket"></i>
+        <span>Introduction</span>
+      </div>
+
+      <h2 class="intro-main-title">
+        Empowering Modern Workforce with <br /><span>HR Info</span>
+      </h2>
+
+      <p class="intro-subtitle">
+        A powerful and flexible HR platform built to streamline operations,
+        enhance productivity, and drive organizational growth.
+      </p>
+    </div>
+    <div class="intro-container">
+      <div class="intro-left">
+        <h2>Why Choose HR Info?</h2>
+        <p>
+          Automate HR processes to save time and increase operational efficiency.
+          Manage employees, leave, payroll, attendance, training, and overtime
+          seamlessly within one secure and modern HR ecosystem.
+        </p>
+        <button class="btn btn-primary"><i class="fas fa-play"></i> Explore Features</button>
+      </div>
+
+      <div class="intro-right">
+        <div class="intro-animation">
+          <img src="images/timeattendance.jpg" alt="HR Illustration">
+          <i class="fas fa-user-tie float-icon icon1"></i>
+          <i class="fas fa-clock float-icon icon2"></i>
+          <i class="fas fa-sitemap float-icon icon3"></i>
+          <i class="fas fa-file-invoice-dollar float-icon icon4"></i>
+          <i class="fas fa-graduation-cap float-icon icon5"></i>
+          <i class="fas fa-chalkboard-teacher float-icon icon6"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-divider"></div>
+
+  <section class="features-section">
+    <div class="logo-watermark">
+      <img src="images/logo1rect.png" alt="HR Info Logo">
+    </div>
+
+    <!-- 🔷 SECTION HEADER -->
+    <div class="features-header">
+      <div class="features-badge">
+        <i class="fas fa-star"></i>
+        <span>Features</span>
+      </div>
+
+      <h2 class="features-main-title">
+        Powerful Capabilities of <br /><span>HR Info</span>
+      </h2>
+
+      <p class="features-subtitle">
+        A complete HR ecosystem designed to automate processes,
+        empower teams, and deliver data-driven workforce management.
+      </p>
+    </div>
+
+    <!-- 🔷 FEATURES GRID -->
+    <div class="features-container">
+
+      <!-- Feature Cards -->
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>User-Friendly Single Source Platform</h3>
+        <p>A centralized and intuitive HR system that consolidates all
+          essential HR tasks into one platform, simplifying workflows
+          and improving operational efficiency.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-id-card"></i></div>
+        <h3>Comprehensive Employee Data Management</h3>
+        <p>Securely manage employee records including personal data,
+          roles, compensation, qualifications, and performance history
+          from a centralized database.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-bell"></i></div>
+        <h3>Automated Workflows & Notifications</h3>
+        <p>Streamline HR processes with automated reminders,
+          approvals, and task notifications to reduce manual work
+          and ensure timely execution.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-users"></i></div>
+        <h3>Employee & Manager Self-Service</h3>
+        <p>Empower employees and managers with portals to manage
+          leave requests, payslips, performance tracking,
+          and approvals seamlessly.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+        <h3>Advanced Leave Management</h3>
+        <p>Automate leave tracking with real-time balance updates,
+          accrual calculations, and policy compliance for all leave types.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-clock"></i></div>
+        <h3>Time & Attendance Integration</h3>
+        <p>Capture real-time attendance data through biometric or
+          time logging systems for accurate overtime and payroll processing.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Training & Development Requests</h3>
+        <p>Manage employee training requests, approvals, and
+          development tracking aligned with organizational growth goals.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>High-Impact Reporting & Analytics</h3>
+        <p>Generate actionable HR reports and KPI analytics to
+          support strategic decision-making and workforce planning.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="hero-divider"></div>
+
+  
+  <section class="modules-timeline-section" id="modulesSection">
+  <!-- HEADER -->
+  <div class="timeline-header">
+
+    <div class="section-badge">
+      <i class="fas fa-layer-group"></i>
+      <span>HR Info Platform</span>
+    </div>
+
+    <h2 class="section-title">
+      Intelligent HR Management Ecosystem
+    </h2>
+
+    <p class="section-subtitle">
+      A fully integrated suite of smart HR modules designed to streamline employee 
+      lifecycle management, optimize workforce operations, and deliver real-time 
+      organizational insights — all within a single unified platform.
+    </p>
+
+  </div>
+
+  <div class="timeline-container">
+
+    <!-- LEFT TIMELINE NAVIGATION -->
+    <div class="timeline-nav">
+
+      <div class="timeline-item active" data-target="employee">
+        <i class="fas fa-user-tie"></i> Employee Management
+      </div>
+
+      <div class="timeline-item" data-target="org">
+        <i class="fas fa-sitemap"></i> Organization Structure
+      </div>
+
+      <div class="timeline-item" data-target="lms">
+        <i class="fas fa-graduation-cap"></i> Leave Management
+      </div>
+
+      <div class="timeline-item" data-target="attendance">
+        <i class="fas fa-clock"></i> Time & Attendance
+      </div>
+
+      <div class="timeline-item" data-target="overtime">
+        <i class="fas fa-business-time"></i> Overtime Management
+      </div>
+
+      <div class="timeline-item" data-target="training">
+        <i class="fas fa-chalkboard-teacher"></i> Training & Development
+      </div>
+
+      <div class="timeline-item" data-target="settings">
+        <i class="fas fa-cogs"></i> General Settings
+      </div>
+
+      <div class="timeline-item" data-target="admin">
+        <i class="fas fa-user-shield"></i> Administration
+      </div>
+
+      <div class="timeline-item" data-target="reports">
+        <i class="fas fa-chart-line"></i> Reports & Analytics
+      </div>
+
+      <div class="timeline-item" data-target="payslip">
+        <i class="fas fa-file-invoice-dollar"></i> Payslip Generator
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="timeline-content">
+
+      <!-- EMPLOYEE -->
+      <div class="module-content active" id="employee">
+        <section class="employee-module-section">
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-users"></i>
+                <span>Employee Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Centralized Employee Data Management
+              </h2>
+
+              <p class="module-subtitle">
+                The system stores and retrieves all current employee-related data on a centralized database, enabling
+                easy
+                access and decision-making for workforce and organizational purposes.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Employee List Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon"><i class="fas fa-address-card"></i></div>
+                    <h3>Employee List</h3>
+                    <p>Manage all employee information in five tabs:</p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user"></i> <strong>About:</strong> Personal & employment info, passport,
+                        education,
+                        past experience, supervisor details.</li>
+                      <li><i class="fas fa-briefcase"></i> <strong>Position:</strong> Current & historical positions.
+                      </li>
+                      <li><i class="fas fa-dollar-sign"></i> <strong>Salary:</strong> Assigned salary, pay plan, grade,
+                        step,
+                        allowances.</li>
+                      <li><i class="fas fa-file-alt"></i> <strong>Documents:</strong> Attach & store confidential files.
+                      </li>
+                      <li><i class="fas fa-cogs"></i> <strong>Others:</strong> Dependents, skills, certifications.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Change Request Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon"><i class="fas fa-edit"></i></div>
+                    <h3>Change Request</h3>
+                    <p>
+                      Employees can submit updates via a change request process. HR approval is required before changes
+                      reflect
+                      in the master database.
+                    </p>
+                  </div>
+
+                  <!-- Role-Based Visibility Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Role-Based Visibility</h3>
+                    <p>
+                      Supervisors can view only their subordinates’ details. HR configures role-specific visibility for
+                      proper
+                      access control.
+                    </p>
+                  </div>
+
+                  <!-- Login & Access Control Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon"><i class="fas fa-lock"></i></div>
+                    <h3>Login & Access Control</h3>
+                    <p>
+                      HR manages login access for active employees and restricts inactive users automatically.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+                <div class="image-wrapper">
+                  <img src="images/My Employees.png" alt="Employee List" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/My Employees - About.png" alt="Employee Profile" class="zoomable-image">
+                </div>
+
+                <!-- NEW IMAGE 1 -->
+                <div class="image-wrapper">
+                  <img src="images/My Employees - Position.png" alt="Employee Profile" class="zoomable-image">
+                </div>
+
+                <!-- NEW IMAGE 2 -->
+                <div class="image-wrapper">
+                  <img src="images/My Employees - Salary.png" alt="Employee Profile" class="zoomable-image">
+                </div>
+
+                 <!-- NEW IMAGE 2 -->
+                <div class="image-wrapper">
+                  <img src="images/My Employees - Documents.png" alt="Employee Profile" class="zoomable-image">
+                </div>
+                 <!-- NEW IMAGE 2 -->
+                <div class="image-wrapper">
+                  <img src="images/My Employees - Others.png" alt="Employee Profile" class="zoomable-image">
+                </div>
+                 <!-- NEW IMAGE 2 -->
+                <div class="image-wrapper">
+                  <img src="images/Employee Change Request _ Pending.png" alt="Change Request" class="zoomable-image">
+                </div>
+                 <!-- NEW IMAGE 2 -->
+                <div class="image-wrapper">
+                  <img src="images/Employee Change Request - Pending Detail.png" alt="Change Request" class="zoomable-image">
+                </div>
+                 <!-- NEW IMAGE 2 -->
+                <div class="image-wrapper">
+                  <img src="images/Employee Change Request _ Processed.png" alt="Change Request" class="zoomable-image">
+                </div>
+                 <div class="image-wrapper">
+                  <img src="images/Employee Change Request _ Processed Detail.png" alt="Change Request" class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+          </section>
+      </div>
+
+      <!-- ORGANIZATION -->
+      <div class="module-content" id="org">
+        <section class="employee-module-section">
+
+  <!-- Module Header -->
+  <div class="module-header">
+    <div class="module-badge">
+      <i class="fas fa-sitemap"></i>
+      <span>Organization Chart Module</span>
+    </div>
+
+    <h2 class="module-main-title">
+      Automated Organizational Hierarchy Management
+    </h2>
+
+    <p class="module-subtitle">
+      Design and manage your complete organizational structure with automated 
+      reporting logic, position hierarchy control, and real-time workforce 
+      visibility across departments, divisions, and locations.
+    </p>
+  </div>
+
+  <!-- Module Content -->
+  <div class="module-container">
+
+    <!-- LEFT SIDE -->
+    <div class="module-left">
+      <div class="feature-cards">
+
+        <!-- Organization Chart Management -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3>Manage Organization Chart</h3>
+          <p>
+            HR can create and manage the complete department and location hierarchy 
+            structure, defining divisions, reporting layers, and structured position 
+            allocations within each unit.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-building"></i> Create department & location hierarchy</li>
+            <li><i class="fas fa-layer-group"></i> Define structured reporting levels</li>
+            <li><i class="fas fa-user-plus"></i> Assign positions under each hierarchy</li>
+            <li><i class="fas fa-random"></i> Automated approval & process flow logic</li>
+          </ul>
+        </div>
+
+        <!-- Employee Position Hierarchy -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h3>Employee Position Hierarchy Overview</h3>
+          <p>
+            Visual representation of the organization structure displaying locations, 
+            reporting connections, and position distribution across the enterprise.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-map-marker-alt"></i> Multi-location structure visibility</li>
+            <li><i class="fas fa-sitemap"></i> Position-based reporting structure</li>
+            <li><i class="fas fa-user-check"></i> View filled vs vacant positions</li>
+            <li><i class="fas fa-chart-bar"></i> Workforce allocation insights</li>
+          </ul>
+        </div>
+
+        <!-- Position Hierarchy List -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-list-ol"></i>
+          </div>
+          <h3>Position Hierarchy Management</h3>
+          <p>
+            View and manage all active positions within their respective organizational 
+            hierarchy structure, ensuring proper reporting alignment and structural accuracy.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-briefcase"></i> Complete active position listing</li>
+            <li><i class="fas fa-level-up-alt"></i> Structured hierarchy mapping</li>
+            <li><i class="fas fa-link"></i> Auto-reporting configuration</li>
+            <li><i class="fas fa-check-circle"></i> Process & privilege automation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="module-right">
+
+      <div class="image-wrapper">
+        <img src="images/Manage Organization Chart.png" 
+             alt="Organization Chart Overview" 
+             class="zoomable-image">
+      </div>
+
+      <div class="image-wrapper">
+        <img src="images/Employee Position Hierarchy.png" 
+             alt="Employee Position Hierarchy Structure" 
+             class="zoomable-image">
+      </div>
+
+      <div class="image-wrapper">
+        <img src="images/Position Organization Hierarchy.png" 
+             alt="Position Organization Hierarchy" 
+             class="zoomable-image">
+      </div>
+ <div class="image-wrapper">
+        <img src="images/Position List.png" 
+             alt="Position List" 
+             class="zoomable-image">
+      </div>
+       <div class="image-wrapper">
+        <img src="images/Position Detail - About.png" 
+             alt="Position Detail" 
+             class="zoomable-image">
+      </div>
+      <div class="image-wrapper">
+        <img src="images/Occupied Positions.png" 
+             alt="Occupied Positions" 
+             class="zoomable-image">
+      </div>
+      <div class="image-wrapper">
+        <img src="images/Vacant Positions.png" 
+             alt="Vacant Positions" 
+             class="zoomable-image">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+      </div>
+
+      <!-- LMS -->
+      <div class="module-content" id="lms">
+        <section class="employee-module-section">
+
+  <!-- Module Header -->
+  <div class="module-header">
+    <div class="module-badge">
+      <i class="fas fa-calendar-check"></i>
+      <span>Leave Management Module</span>
+    </div>
+
+    <h2 class="module-main-title">
+      Comprehensive Leave Transaction Management
+    </h2>
+
+    <p class="module-subtitle">
+      Streamline leave configuration, entitlement tracking, approval workflows, 
+      and automated balance management with a fully integrated leave processing 
+      system designed for accuracy, compliance, and transparency.
+    </p>
+  </div>
+
+  <!-- Module Content -->
+  <div class="module-container">
+
+    <!-- LEFT SIDE -->
+    <div class="module-left">
+      <div class="feature-cards">
+
+        <!-- Configure Leave Types -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Configure Leave Types</h3>
+          <p>
+            Create and manage customizable leave categories aligned with 
+            organizational policies. HR can define leave structures, configure 
+            accrual-based types, and maintain regulatory compliance with a 
+            streamlined configuration process.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-plus-circle"></i> Add & customize leave categories</li>
+            <li><i class="fas fa-balance-scale"></i> Policy-aligned leave configuration</li>
+            <li><i class="fas fa-sync-alt"></i> Accrual-based leave setup</li>
+            <li><i class="fas fa-edit"></i> Update & manage leave structures</li>
+          </ul>
+        </div>
+
+        <!-- Manage Leave Balances -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3>Manage Leave Balances</h3>
+          <p>
+            Maintain accurate leave entitlements by tracking balance allocations 
+            and enforcing usage limits. HR and authorized roles can adjust balances 
+            while ensuring full transparency through automated activity logs.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-calculator"></i> Entitlement-based balance tracking</li>
+            <li><i class="fas fa-plus-minus"></i> Add or deduct leave days</li>
+            <li><i class="fas fa-lock"></i> Prevent over-utilization of leave</li>
+            <li><i class="fas fa-history"></i> Automated adjustment logs & audit trail</li>
+          </ul>
+        </div>
+
+        <!-- Leave Application & Approval Workflow -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <h3>Leave Request & Approval Workflow</h3>
+          <p>
+            Employees can apply for eligible leave types through a structured 
+            approval hierarchy. Requests flow through reporting managers and HR 
+            processing, ensuring proper validation, balance deduction, and 
+            absenteeism control.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-user-edit"></i> Employee leave submission</li>
+            <li><i class="fas fa-sitemap"></i> Multi-level approval workflow</li>
+            <li><i class="fas fa-check-circle"></i> Final HR processing & confirmation</li>
+            <li><i class="fas fa-envelope"></i> Automated email notifications</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="module-right">
+
+      <div class="image-wrapper">
+        <img src="images/Leave Type Settings.png" 
+             alt="Leave Type Settings" 
+             class="zoomable-image">
+      </div>
+
+      <div class="image-wrapper">
+        <img src="images/Add Leave Type.png" 
+             alt="Add Leave Type" 
+             class="zoomable-image">
+      </div>
+
+      <div class="image-wrapper">
+        <img src="images/Manage Employee Leave Balances.png" 
+             alt="Employee Leave Balance" 
+             class="zoomable-image">
+      </div>
+<div class="image-wrapper">
+        <img src="images/My Leaves.png" 
+             alt="My Leaves" 
+             class="zoomable-image">
+      </div>
+      <div class="image-wrapper">
+        <img src="images/Create Leave.png" 
+             alt="Create Leave" 
+             class="zoomable-image">
+      </div>
+      <div class="image-wrapper">
+        <img src="images/Leave Detail - Pending.png" 
+             alt="Leave Detail" 
+             class="zoomable-image">
+      </div>
+      <div class="image-wrapper">
+        <img src="images/Subordinates Processed Leaves.png" 
+             alt="Subordinates Leaves" 
+             class="zoomable-image">
+      </div>
+      <div class="image-wrapper">
+        <img src="images/Processed Leave Details.png" 
+             alt="Processed Leave" 
+             class="zoomable-image">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+      </div>
+
+      <!-- ATTENDANCE -->
+      <div class="module-content" id="attendance">
+        <section class="employee-module-section">
+
+  <!-- Module Header -->
+  <div class="module-header">
+    <div class="module-badge">
+      <i class="fas fa-clock"></i>
+      <span>Time & Attendance Module</span>
+    </div>
+
+    <h2 class="module-main-title">
+      Streamlined Workforce Management & Attendance Automation
+    </h2>
+
+    <p class="module-subtitle">
+      Automate attendance tracking, overtime management, schedule configuration, 
+      and payroll integration with a centralized system designed to improve 
+      accuracy, transparency, and workforce productivity.
+    </p>
+  </div>
+
+  <!-- Module Content -->
+  <div class="module-container">
+
+    <!-- LEFT SIDE -->
+    <div class="module-left">
+      <div class="feature-cards">
+
+        <!-- Daily Time Record -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-calendar-day"></i>
+          </div>
+          <h3>Daily Time Record & Attendance Analytics</h3>
+          <p>
+            Track employee clock-ins, clock-outs, breaks, late hours, and overtime 
+            automatically. The system calculates irregularities based on assigned 
+            schedules and provides detailed daily attendance insights.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-sign-in-alt"></i> Real-time clock-in / clock-out tracking</li>
+            <li><i class="fas fa-hourglass-half"></i> Late & irregular hour calculation</li>
+            <li><i class="fas fa-chart-line"></i> Attendance analytics & insights</li>
+            <li><i class="fas fa-file-alt"></i> Detailed daily attendance records</li>
+          </ul>
+        </div>
+
+        <!-- Overtime Management -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-business-time"></i>
+          </div>
+          <h3>Overtime Summary & Claims Processing</h3>
+          <p>
+            Automatically calculate and summarize monthly overtime hours. 
+            Employees can review, confirm, and submit overtime claims, while 
+            HR ensures quick validation and fair compensation.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-calculator"></i> Automated overtime calculation</li>
+            <li><i class="fas fa-calendar-alt"></i> Monthly overtime summary view</li>
+            <li><i class="fas fa-paper-plane"></i> Easy overtime claim submission</li>
+            <li><i class="fas fa-check-circle"></i> Structured approval workflow</li>
+          </ul>
+        </div>
+
+        <!-- Schedule & Holiday Settings -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Schedule, Holiday & Note Configuration</h3>
+          <p>
+            Configure flexible work schedules, holiday calendars, and classified 
+            attendance notes. Ensure compliance while supporting operational 
+            flexibility across departments and roles.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-layer-group"></i> Full-time, part-time & shift schedules</li>
+            <li><i class="fas fa-umbrella-beach"></i> Organization-wide holiday settings</li>
+            <li><i class="fas fa-sticky-note"></i> Personal & official classified notes</li>
+            <li><i class="fas fa-shield-alt"></i> Policy-based attendance validation</li>
+          </ul>
+        </div>
+
+        <!-- Advanced Overtime Settings -->
+        <div class="mdlfeaturecard">
+          <div class="mdlfeatureicon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Advanced Overtime Policy Management</h3>
+          <p>
+            Configure company-wide or department-specific overtime rules. 
+            Define allowable hours, calculation methods, and compensation 
+            structures aligned with operational requirements.
+          </p>
+          <ul class="tab-list">
+            <li><i class="fas fa-globe"></i> Organization-wide overtime policies</li>
+            <li><i class="fas fa-building"></i> Department-based overtime rules</li>
+            <li><i class="fas fa-sliders-h"></i> Configurable pay calculations</li>
+            <li><i class="fas fa-balance-scale"></i> Fair & transparent overtime management</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="module-right">
+
+      <div class="image-wrapper">
+        <img src="images/Attendance Logs.png" 
+             alt="Daily Time Record Overview" 
+             class="zoomable-image">
+      </div>
+
+      <div class="image-wrapper">
+        <img src="images/Notes - Create.png" 
+             alt="Create Notes" 
+             class="zoomable-image">
+      </div>
+
+      <div class="image-wrapper">
+        <img src="images/Time and Attendance Settings.png" 
+             alt="Attendance Settings" 
+             class="zoomable-image">
+      </div>
+       <div class="image-wrapper">
+        <img src="images/Time and Attendance Settings - Schedule Management.png" 
+             alt="Employee Schedule Management" 
+             class="zoomable-image">
+      </div>
+       <div class="image-wrapper">
+        <img src="images/Employee schedule.png" 
+             alt="Manage Employee Schedules" 
+             class="zoomable-image">
+      </div>
+       <div class="image-wrapper">
+        <img src="images/Manage Schedule.png" 
+             alt="Manage Schedule" 
+             class="zoomable-image">
+      </div>
+       <div class="image-wrapper">
+        <img src="images/Time and Attendance Settings - Note Settings.png" 
+             alt="Manage Notes" 
+             class="zoomable-image">
+      </div>
+<div class="image-wrapper">
+        <img src="images/Time and Attendance Settings - Holiday Settings.png" 
+             alt="Manage Holidays" 
+             class="zoomable-image">
+      </div>
+      <div class="image-wrapper">
+        <img src="images/Note List - Pending.png" 
+             alt="Manage Notes" 
+             class="zoomable-image">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+      </div>
+
+      <!-- OVERTIME -->
+      <div class="module-content" id="overtime">
+        <h3>Automated Overtime Management</h3>
+        <p>
+          Configure overtime policies, approval workflows, rate calculations, and 
+          integration with payroll for accurate and compliant compensation processing.
+        </p>
+      </div>
+
+      <!-- TRAINING -->
+      <div class="module-content" id="training">
+        <h3>Strategic Training & Development</h3>
+        <p>
+          Plan, approve, and monitor employee development initiatives, track 
+          certifications, evaluate training effectiveness, and manage learning budgets.
+        </p>
+      </div>
+
+      <!-- GENERAL SETTINGS -->
+      <div class="module-content" id="settings">
+        <h3>System Configuration & General Settings</h3>
+        <p>
+          Configure company policies, grading structures, salary plans, approval 
+          hierarchies, roles, and master data settings tailored to organizational needs.
+        </p>
+      </div>
+
+      <!-- ADMINISTRATION -->
+      <div class="module-content" id="admin">
+        <h3>Role-Based Administration & Security Control</h3>
+        <p>
+          Manage user roles, access permissions, approval levels, and system audit 
+          controls to ensure secure and structured HR operations.
+        </p>
+      </div>
+
+      <!-- REPORTS -->
+      <div class="module-content" id="reports">
+        <h3>HR Analytics & Executive Reporting</h3>
+        <p>
+          Generate real-time dashboards, KPI reports, compliance documents, and 
+          exportable analytics to support data-driven decision-making.
+        </p>
+      </div>
+
+      <!-- PAYSLIP -->
+      <div class="module-content" id="payslip">
+        <h3>Automated Payslip Generation</h3>
+        <p>
+          Generate secure, structured payslips with salary breakdowns, allowances, 
+          deductions, overtime calculations, and export to PDF functionality.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <div class="hero-divider"></div>
+
+  <!-- Modal for Zoom -->
+  <div id="image-modal" class="image-modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script>const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const megaParent = document.querySelector(".mega-parent");
+
+// Mobile menu toggle
+toggle.addEventListener("click", function(e){
+  e.stopPropagation();
+  navLinks.classList.toggle("show");
+});
+
+// Mega toggle (mobile only)
+megaParent.addEventListener("click", function(e){
+  if(window.innerWidth <= 1000){
+    e.preventDefault();
+    this.classList.toggle("active");
+  }
+});
+
+// Close when clicking outside
+document.addEventListener("click", function(e){
+  if(window.innerWidth <= 1000 &&
+     !navLinks.contains(e.target) &&
+     !toggle.contains(e.target)){
+      navLinks.classList.remove("show");
+      megaParent.classList.remove("active");
+  }
+});
+
+// Reset on resize
+window.addEventListener("resize", function(){
+  if(window.innerWidth > 1000){
+    navLinks.classList.remove("show");
+    megaParent.classList.remove("active");
+  }
+});
+
+// Scroll to top
+function scrollToTop(){
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+// Floating icons scroll interaction
+window.addEventListener('scroll', function() {
+  const scrollY = window.scrollY;
+  document.querySelectorAll('.float-icon').forEach((icon, idx)=>{
+    const speed = (idx+1)*0.3;
+    icon.style.transform =
+      `translateY(${Math.sin(scrollY*0.01*speed)*15}px)
+       rotate(${Math.sin(scrollY*0.01*speed)*15}deg)`;
+  });
+});
+
+// Card 3D Tilt
+const cards = document.querySelectorAll('.feature-card');
+cards.forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / 10);
+    const rotateY = ((centerX - x) / 10);
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+  });
+});
+
+// Logo Parallax on Mouse Move
+const logo = document.querySelector('.logo-watermark');
+document.querySelector('.features-section').addEventListener('mousemove', e => {
+  const { width, height, left, top } = e.currentTarget.getBoundingClientRect();
+  const offsetX = (e.clientX - left - width/2) / 50; // small factor for subtle movement
+  const offsetY = (e.clientY - top - height/2) / 50;
+  logo.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) rotate(5deg) scale(1.05)`;
+});
+document.querySelector('.features-section').addEventListener('mouseleave', () => {
+  logo.style.transform = `translate(-50%, -50%) rotate(0deg) scale(1)`;
+});
+
+// tsParticles Network Background
+tsParticles.load("particles", {
+  fpsLimit: 60,
+  interactivity: {
+    events: { onHover: { enable: true, mode: "repulse" } },
+    modes: { repulse: { distance: 100, duration: 0.4 } }
+  },
+  particles: {
+    color: { value: "#0066ff" },
+    links: { enable: true, color: "#0066ff", distance: 120 },
+    move: { enable: true, speed: 1 },
+    number: { value: 40 },
+    opacity: { value: 0.3 },
+    shape: { type: "circle" },
+    size: { value: 4 }
+  },
+  detectRetina: true,
+});
+
+// Feature Card Icon Parallax
+const featureCards = document.querySelectorAll('.feature-card');
+
+featureCards.forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const icon = card.querySelector('.feature-icon');
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width/2;
+    const y = e.clientY - rect.top - rect.height/2;
+    icon.style.transform = `translate(${x*0.05}px, ${y*0.05}px) rotate(15deg) scale(1.3)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    const icon = card.querySelector('.feature-icon');
+    icon.style.transform = 'rotate(0deg) scale(1)';
+  });
+});
+
+// Zoomable Images Lightbox
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('modal-img');
+const zoomImages = document.querySelectorAll('.zoomable-image');
+const closeModal = document.querySelector('.close-modal');
+
+zoomImages.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+  });
+});
+
+closeModal.addEventListener('click', () => { modal.style.display = 'none'; });
+window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
+
+
+// ===============================
+// PREMIUM TIMELINE SWITCH
+// ===============================
+
+const timelineItems = document.querySelectorAll('.timeline-item');
+const moduleContents = document.querySelectorAll('.module-content');
+
+function activateModule(moduleId){
+  timelineItems.forEach(i => i.classList.remove('active'));
+  moduleContents.forEach(c => c.classList.remove('active'));
+
+  const targetNav = document.querySelector(`.timeline-item[data-target="${moduleId}"]`);
+  const targetContent = document.getElementById(moduleId);
+
+  if(targetNav && targetContent){
+    targetNav.classList.add('active');
+    targetContent.classList.add('active');
+  }
+}
+
+// Timeline click
+timelineItems.forEach(item => {
+  item.addEventListener('click', () => {
+    activateModule(item.dataset.target);
+  });
+});
+
+// Top Mega Menu click → Scroll + Activate
+const megaItems = document.querySelectorAll('.mega-item');
+
+megaItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const module = item.dataset.module;
+
+    document.getElementById("modulesSection")
+      .scrollIntoView({ behavior: "smooth" });
+
+    setTimeout(() => {
+      activateModule(module);
+    }, 500);
+  });
+});</script>
+</body>
+
+</html>
