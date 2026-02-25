@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR-Info</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="HC.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo" onclick="scrollToTop()">
+    <img src="images/logo1rect.png" alt="HR Info Logo">
+  </div>
+
+  <!-- Hamburger -->
+  <i class="fas fa-bars menu-toggle"></i>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fas fa-star"></i> Features</a></li>
+
+      <li class="mega-parent">
+        <a href="#"><i class="fas fa-layer-group"></i> Modules 
+          <i class="fas fa-chevron-down small-icon"></i>
+        </a>
+
+        <div class="mega-menu">
+          <div class="mega-item"><i class="fas fa-user-tie"></i><span>Employee</span></div>
+          <div class="mega-item"><i class="fas fa-sitemap"></i><span>Organization Chart</span></div>
+          <div class="mega-item"><i class="fas fa-graduation-cap"></i><span>LMS</span></div>
+          <div class="mega-item"><i class="fas fa-clock"></i><span>Time & Attendance</span></div>
+          <div class="mega-item"><i class="fas fa-business-time"></i><span>Overtime</span></div>
+          <div class="mega-item"><i class="fas fa-cogs"></i><span>General Settings</span></div>
+          <div class="mega-item"><i class="fas fa-chalkboard-teacher"></i><span>Training</span></div>
+          <div class="mega-item"><i class="fas fa-user-shield"></i><span>Administration</span></div>
+          <div class="mega-item"><i class="fas fa-chart-line"></i><span>Reports</span></div>
+          <div class="mega-item"><i class="fas fa-file-invoice-dollar"></i><span>Payslip</span></div>
+        </div>
+      </li>
+
+      <li><a href="#"><i class="fas fa-briefcase"></i> Services</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-label"><i class="fas fa-star"></i> HR Info</div>
+    <h1 class="animated-title">Smart & Reliable HR Management</h1>
+    <p class="animated-desc">
+      Transform the way you manage employees, payroll, attendance, leave,
+      training and organizational structure with a secure, modern HR platform.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request Demo</button>
+      <button class="btn btn-outline"><i class="fas fa-lightbulb"></i> Learn More</button>
+    </div>
+  </div>
+</section>
+
+<script src="HC.js"></script>
+</body>
+</html>

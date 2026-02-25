@@ -39,6 +39,56 @@ function scrollToTop(){
   window.scrollTo({ top:0, behavior:'smooth' });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  const megaItems = document.querySelectorAll(".mega-item");
+  const timelineItems = document.querySelectorAll(".timeline-item");
+  const moduleContents = document.querySelectorAll(".module-content");
+  const modulesSection = document.getElementById("modulesSection");
+
+  function activateModule(moduleId) {
+
+    // Remove active from all timeline items
+    timelineItems.forEach(item => item.classList.remove("active"));
+
+    // Remove active from all module contents
+    moduleContents.forEach(content => content.classList.remove("active"));
+
+    // Activate correct timeline item
+    const activeTimeline = document.querySelector(`.timeline-item[data-target="${moduleId}"]`);
+    if (activeTimeline) activeTimeline.classList.add("active");
+
+    // Activate correct content section
+    const activeContent = document.getElementById(moduleId);
+    if (activeContent) activeContent.classList.add("active");
+  }
+
+  // 🔹 When clicking Mega Menu
+  megaItems.forEach(item => {
+    item.addEventListener("click", function () {
+
+      const moduleId = this.getAttribute("data-module");
+
+      // Scroll to timeline section
+      modulesSection.scrollIntoView({ behavior: "smooth" });
+
+      // Activate correct module
+      activateModule(moduleId);
+    });
+  });
+
+  // 🔹 When clicking Timeline Navigation
+  timelineItems.forEach(item => {
+    item.addEventListener("click", function () {
+
+      const moduleId = this.getAttribute("data-target");
+
+      activateModule(moduleId);
+    });
+  });
+
+});
+
 // Floating icons scroll interaction
 window.addEventListener('scroll', function() {
   const scrollY = window.scrollY;
