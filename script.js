@@ -209,3 +209,178 @@ window.addEventListener('click', e => {
   }
 });
 
+ const mandatoryPrice = 0.5;
+  const userSlider = document.getElementById("userCount");
+  const userLabel = document.getElementById("userCountLabel");
+  const modules = document.querySelectorAll(".module");
+  const totalPriceEl = document.getElementById("totalPrice");
+
+  function animateValue(start, end, duration) {
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (!startTime) startTime = currentTime;
+      let progress = Math.min((currentTime - startTime) / duration, 1);
+      let value = progress * (end - start) + start;
+      totalPriceEl.textContent = value.toFixed(2);
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+  function calculateTotal() {
+    let users = parseInt(userSlider.value);
+    userLabel.textContent = users;
+
+    let totalPerUser = mandatoryPrice;
+
+    modules.forEach(module => {
+      if (module.checked) {
+        totalPerUser += parseFloat(module.dataset.price);
+      }
+    });
+
+    let finalTotal = users * totalPerUser;
+    let current = parseFloat(totalPriceEl.textContent) || 0;
+
+    animateValue(current, finalTotal, 400);
+  }
+
+  modules.forEach(module => {
+    module.addEventListener("change", calculateTotal);
+  });
+
+  userSlider.addEventListener("input", calculateTotal);
+
+  calculateTotal();
+
+  
+  const clientSwiper = new Swiper('.clients-carousel', {
+  slidesPerView:4,
+  spaceBetween:30,
+  loop:true,
+  autoplay:{ delay:2500 },
+  breakpoints:{
+    320:{slidesPerView:1, spaceBetween:15},
+    640:{slidesPerView:2, spaceBetween:20},
+    768:{slidesPerView:3, spaceBetween:25},
+    1024:{slidesPerView:4, spaceBetween:30}
+  }
+});
+
+// Testimonials carousel
+const testimonialSwiper = new Swiper('.testimonials-wrapper', {
+  slidesPerView:1,
+  spaceBetween:30,
+  loop:true,
+  autoplay:{ delay:4000 },
+  navigation:{ nextEl:'.swiper-button-next', prevEl:'.swiper-button-prev' }
+});
+
+// Counters
+function animateCounter(id,endValue,duration=2000){
+  let start=0, increment=endValue/(duration/20);
+  const el=document.getElementById(id);
+  const counter=setInterval(()=>{
+    start+=increment;
+    if(start>=endValue){ start=endValue; clearInterval(counter); }
+    el.innerText=Math.floor(start);
+  },20);
+}
+animateCounter("clientsCount",100);
+animateCounter("projectsCount",250);
+animateCounter("countriesCount",10);
+
+// Fade-in on scroll
+const slides = document.querySelectorAll('.swiper-slide');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('fade-in'); });
+},{threshold:0.2});
+slides.forEach(slide=>observer.observe(slide));
+
+// Filters
+const filterButtons=document.querySelectorAll('.filter-btn');
+filterButtons.forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelector('.filter-btn.active').classList.remove('active');
+  btn.classList.add('active');
+  const filter=btn.dataset.filter;
+  slides.forEach(slide=>{
+    slide.style.display=(filter==='all'||slide.dataset.category===filter)?'flex':'none';
+  });
+}));
+
+// Fade-in animation on scroll
+const fadeElements = document.querySelectorAll('.pre-fade');
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('fade-in');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold:0.2 });
+fadeElements.forEach(el=>fadeObserver.observe(el));
+
+// Optional form submit demo
+document.getElementById('demoForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  alert('Thank you! Our team will contact you shortly.');
+  e.target.reset();
+});
+
+
+// Contact particles animation
+const canvas = document.getElementById('contact-particles');
+const ctx = canvas.getContext('2d');
+let particlesArray;
+
+function initParticles() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  particlesArray = [];
+  const numberOfParticles = Math.floor(canvas.width / 20);
+
+  for(let i=0; i<numberOfParticles; i++){
+    particlesArray.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 3 + 1,
+      speedX: Math.random() * 1 - 0.5,
+      speedY: Math.random() * 1 - 0.5
+    });
+  }
+}
+
+function animateParticles() {
+  ctx.clearRect(0,0,canvas.width, canvas.height);
+
+  particlesArray.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
+    ctx.fillStyle = "rgba(37,99,235,0.4)";
+    ctx.fill();
+
+    p.x += p.speedX;
+    p.y += p.speedY;
+
+    // wrap around edges
+    if(p.x < 0) p.x = canvas.width;
+    if(p.x > canvas.width) p.x = 0;
+    if(p.y < 0) p.y = canvas.height;
+    if(p.y > canvas.height) p.y = 0;
+  });
+
+  requestAnimationFrame(animateParticles);
+}
+
+// Initialize
+initParticles();
+animateParticles();
+
+// Resize
+window.addEventListener('resize', () => {
+  initParticles();
+});

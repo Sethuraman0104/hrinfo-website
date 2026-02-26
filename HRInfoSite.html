@@ -37,6 +37,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -81,7 +82,7 @@
           </div>
         </li>
 
-        <li><a href="#"><i class="fas fa-briefcase"></i> Services</a></li>
+        <li><a href="#services"><i class="fas fa-briefcase"></i> Services</a></li>
         <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
@@ -1937,8 +1938,572 @@
 
 </section>
 
-
   <div class="hero-divider"></div>
+<section id="pricing" class="pricing-section">
+
+  <div class="pricing-header">
+    <div class="section-badge">
+      <i class="fas fa-coins"></i>
+      <span>Flexible Pricing</span>
+    </div>
+
+    <h2 class="services-title">
+      Build Your <span>HR Info Plan</span>
+    </h2>
+
+    <p class="pricing-subtitle">
+      Simple pricing. Per User / Per Month. Scale anytime.
+    </p>
+  </div>
+
+  <div class="pricing-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="pricing-left">
+
+      <!-- User Slider -->
+      <div class="user-slider-box">
+        <label>
+          <i class="fas fa-users"></i>
+          Number of Employees:
+          <strong><span id="userCountLabel">10</span></strong>
+        </label>
+        <input type="range" id="userCount" min="1" max="1000" value="10" />
+      </div>
+
+      <div class="pricing-container">
+
+        <!-- ================= EMPLOYEE MODULE (Mandatory) ================= -->
+        <div class="pricing-card expandable mandatory">
+
+          <div class="card-top">
+            <i class="fas fa-id-badge module-icon"></i>
+            <h3>Employee Module</h3>
+            <p>$0.30 <span>Per User / Per Month</span></p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-strip"><i class="fas fa-database"></i><span>Centralized Employee Database</span></div>
+            <div class="feature-strip"><i class="fas fa-user-edit"></i><span>Employee Change Request Workflow</span></div>
+            <div class="feature-strip"><i class="fas fa-user-shield"></i><span>Role-Based Visibility</span></div>
+            <div class="feature-strip"><i class="fas fa-lock"></i><span>Login & Access Control</span></div>
+            <div class="feature-strip"><i class="fas fa-folder-open"></i><span>Documents & Salary Management</span></div>
+          </div>
+
+        </div>
+
+        <!-- ================= ORGANIZATION CHART (Mandatory) ================= -->
+        <div class="pricing-card expandable mandatory">
+
+          <div class="card-top">
+            <i class="fas fa-sitemap module-icon"></i>
+            <h3>Organization Chart</h3>
+            <p>$0.20 <span>Per User / Per Month</span></p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-strip"><i class="fas fa-layer-group"></i><span>Department & Location Hierarchy</span></div>
+            <div class="feature-strip"><i class="fas fa-project-diagram"></i><span>Structured Reporting Levels</span></div>
+            <div class="feature-strip"><i class="fas fa-user-cog"></i><span>Position Assignment Control</span></div>
+            <div class="feature-strip"><i class="fas fa-check-circle"></i><span>Automated Approval Workflow</span></div>
+          </div>
+
+        </div>
+
+        <!-- ================= LEAVE MANAGEMENT SYSTEM (LMS) ================= -->
+<div class="pricing-card expandable">
+
+  <div class="card-top">
+    <i class="fas fa-calendar-alt module-icon"></i>
+    <h3>Leave Management System (LMS)</h3>
+    <p>$0.50 <span>Per User / Per Month</span></p>
+    <label class="switch">
+      <input type="checkbox" class="module" data-price="0.5">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="feature-list">
+
+    <div class="feature-strip">
+      <i class="fas fa-paper-plane"></i>
+      <span>Online Leave Application & Approval Workflow</span>
+    </div>
+
+    <div class="feature-strip">
+      <i class="fas fa-balance-scale"></i>
+      <span>Real-Time Leave Balance Tracking</span>
+    </div>
+
+    <div class="feature-strip">
+      <i class="fas fa-sync-alt"></i>
+      <span>Automatic Leave Accrual Calculation</span>
+    </div>
+
+    <div class="feature-strip">
+      <i class="fas fa-user-clock"></i>
+      <span>Supervisor & HR Multi-Level Approval</span>
+    </div>
+
+    <div class="feature-strip">
+      <i class="fas fa-chart-pie"></i>
+      <span>Leave Reports & Policy Compliance</span>
+    </div>
+
+  </div>
+
+</div>
+
+        <!-- ================= TIME & ATTENDANCE ================= -->
+        <div class="pricing-card expandable">
+
+          <div class="card-top">
+            <i class="fas fa-clock module-icon"></i>
+            <h3>Time & Attendance</h3>
+            <p>$0.65 <span>Per User / Per Month</span></p>
+            <label class="switch">
+              <input type="checkbox" class="module" data-price="0.65">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-strip"><i class="fas fa-fingerprint"></i><span>Biometric Integration</span></div>
+            <div class="feature-strip"><i class="fas fa-calendar-check"></i><span>Daily Attendance Logs</span></div>
+            <div class="feature-strip"><i class="fas fa-business-time"></i><span>Overtime Calculation</span></div>
+            <div class="feature-strip"><i class="fas fa-chart-line"></i><span>Attendance Reports</span></div>
+          </div>
+
+        </div>
+
+        <!-- ================= TRAINING & DEVELOPMENT ================= -->
+        <div class="pricing-card expandable">
+
+          <div class="card-top">
+            <i class="fas fa-chalkboard-teacher module-icon"></i>
+            <h3>Training & Development</h3>
+            <p>$0.30 <span>Per User / Per Month</span></p>
+            <label class="switch">
+              <input type="checkbox" class="module" data-price="0.3">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-strip"><i class="fas fa-tasks"></i><span>Training Request Workflow</span></div>
+            <div class="feature-strip"><i class="fas fa-chart-bar"></i><span>Skill Development Tracking</span></div>
+            <div class="feature-strip"><i class="fas fa-users-cog"></i><span>Performance Alignment</span></div>
+            <div class="feature-strip"><i class="fas fa-file-alt"></i><span>Development Reports</span></div>
+          </div>
+
+        </div>
+
+        <!-- ================= RECRUITMENT ================= -->
+        <div class="pricing-card expandable">
+
+          <div class="card-top">
+            <i class="fas fa-user-plus module-icon"></i>
+            <h3>Recruitment</h3>
+            <p>$0.50 <span>Per User / Per Month</span></p>
+            <label class="switch">
+              <input type="checkbox" class="module" data-price="0.5">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-strip"><i class="fas fa-briefcase"></i><span>Vacancy Management</span></div>
+            <div class="feature-strip"><i class="fas fa-user-check"></i><span>Applicant Tracking</span></div>
+            <div class="feature-strip"><i class="fas fa-comments"></i><span>Interview Workflow</span></div>
+            <div class="feature-strip"><i class="fas fa-file-signature"></i><span>Offer Management</span></div>
+          </div>
+
+        </div>
+
+        <!-- ================= PAYSLIP GENERATOR ================= -->
+        <div class="pricing-card expandable">
+
+          <div class="card-top">
+            <i class="fas fa-file-invoice-dollar module-icon"></i>
+            <h3>Payslip Generator</h3>
+            <p>$0.20 <span>Per User / Per Month</span></p>
+            <label class="switch">
+              <input type="checkbox" class="module" data-price="0.2">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-strip"><i class="fas fa-calculator"></i><span>Automated Payslip Creation</span></div>
+            <div class="feature-strip"><i class="fas fa-file-pdf"></i><span>Secure PDF Download</span></div>
+            <div class="feature-strip"><i class="fas fa-money-bill-wave"></i><span>Salary Breakdown</span></div>
+            <div class="feature-strip"><i class="fas fa-history"></i><span>Payroll History Records</span></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="pricing-right">
+
+      <div class="pricing-summary">
+        <h4>Total Monthly Cost</h4>
+        <div class="price-display">
+          $<span id="totalPrice">0.00</span>
+        </div>
+        <p>Based on selected modules & users</p>
+      </div>
+
+      <div class="enterprise-card">
+        <h4><i class="fas fa-building"></i> Enterprise License</h4>
+        <p>
+          Need custom integrations, unlimited users,
+          priority SLA support, or on-premise deployment?
+          Contact our team for a tailored enterprise solution.
+        </p>
+
+        <!-- Enterprise License Contact -->
+<a href="mailto:support@yourdomain.com?subject=Enterprise License Inquiry - HR Info Platform&body=Hello HR Info Team,%0D%0A%0D%0AWe would like to inquire about the Enterprise License plan.%0D%0ACompany Name:%0D%0AEstimated Users:%0D%0ARequirements:%0D%0A"
+   class="btn btn-enterprise">
+  <i class="fas fa-envelope"></i> Contact Support
+</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+ <div class="hero-divider"></div>
+
+ <!-- ================= OTHER SERVICES SECTION ================= -->
+<section id="services" class="services-section">
+
+  <div class="services-header">
+    <div class="section-badge">
+      <i class="fas fa-layer-group"></i>
+      <span>Other Services</span>
+    </div>
+
+    <h2 class="services-title">
+      Digital Solutions Beyond <span>HR Info</span>
+    </h2>
+
+    <p class="services-subtitle">
+      We help businesses grow with powerful digital tools, modern websites,
+      and smart marketing strategies.
+    </p>
+  </div>
+
+  <div class="services-wrapper">
+
+    <!-- ================= CMS ================= -->
+    <div class="service-card">
+      <div class="service-icon cms">
+        <i class="fas fa-edit"></i>
+      </div>
+
+      <h3>Content Management System (CMS)</h3>
+      <p class="service-desc">
+        Easily create, manage, and update your website content without coding.
+        Our CMS solutions give you full control with an intuitive interface.
+      </p>
+
+      <div class="service-features">
+        <div><i class="fas fa-check-circle"></i> User-Friendly Interface</div>
+        <div><i class="fas fa-check-circle"></i> Templates & Themes</div>
+        <div><i class="fas fa-check-circle"></i> Plugins & Extensions</div>
+        <div><i class="fas fa-check-circle"></i> User Roles & Permissions</div>
+        <div><i class="fas fa-check-circle"></i> Built-in SEO Optimization</div>
+      </div>
+
+      <div class="service-hover-content">
+        <p>
+          Manage text, images, videos, forms, and more — all from a powerful
+          dashboard designed for simplicity and performance.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- ================= WEBSITE DESIGN ================= -->
+    <div class="service-card">
+      <div class="service-icon design">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+
+      <h3>Professional Website Designing</h3>
+      <p class="service-desc">
+        Modern, responsive, and SEO-optimized websites tailored to your business goals.
+      </p>
+
+      <div class="service-features">
+        <div><i class="fas fa-check-circle"></i> Responsive Web Design</div>
+        <div><i class="fas fa-check-circle"></i> Custom UI/UX Design</div>
+        <div><i class="fas fa-check-circle"></i> SEO-Optimized Structure</div>
+        <div><i class="fas fa-check-circle"></i> E-Commerce Ready</div>
+        <div><i class="fas fa-check-circle"></i> Fast Performance</div>
+      </div>
+
+      <div class="service-hover-content">
+        <p>
+          We build visually stunning and conversion-focused websites
+          that engage users and deliver measurable results.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- ================= SEO & SOCIAL ================= -->
+    <div class="service-card">
+      <div class="service-icon seo">
+        <i class="fas fa-chart-line"></i>
+      </div>
+
+      <h3>SEO & Social Media Support</h3>
+      <p class="service-desc">
+        Increase visibility, grow engagement, and drive more traffic
+        through strategic SEO and social media marketing.
+      </p>
+
+      <div class="service-features">
+        <div><i class="fas fa-check-circle"></i> SEO Optimization</div>
+        <div><i class="fas fa-check-circle"></i> Social Media Strategy</div>
+        <div><i class="fas fa-check-circle"></i> Content Creation</div>
+        <div><i class="fas fa-check-circle"></i> Analytics & Reporting</div>
+      </div>
+
+      <div class="service-hover-content">
+        <p>
+          From ranking higher on Google to engaging audiences on social platforms,
+          we help your brand stand out in the digital space.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <div class="hero-divider"></div>
+
+<section id="clients" class="clients-section">
+
+  <!-- Parallax Background -->
+  <div class="parallax-bg"></div>
+
+  <div class="clients-header">
+    <div class="section-badge">
+      <i class="fas fa-handshake"></i>
+      <span>Our Clients</span>
+    </div>
+
+    <h2 class="clients-title">
+      Trusted by Leading Companies <span>Worldwide</span>
+    </h2>
+
+    <p class="clients-subtitle">
+      We take pride in delivering high-quality HR solutions to our esteemed clients.
+    </p>
+  </div>
+
+  <!-- Animated Counters -->
+  <div class="clients-counters">
+    <div class="counter-box">
+      <h3 id="clientsCount">0</h3>
+      <p>Clients Served</p>
+    </div>
+    <div class="counter-box">
+      <h3 id="projectsCount">0</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="counter-box">
+      <h3 id="countriesCount">0</h3>
+      <p>Countries Served</p>
+    </div>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="clients-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="bahrain">Bahrain</button>
+    <button class="filter-btn" data-filter="media">Media</button>
+    <button class="filter-btn" data-filter="trading">Trading</button>
+  </div>
+
+  <!-- Clients Logo Carousel -->
+  <div class="clients-carousel swiper-container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide client-card" data-category="trading">
+        <a href="https://mcfwll.com/" target="_blank">
+          <img src="images/mcflogo.png" alt="MADHA Carpentry Factory W.L.L">
+          <p>MADHA Carpentry Factory W.L.L</p>
+        </a>
+      </div>
+
+      <div class="swiper-slide client-card" data-category="trading">
+        <a href="https://palmerabh.com/" target="_blank">
+          <img src="images/PGTLogotransparent.png" alt="Palmera General Trading Bahrain">
+          <p>Palmera General Trading Bahrain</p>
+        </a>
+      </div>
+
+      <div class="swiper-slide client-card" data-category="media">
+        <a href="#" target="_blank">
+          <img src="images/TOBDown.jpg" alt="Times of Bahrain | Manama">
+          <p>Times of Bahrain | Manama</p>
+        </a>
+      </div>
+
+      <div class="swiper-slide client-card" data-category="media">
+        <a href="#" target="_blank">
+          <img src="images/AMMedia.jfif" alt="AM Media Bahrain">
+          <p>AM Media Bahrain</p>
+        </a>
+      </div>
+
+      <!-- Add more clients here -->
+
+    </div>
+  </div>
+
+  <!-- Testimonials Carousel -->
+  <div class="testimonials-wrapper swiper-container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide testimonial-card">
+        <p>"HR Info has transformed our HR processes. Highly recommend!"</p>
+        <h4>- John Doe, MADHA Carpentry Factory W.L.L</h4>
+      </div>
+
+      <div class="swiper-slide testimonial-card">
+        <p>"Seamless integration and amazing support from the team."</p>
+        <h4>- Jane Smith, Palmera General Trading Bahrain</h4>
+      </div>
+
+      <div class="swiper-slide testimonial-card">
+        <p>"The platform is intuitive and saved us countless hours."</p>
+        <h4>- Ali Khan, Times of Bahrain</h4>
+      </div>
+
+      <!-- Add more testimonials here -->
+
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+</section>
+<div class="hero-divider"></div>
+<section id="contact-us" class="contact-section">
+
+  <!-- Parallax background -->
+  <div class="contact-bg"></div>
+   <!-- Particles container -->
+  <canvas id="contact-particles" class="contact-particles"></canvas>
+
+  <!-- Section Header -->
+  <div class="contact-header">
+    <div class="section-badge animated-gradient">
+      <i class="fas fa-envelope"></i>
+      <span>Contact Us</span>
+    </div>
+    <h2 class="contact-title">Let’s Get In Touch!</h2>
+    <p class="contact-subtitle">
+      We value your interest in our HR Info Software and are here to provide you with the information and support you need. 
+      Whether you have questions about our services, want a demo, or need technical assistance, we’re always ready to assist.
+    </p>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper tilt-card pre-fade">
+      <h3>Request a Free Demo</h3>
+      <p>Fill out the form below to request a free demo, and we’ll be in touch to schedule a personalized walkthrough.</p>
+      <form id="demoForm">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-comment-alt"></i>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <!-- Demo Form Submit -->
+<button type="submit" class="btn btn-gradient">
+  <i class="fas fa-paper-plane"></i> Send Request
+</button>
+      </form>
+    </div>
+
+    <!-- Contact Info Cards -->
+    <div class="contact-info-wrapper">
+
+      <div class="contact-card tilt-card pre-fade">
+        <i class="fas fa-phone-alt"></i>
+        <h4>Phone Support</h4>
+        <p>Call us at <a href="tel:+97333375769">+973 33375769</a></p>
+      </div>
+
+      <div class="contact-card tilt-card pre-fade">
+        <i class="fas fa-envelope"></i>
+        <h4>Email</h4>
+        <p>Send us an email at <a href="mailto:hrinfo0104@gmail.com">hrinfo0104@gmail.com</a></p>
+      </div>
+
+      <div class="contact-card tilt-card pre-fade">
+        <i class="fab fa-whatsapp"></i>
+        <h4>WhatsApp</h4>
+        <p><a href="https://wa.me/97333375769" target="_blank">Chat Now</a></p>
+      </div>
+
+      <div class="contact-card tilt-card pre-fade">
+        <i class="fas fa-comments"></i>
+        <h4>Live Chat</h4>
+        <p>Available during business hours for real-time assistance.</p>
+      </div>
+
+      <div class="contact-card tilt-card pre-fade">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Office Location</h4>
+        <p>Visit us at Al-Hoora, Kingdom of Bahrain</p>
+      </div>
+
+      <div class="contact-card tilt-card partners-card pre-fade">
+  <i class="fas fa-handshake"></i>
+  <h4>Looking for Partners & Supporters</h4>
+  <p>If you’re interested in collaborating with HR Info, contact us for partnership opportunities.</p>
+  <!-- Partner Inquiry -->
+  <a href="mailto:hrinfo0104@gmail.com?subject=Partner Inquiry - HR Info" class="btn">
+    <i class="fas fa-handshake"></i> Contact Us
+  </a>
+</div>
+
+      <!-- Social Links -->
+      <div class="social-links tilt-card pre-fade">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="contact-footer">
+    <p>&copy; 2024 HR Info. All rights reserved.</p>
+  </div>
+
+</section>
 
   <!-- Modal for Zoom -->
   <div id="image-modal" class="image-modal">
@@ -1947,6 +2512,7 @@
     <div id="caption"></div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
