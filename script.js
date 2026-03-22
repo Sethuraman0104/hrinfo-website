@@ -384,3 +384,26 @@ animateParticles();
 window.addEventListener('resize', () => {
   initParticles();
 });
+
+document.getElementById("requestDemoBtn").addEventListener("click", function () {
+  document.getElementById("contact-us").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.getElementById("explorefeaturesBtn").addEventListener("click", function () {
+  document.getElementById("features").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.getElementById('downloadBrochure').addEventListener('click', function() {
+  const link = document.createElement('a');
+
+  // Use relative path, not localhost URL
+  link.href = 'HRInfoBrochure.pdf'; // or 'files/HR-Info-Brochure.pdf' if in subfolder
+  link.download = 'HRInfoBrochure.pdf'; // The downloaded filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});

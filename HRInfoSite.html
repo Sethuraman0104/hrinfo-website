@@ -8,10 +8,12 @@
   <title>HR-Info | Comprehensive HR Management System</title>
 
   <!-- Meta Description (for SEO and sharing) -->
-  <meta name="description" content="HR-Info is an all-in-one Human Resource Management System providing modules for Organization Management, Time & Attendance, Overtime Tracking, Training & Development, Reports, Payroll & Payslip Generation, and Custom Settings. Streamline HR operations, automate workflows, and enhance workforce productivity.">
+  <meta name="description"
+    content="HR-Info is an all-in-one Human Resource Management System providing modules for Organization Management, Time & Attendance, Overtime Tracking, Training & Development, Reports, Payroll & Payslip Generation, and Custom Settings. Streamline HR operations, automate workflows, and enhance workforce productivity.">
 
   <!-- Meta Keywords (optional) -->
-  <meta name="keywords" content="HR software, HR management, employee management, payroll system, attendance tracking, overtime management, training management, reports, HR automation">
+  <meta name="keywords"
+    content="HR software, HR management, employee management, payroll system, attendance tracking, overtime management, training management, reports, HR automation">
 
   <!-- Meta Author -->
   <meta name="author" content="HR-Info System">
@@ -24,15 +26,17 @@
 
   <!-- Optional Open Graph / Social Sharing -->
   <meta property="og:title" content="HR-Info | Comprehensive HR Management System">
-  <meta property="og:description" content="Manage your workforce efficiently with HR-Info: Organization, Attendance, Overtime, Training, Payroll, and Reports modules. Streamline HR operations and boost productivity.">
+  <meta property="og:description"
+    content="Manage your workforce efficiently with HR-Info: Organization, Attendance, Overtime, Training, Payroll, and Reports modules. Streamline HR operations and boost productivity.">
   <meta property="og:image" content="images/hr-info-logo.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:url" content="https://hrinfo.live/">
 
   <!-- Optional Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HR-Info | Comprehensive HR Management System">
-  <meta name="twitter:description" content="All-in-one HR software with modules for organization, attendance, payroll, overtime, training, and reports.">
+  <meta name="twitter:description"
+    content="All-in-one HR software with modules for organization, attendance, payroll, overtime, training, and reports.">
   <meta name="twitter:image" content="images/hr-info-logo.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -55,8 +59,8 @@
       <ul class="nav-links">
         <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
         <li>
-  <a href="#features"><i class="fas fa-star"></i> Features</a>
-</li>
+          <a href="#features"><i class="fas fa-star"></i> Features</a>
+        </li>
 
         <li class="mega-parent">
           <a href="#"><i class="fas fa-layer-group"></i> Modules <i class="fas fa-chevron-down small-icon"></i></a>
@@ -71,19 +75,28 @@
             <div class="mega-item" data-module="settings"><i class="fas fa-cogs"></i><span>General Settings</span></div>
             <div class="mega-item" data-module="training"><i class="fas fa-chalkboard-teacher"></i><span>Training &
                 Development</span></div>
-                <div class="mega-item" data-module="recruitment">
-  <i class="fas fa-user-plus"></i>
-  <span>Recruitment Module</span>
-</div>
-            
+            <div class="mega-item" data-module="recruitment">
+              <i class="fas fa-user-plus"></i>
+              <span>Recruitment Module</span>
+            </div>
+
             <div class="mega-item" data-module="reports"><i class="fas fa-chart-line"></i><span>Reports</span></div>
             <div class="mega-item" data-module="payslip"><i class="fas fa-file-invoice-dollar"></i><span>Payslip
                 Generator</span></div>
           </div>
         </li>
-
+        <li>
+          <a href="#pricing">
+            <i class="fas fa-tags"></i> Pricing
+          </a>
+        </li>
         <li><a href="#services"><i class="fas fa-briefcase"></i> Services</a></li>
-        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li>
+          <a href="#clients">
+            <i class="fas fa-users"></i> Clients
+          </a>
+        </li>
+        <li><a href="#contact-us"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -98,8 +111,12 @@
       </p>
 
       <div class="hero-buttons">
-        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request Demo</button>
-        <button class="btn btn-outline"><i class="fas fa-lightbulb"></i> Learn More</button>
+        <button class="btn btn-primary" id="requestDemoBtn">
+          <i class="fas fa-paper-plane"></i> Request Demo
+        </button>
+        <button class="btn btn-outline" id="downloadBrochure">
+  <i class="fas fa-file-download"></i> Download Brochure
+</button>
       </div>
     </div>
   </section>
@@ -131,7 +148,7 @@
           Manage employees, leave, payroll, attendance, training, and overtime
           seamlessly within one secure and modern HR ecosystem.
         </p>
-        <button class="btn btn-primary"><i class="fas fa-play"></i> Explore Features</button>
+        <button class="btn btn-primary" id="explorefeaturesBtn"><i class="fas fa-play"></i> Explore Features</button>
       </div>
 
       <div class="intro-right">
@@ -242,79 +259,79 @@
   <div class="hero-divider"></div>
 
   <section class="modules-timeline-section" id="modulesSection">
-  <!-- HEADER -->
-  <div class="timeline-header">
+    <!-- HEADER -->
+    <div class="timeline-header">
 
-    <div class="section-badge">
-      <i class="fas fa-layer-group"></i>
-      <span>HR Info Platform</span>
-    </div>
-
-    <h2 class="features-main-title">
-      Intelligent HR Management Ecosystem
-    </h2>
-
-    <p class="section-subtitle">
-      A fully integrated suite of smart HR modules designed to streamline employee 
-      lifecycle management, optimize workforce operations, and deliver real-time 
-      organizational insights — all within a single unified platform.
-    </p>
-
-  </div>
-
-  <div class="timeline-container">
-
-    <!-- LEFT TIMELINE NAVIGATION -->
-    <div class="timeline-nav">
-
-      <div class="timeline-item active" data-target="employee">
-        <i class="fas fa-user-tie"></i> Employee Management
+      <div class="section-badge">
+        <i class="fas fa-layer-group"></i>
+        <span>HR Info Platform</span>
       </div>
 
-      <div class="timeline-item" data-target="org">
-        <i class="fas fa-sitemap"></i> Organization Structure
-      </div>
+      <h2 class="features-main-title">
+        Intelligent HR Management Ecosystem
+      </h2>
 
-      <div class="timeline-item" data-target="lms">
-        <i class="fas fa-graduation-cap"></i> Leave Management
-      </div>
-
-      <div class="timeline-item" data-target="attendance">
-        <i class="fas fa-clock"></i> Time & Attendance
-      </div>
-
-      <div class="timeline-item" data-target="overtime">
-        <i class="fas fa-business-time"></i> Overtime Management
-      </div>
-
-      <div class="timeline-item" data-target="training">
-        <i class="fas fa-chalkboard-teacher"></i> Training & Development
-      </div>
-
-      <div class="timeline-item" data-target="recruitment">
-  <i class="fas fa-user-plus"></i> Recruitment Module
-</div>
-
-      <div class="timeline-item" data-target="settings">
-        <i class="fas fa-cogs"></i> General Settings
-      </div>
-
-      <div class="timeline-item" data-target="reports">
-        <i class="fas fa-chart-line"></i> Reports & Analytics
-      </div>
-
-      <div class="timeline-item" data-target="payslip">
-        <i class="fas fa-file-invoice-dollar"></i> Payslip Generator
-      </div>
+      <p class="section-subtitle">
+        A fully integrated suite of smart HR modules designed to streamline employee
+        lifecycle management, optimize workforce operations, and deliver real-time
+        organizational insights — all within a single unified platform.
+      </p>
 
     </div>
 
-    <!-- RIGHT CONTENT -->
-    <div class="timeline-content">
+    <div class="timeline-container">
 
-      <!-- EMPLOYEE -->
-      <div class="module-content active" id="employee">
-        <section class="employee-module-section">
+      <!-- LEFT TIMELINE NAVIGATION -->
+      <div class="timeline-nav">
+
+        <div class="timeline-item active" data-target="employee">
+          <i class="fas fa-user-tie"></i> Employee Management
+        </div>
+
+        <div class="timeline-item" data-target="org">
+          <i class="fas fa-sitemap"></i> Organization Structure
+        </div>
+
+        <div class="timeline-item" data-target="lms">
+          <i class="fas fa-graduation-cap"></i> Leave Management
+        </div>
+
+        <div class="timeline-item" data-target="attendance">
+          <i class="fas fa-clock"></i> Time & Attendance
+        </div>
+
+        <div class="timeline-item" data-target="overtime">
+          <i class="fas fa-business-time"></i> Overtime Management
+        </div>
+
+        <div class="timeline-item" data-target="training">
+          <i class="fas fa-chalkboard-teacher"></i> Training & Development
+        </div>
+
+        <div class="timeline-item" data-target="recruitment">
+          <i class="fas fa-user-plus"></i> Recruitment Module
+        </div>
+
+        <div class="timeline-item" data-target="settings">
+          <i class="fas fa-cogs"></i> General Settings
+        </div>
+
+        <div class="timeline-item" data-target="reports">
+          <i class="fas fa-chart-line"></i> Reports & Analytics
+        </div>
+
+        <div class="timeline-item" data-target="payslip">
+          <i class="fas fa-file-invoice-dollar"></i> Payslip Generator
+        </div>
+
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="timeline-content">
+
+        <!-- EMPLOYEE -->
+        <div class="module-content active" id="employee">
+          <section class="employee-module-section">
             <!-- Module Header -->
             <div class="module-header">
               <div class="module-badge">
@@ -413,2097 +430,2153 @@
                   <img src="images/My Employees - Salary.png" alt="Employee Profile" class="zoomable-image">
                 </div>
 
-                 <!-- NEW IMAGE 2 -->
+                <!-- NEW IMAGE 2 -->
                 <div class="image-wrapper">
                   <img src="images/My Employees - Documents.png" alt="Employee Profile" class="zoomable-image">
                 </div>
-                 <!-- NEW IMAGE 2 -->
+                <!-- NEW IMAGE 2 -->
                 <div class="image-wrapper">
                   <img src="images/My Employees - Others.png" alt="Employee Profile" class="zoomable-image">
                 </div>
-                 <!-- NEW IMAGE 2 -->
+                <!-- NEW IMAGE 2 -->
                 <div class="image-wrapper">
                   <img src="images/Employee Change Request _ Pending.png" alt="Change Request" class="zoomable-image">
                 </div>
-                 <!-- NEW IMAGE 2 -->
+                <!-- NEW IMAGE 2 -->
                 <div class="image-wrapper">
-                  <img src="images/Employee Change Request - Pending Detail.png" alt="Change Request" class="zoomable-image">
+                  <img src="images/Employee Change Request - Pending Detail.png" alt="Change Request"
+                    class="zoomable-image">
                 </div>
-                 <!-- NEW IMAGE 2 -->
+                <!-- NEW IMAGE 2 -->
                 <div class="image-wrapper">
                   <img src="images/Employee Change Request _ Processed.png" alt="Change Request" class="zoomable-image">
                 </div>
-                 <div class="image-wrapper">
-                  <img src="images/Employee Change Request _ Processed Detail.png" alt="Change Request" class="zoomable-image">
+                <div class="image-wrapper">
+                  <img src="images/Employee Change Request _ Processed Detail.png" alt="Change Request"
+                    class="zoomable-image">
                 </div>
               </div>
 
             </div>
           </section>
-      </div>
-
-      <!-- ORGANIZATION -->
-      <div class="module-content" id="org">
-        <section class="employee-module-section">
-
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-sitemap"></i>
-      <span>Organization Chart Module</span>
-    </div>
-
-    <h2 class="module-main-title">
-      Automated Organizational Hierarchy Management
-    </h2>
-
-    <p class="module-subtitle">
-      Design and manage your complete organizational structure with automated 
-      reporting logic, position hierarchy control, and real-time workforce 
-      visibility across departments, divisions, and locations.
-    </p>
-  </div>
-
-  <!-- Module Content -->
-  <div class="module-container">
-
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
-
-        <!-- Organization Chart Management -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-project-diagram"></i>
-          </div>
-          <h3>Manage Organization Chart</h3>
-          <p>
-            HR can create and manage the complete department and location hierarchy 
-            structure, defining divisions, reporting layers, and structured position 
-            allocations within each unit.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-building"></i> Create department & location hierarchy</li>
-            <li><i class="fas fa-layer-group"></i> Define structured reporting levels</li>
-            <li><i class="fas fa-user-plus"></i> Assign positions under each hierarchy</li>
-            <li><i class="fas fa-random"></i> Automated approval & process flow logic</li>
-          </ul>
         </div>
 
-        <!-- Employee Position Hierarchy -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-users-cog"></i>
-          </div>
-          <h3>Employee Position Hierarchy Overview</h3>
-          <p>
-            Visual representation of the organization structure displaying locations, 
-            reporting connections, and position distribution across the enterprise.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-map-marker-alt"></i> Multi-location structure visibility</li>
-            <li><i class="fas fa-sitemap"></i> Position-based reporting structure</li>
-            <li><i class="fas fa-user-check"></i> View filled vs vacant positions</li>
-            <li><i class="fas fa-chart-bar"></i> Workforce allocation insights</li>
-          </ul>
+        <!-- ORGANIZATION -->
+        <div class="module-content" id="org">
+          <section class="employee-module-section">
+
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-sitemap"></i>
+                <span>Organization Chart Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Automated Organizational Hierarchy Management
+              </h2>
+
+              <p class="module-subtitle">
+                Design and manage your complete organizational structure with automated
+                reporting logic, position hierarchy control, and real-time workforce
+                visibility across departments, divisions, and locations.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Organization Chart Management -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Manage Organization Chart</h3>
+                    <p>
+                      HR can create and manage the complete department and location hierarchy
+                      structure, defining divisions, reporting layers, and structured position
+                      allocations within each unit.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-building"></i> Create department & location hierarchy</li>
+                      <li><i class="fas fa-layer-group"></i> Define structured reporting levels</li>
+                      <li><i class="fas fa-user-plus"></i> Assign positions under each hierarchy</li>
+                      <li><i class="fas fa-random"></i> Automated approval & process flow logic</li>
+                    </ul>
+                  </div>
+
+                  <!-- Employee Position Hierarchy -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Employee Position Hierarchy Overview</h3>
+                    <p>
+                      Visual representation of the organization structure displaying locations,
+                      reporting connections, and position distribution across the enterprise.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-map-marker-alt"></i> Multi-location structure visibility</li>
+                      <li><i class="fas fa-sitemap"></i> Position-based reporting structure</li>
+                      <li><i class="fas fa-user-check"></i> View filled vs vacant positions</li>
+                      <li><i class="fas fa-chart-bar"></i> Workforce allocation insights</li>
+                    </ul>
+                  </div>
+
+                  <!-- Position Hierarchy List -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h3>Position Hierarchy Management</h3>
+                    <p>
+                      View and manage all active positions within their respective organizational
+                      hierarchy structure, ensuring proper reporting alignment and structural accuracy.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-briefcase"></i> Complete active position listing</li>
+                      <li><i class="fas fa-level-up-alt"></i> Structured hierarchy mapping</li>
+                      <li><i class="fas fa-link"></i> Auto-reporting configuration</li>
+                      <li><i class="fas fa-check-circle"></i> Process & privilege automation</li>
+                    </ul>
+                  </div>
+
+                  <!-- Occupied Positions Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Occupied Positions</h3>
+                    <p>
+                      Lists all positions currently assigned to active employees. Only positions with active employees
+                      are considered occupied,
+                      allowing HR to monitor workforce allocation in real-time.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user"></i> Display employee assigned to each position</li>
+                      <li><i class="fas fa-building"></i> View department & location of assignment</li>
+                      <li><i class="fas fa-clock"></i> Track active employee status</li>
+                      <li><i class="fas fa-chart-line"></i> Analyze position utilization trends</li>
+                    </ul>
+                  </div>
+
+                  <!-- Vacant Positions Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-user-slash"></i>
+                    </div>
+                    <h3>Vacant Positions</h3>
+                    <p>
+                      Automatically identifies positions without active employee assignments and marks them as vacant.
+                      HR can create
+                      vacancies and publish them to initiate the recruitment process for hiring suitable employees.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-plus-circle"></i> Create new vacancy for unfilled positions</li>
+                      <li><i class="fas fa-bullhorn"></i> Publish vacancy to start recruitment process</li>
+                      <li><i class="fas fa-users"></i> Assign required skills & qualifications</li>
+                      <li><i class="fas fa-file-alt"></i> Monitor application and hiring progress</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+
+                <div class="image-wrapper">
+                  <img src="images/Manage Organization Chart.png" alt="Organization Chart Overview"
+                    class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Employee Position Hierarchy.png" alt="Employee Position Hierarchy Structure"
+                    class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Position Organization Hierarchy.png" alt="Position Organization Hierarchy"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Position List.png" alt="Position List" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Position Detail - About.png" alt="Position Detail" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Occupied Positions.png" alt="Occupied Positions" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Vacant Positions.png" alt="Vacant Positions" class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+
+          </section>
         </div>
 
-        <!-- Position Hierarchy List -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-list-ol"></i>
-          </div>
-          <h3>Position Hierarchy Management</h3>
-          <p>
-            View and manage all active positions within their respective organizational 
-            hierarchy structure, ensuring proper reporting alignment and structural accuracy.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-briefcase"></i> Complete active position listing</li>
-            <li><i class="fas fa-level-up-alt"></i> Structured hierarchy mapping</li>
-            <li><i class="fas fa-link"></i> Auto-reporting configuration</li>
-            <li><i class="fas fa-check-circle"></i> Process & privilege automation</li>
-          </ul>
+        <!-- LMS -->
+        <div class="module-content" id="lms">
+          <section class="employee-module-section">
+
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-calendar-check"></i>
+                <span>Leave Management Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Comprehensive Leave Transaction Management
+              </h2>
+
+              <p class="module-subtitle">
+                Streamline leave configuration, entitlement tracking, approval workflows,
+                and automated balance management with a fully integrated leave processing
+                system designed for accuracy, compliance, and transparency.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Configure Leave Types -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Configure Leave Types</h3>
+                    <p>
+                      Create and manage customizable leave categories aligned with
+                      organizational policies. HR can define leave structures, configure
+                      accrual-based types, and maintain regulatory compliance with a
+                      streamlined configuration process.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-plus-circle"></i> Add & customize leave categories</li>
+                      <li><i class="fas fa-balance-scale"></i> Policy-aligned leave configuration</li>
+                      <li><i class="fas fa-sync-alt"></i> Accrual-based leave setup</li>
+                      <li><i class="fas fa-edit"></i> Update & manage leave structures</li>
+                    </ul>
+                  </div>
+
+                  <!-- Manage Leave Balances -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Manage Leave Balances</h3>
+                    <p>
+                      Maintain accurate leave entitlements by tracking balance allocations
+                      and enforcing usage limits. HR and authorized roles can adjust balances
+                      while ensuring full transparency through automated activity logs.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-calculator"></i> Entitlement-based balance tracking</li>
+                      <li><i class="fas fa-plus-minus"></i> Add or deduct leave days</li>
+                      <li><i class="fas fa-lock"></i> Prevent over-utilization of leave</li>
+                      <li><i class="fas fa-history"></i> Automated adjustment logs & audit trail</li>
+                    </ul>
+                  </div>
+
+                  <!-- Leave Application & Approval Workflow -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h3>Leave Request & Approval Workflow</h3>
+                    <p>
+                      Employees can apply for eligible leave types through a structured
+                      approval hierarchy. Requests flow through reporting managers and HR
+                      processing, ensuring proper validation, balance deduction, and
+                      absenteeism control.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-edit"></i> Employee leave submission</li>
+                      <li><i class="fas fa-sitemap"></i> Multi-level approval workflow</li>
+                      <li><i class="fas fa-check-circle"></i> Final HR processing & confirmation</li>
+                      <li><i class="fas fa-envelope"></i> Automated email notifications</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+
+                <div class="image-wrapper">
+                  <img src="images/Leave Type Settings.png" alt="Leave Type Settings" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Add Leave Type.png" alt="Add Leave Type" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Manage Employee Leave Balances.png" alt="Employee Leave Balance"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/My Leaves.png" alt="My Leaves" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Create Leave.png" alt="Create Leave" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Leave Detail - Pending.png" alt="Leave Detail" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Subordinates Processed Leaves.png" alt="Subordinates Leaves" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Processed Leave Details.png" alt="Processed Leave" class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+
+          </section>
         </div>
 
-        <!-- Occupied Positions Card -->
-<div class="mdlfeaturecard">
-  <div class="mdlfeatureicon">
-    <i class="fas fa-user-check"></i>
-  </div>
-  <h3>Occupied Positions</h3>
-  <p>
-    Lists all positions currently assigned to active employees. Only positions with active employees are considered occupied, 
-    allowing HR to monitor workforce allocation in real-time.
-  </p>
-  <ul class="tab-list">
-    <li><i class="fas fa-user"></i> Display employee assigned to each position</li>
-    <li><i class="fas fa-building"></i> View department & location of assignment</li>
-    <li><i class="fas fa-clock"></i> Track active employee status</li>
-    <li><i class="fas fa-chart-line"></i> Analyze position utilization trends</li>
-  </ul>
-</div>
+        <!-- ATTENDANCE -->
+        <div class="module-content" id="attendance">
+          <section class="employee-module-section">
 
-<!-- Vacant Positions Card -->
-<div class="mdlfeaturecard">
-  <div class="mdlfeatureicon">
-    <i class="fas fa-user-slash"></i>
-  </div>
-  <h3>Vacant Positions</h3>
-  <p>
-    Automatically identifies positions without active employee assignments and marks them as vacant. HR can create 
-    vacancies and publish them to initiate the recruitment process for hiring suitable employees.
-  </p>
-  <ul class="tab-list">
-    <li><i class="fas fa-plus-circle"></i> Create new vacancy for unfilled positions</li>
-    <li><i class="fas fa-bullhorn"></i> Publish vacancy to start recruitment process</li>
-    <li><i class="fas fa-users"></i> Assign required skills & qualifications</li>
-    <li><i class="fas fa-file-alt"></i> Monitor application and hiring progress</li>
-  </ul>
-</div>
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-clock"></i>
+                <span>Time & Attendance Module</span>
+              </div>
 
-      </div>
-    </div>
+              <h2 class="module-main-title">
+                Streamlined Workforce Management & Attendance Automation
+              </h2>
 
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
+              <p class="module-subtitle">
+                Automate attendance tracking, overtime management, schedule configuration,
+                and payroll integration with a centralized system designed to improve
+                accuracy, transparency, and workforce productivity.
+              </p>
+            </div>
 
-      <div class="image-wrapper">
-        <img src="images/Manage Organization Chart.png" 
-             alt="Organization Chart Overview" 
-             class="zoomable-image">
-      </div>
+            <!-- Module Content -->
+            <div class="module-container">
 
-      <div class="image-wrapper">
-        <img src="images/Employee Position Hierarchy.png" 
-             alt="Employee Position Hierarchy Structure" 
-             class="zoomable-image">
-      </div>
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
 
-      <div class="image-wrapper">
-        <img src="images/Position Organization Hierarchy.png" 
-             alt="Position Organization Hierarchy" 
-             class="zoomable-image">
-      </div>
- <div class="image-wrapper">
-        <img src="images/Position List.png" 
-             alt="Position List" 
-             class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Position Detail - About.png" 
-             alt="Position Detail" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Occupied Positions.png" 
-             alt="Occupied Positions" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Vacant Positions.png" 
-             alt="Vacant Positions" 
-             class="zoomable-image">
-      </div>
-    </div>
+                  <!-- Daily Time Record -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <h3>Daily Time Record & Attendance Analytics</h3>
+                    <p>
+                      Track employee clock-ins, clock-outs, breaks, late hours, and overtime
+                      automatically. The system calculates irregularities based on assigned
+                      schedules and provides detailed daily attendance insights.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-sign-in-alt"></i> Real-time clock-in / clock-out tracking</li>
+                      <li><i class="fas fa-hourglass-half"></i> Late & irregular hour calculation</li>
+                      <li><i class="fas fa-chart-line"></i> Attendance analytics & insights</li>
+                      <li><i class="fas fa-file-alt"></i> Detailed daily attendance records</li>
+                    </ul>
+                  </div>
 
-  </div>
+                  <!-- Notes Management Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <h3>Attendance Notes Management</h3>
+                    <p>
+                      HR Info allows employees and HR to record valid working time adjustments via Notes.
+                      Notes can be submitted for offline work, on-site work, or when unable to clock in/out.
+                      HR can configure multiple note types and assign privileges accordingly.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-edit"></i> Employee note submission with privileges</li>
+                      <li><i class="fas fa-cogs"></i> HR-managed note types & classifications</li>
+                      <li><i class="fas fa-user-clock"></i> Accurate attendance adjustments</li>
+                      <li><i class="fas fa-check-circle"></i> Classification: Personal & Official Notes</li>
+                    </ul>
+                  </div>
 
-</section>
-      </div>
+                  <!-- Notes Settings Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Notes Settings</h3>
+                    <p>
+                      System allows multiple classified notes for attendance. Personal notes are limited to accumulated
+                      working hours,
+                      while Official notes have no restrictions. HR can assign note types to specific employees ensuring
+                      compliance and flexibility.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-shield"></i> HR-controlled note privilege assignment</li>
+                      <li><i class="fas fa-calendar-check"></i> Personal notes validated by schedule hours</li>
+                      <li><i class="fas fa-unlock-alt"></i> Official notes without accumulated restrictions</li>
+                      <li><i class="fas fa-tasks"></i> Supports multiple note types per organization</li>
+                    </ul>
+                  </div>
 
-      <!-- LMS -->
-      <div class="module-content" id="lms">
-        <section class="employee-module-section">
+                  <!-- Attendance Settings - Schedule Management Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Attendance & Schedule Management</h3>
+                    <p>
+                      HR can configure various schedule types, including full-time, part-time, and shift-based
+                      arrangements.
+                      Schedules can be assigned to employees ensuring operational efficiency and workforce flexibility.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-cogs"></i> Create and manage multiple schedule types</li>
+                      <li><i class="fas fa-user-plus"></i> Assign schedules to respective employees</li>
+                      <li><i class="fas fa-clock"></i> Support operational flexibility across roles</li>
+                      <li><i class="fas fa-chart-bar"></i> Optimize workforce allocation and attendance tracking</li>
+                    </ul>
+                  </div>
 
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-calendar-check"></i>
-      <span>Leave Management Module</span>
-    </div>
+                  <!-- Holiday Settings Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Holiday Settings</h3>
+                    <p>
+                      HR can configure recognized holidays in the system, allowing employees to log non-working days.
+                      This ensures compliance, accurate attendance recording, and improved payroll and workforce
+                      management.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-calendar-day"></i> Configure organization-wide holidays</li>
+                      <li><i class="fas fa-user-clock"></i> Integrate holidays into daily time records</li>
+                      <li><i class="fas fa-balance-scale"></i> Ensure compliance with labor regulations</li>
+                      <li><i class="fas fa-smile"></i> Enhance employee clarity and satisfaction</li>
+                    </ul>
+                  </div>
 
-    <h2 class="module-main-title">
-      Comprehensive Leave Transaction Management
-    </h2>
+                </div>
+              </div>
 
-    <p class="module-subtitle">
-      Streamline leave configuration, entitlement tracking, approval workflows, 
-      and automated balance management with a fully integrated leave processing 
-      system designed for accuracy, compliance, and transparency.
-    </p>
-  </div>
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
 
-  <!-- Module Content -->
-  <div class="module-container">
+                <div class="image-wrapper">
+                  <img src="images/Attendance Logs.png" alt="Daily Time Record Overview" class="zoomable-image">
+                </div>
 
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
+                <div class="image-wrapper">
+                  <img src="images/Notes - Create.png" alt="Create Notes" class="zoomable-image">
+                </div>
 
-        <!-- Configure Leave Types -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <h3>Configure Leave Types</h3>
-          <p>
-            Create and manage customizable leave categories aligned with 
-            organizational policies. HR can define leave structures, configure 
-            accrual-based types, and maintain regulatory compliance with a 
-            streamlined configuration process.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-plus-circle"></i> Add & customize leave categories</li>
-            <li><i class="fas fa-balance-scale"></i> Policy-aligned leave configuration</li>
-            <li><i class="fas fa-sync-alt"></i> Accrual-based leave setup</li>
-            <li><i class="fas fa-edit"></i> Update & manage leave structures</li>
-          </ul>
+                <div class="image-wrapper">
+                  <img src="images/Time and Attendance Settings.png" alt="Attendance Settings" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Time and Attendance Settings - Schedule Management.png"
+                    alt="Employee Schedule Management" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Employee schedule.png" alt="Manage Employee Schedules" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Schedule.png" alt="Manage Schedule" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Time and Attendance Settings - Note Settings.png" alt="Manage Notes"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Time and Attendance Settings - Holiday Settings.png" alt="Manage Holidays"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Note List - Pending.png" alt="Manage Notes" class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+
+          </section>
         </div>
 
-        <!-- Manage Leave Balances -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-wallet"></i>
-          </div>
-          <h3>Manage Leave Balances</h3>
-          <p>
-            Maintain accurate leave entitlements by tracking balance allocations 
-            and enforcing usage limits. HR and authorized roles can adjust balances 
-            while ensuring full transparency through automated activity logs.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-calculator"></i> Entitlement-based balance tracking</li>
-            <li><i class="fas fa-plus-minus"></i> Add or deduct leave days</li>
-            <li><i class="fas fa-lock"></i> Prevent over-utilization of leave</li>
-            <li><i class="fas fa-history"></i> Automated adjustment logs & audit trail</li>
-          </ul>
+        <!-- OVERTIME -->
+        <div class="module-content" id="overtime">
+          <section class="employee-module-section">
+
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-clock"></i>
+                <span>Overtime Management Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Streamlined Overtime Tracking & Automated Claims
+              </h2>
+
+              <p class="module-subtitle">
+                Automate overtime tracking, claims submission, and department-specific settings
+                with a centralized system designed to ensure accuracy, transparency, and fairness
+                in managing extra work hours.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Overtime Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Overtime Tracking & Overview</h3>
+                    <p>
+                      Automatically calculate and display monthly overtime hours for each employee.
+                      Employees can review accumulated overtime, submit claims, and HR can process approvals
+                      efficiently,
+                      ensuring accurate compensation and transparency.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-chart-pie"></i> Automated monthly overtime calculations</li>
+                      <li><i class="fas fa-user-clock"></i> Employee review & claim submission</li>
+                      <li><i class="fas fa-tasks"></i> Quick HR review & approval workflow</li>
+                      <li><i class="fas fa-hand-holding-usd"></i> Accurate financial calculation of overtime</li>
+                    </ul>
+                  </div>
+
+                  <!-- Overtime Settings Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Overtime Settings</h3>
+                    <p>
+                      Configure organization-wide and department-specific overtime rules. Ensure compliance,
+                      flexibility,
+                      and fair management of extra work hours for all employees.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-globe"></i> Uniform application for all employees</li>
+                      <li><i class="fas fa-sliders-h"></i> Configurable values & policies</li>
+                      <li><i class="fas fa-building"></i> Department-specific overtime rules</li>
+                      <li><i class="fas fa-balance-scale"></i> Transparent pay calculation per department</li>
+                    </ul>
+                  </div>
+
+                  <!-- Overtime Summary Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Overtime Summary</h3>
+                    <p>
+                      HR can overview all processed overtime applications, including total hours and financial
+                      implications,
+                      providing clear insights for reporting and payroll purposes.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-users"></i> Summary of all employees' overtime</li>
+                      <li><i class="fas fa-clock"></i> Total processed overtime hours</li>
+                      <li><i class="fas fa-dollar-sign"></i> Financial implications calculation</li>
+                      <li><i class="fas fa-chart-line"></i> Insights for payroll and reporting</li>
+                    </ul>
+                  </div>
+
+                  <!-- Overtime Process Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-forward"></i>
+                    </div>
+                    <h3>Overtime Process & Workflow</h3>
+                    <p>
+                      The overtime workflow ensures proper submission, approval, and processing with rejection options
+                      at all stages.
+                      Email notifications keep employees, supervisors, and HR informed. Submissions are locked after
+                      processing until deleted.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-clock"></i> Employee self-submission</li>
+                      <li><i class="fas fa-user-check"></i> Supervisor approval & rejection</li>
+                      <li><i class="fas fa-user-tie"></i> HR processing & final approval</li>
+                      <li><i class="fas fa-envelope"></i> Email notifications at all stages</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+
+                <div class="image-wrapper">
+                  <img src="images/Overtime.png" alt="Overtime" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Time and Attendance Settings - Common Overtime Settings.png"
+                    alt="Overtime Settings Configuration" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Time and Attendance Settings - Department Based Overtime Settings.png"
+                    alt="Department Specific Overtime" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Overtime - Pending.png" alt="Overtime Pending" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Overtime List - Subordinates.png" alt="Overtime List" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Overtime List - Overtime processor.png" alt="Overtime Process"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Overtime Summary - Overtime Processor.png" alt="Overtime Summary"
+                    class="zoomable-image">
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
         </div>
 
-        <!-- Leave Application & Approval Workflow -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-paper-plane"></i>
-          </div>
-          <h3>Leave Request & Approval Workflow</h3>
-          <p>
-            Employees can apply for eligible leave types through a structured 
-            approval hierarchy. Requests flow through reporting managers and HR 
-            processing, ensuring proper validation, balance deduction, and 
-            absenteeism control.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-edit"></i> Employee leave submission</li>
-            <li><i class="fas fa-sitemap"></i> Multi-level approval workflow</li>
-            <li><i class="fas fa-check-circle"></i> Final HR processing & confirmation</li>
-            <li><i class="fas fa-envelope"></i> Automated email notifications</li>
-          </ul>
+        <!-- TRAINING -->
+        <div class="module-content" id="training">
+          <section class="employee-module-section">
+
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Training & Development Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Empowering Employee Growth Through Structured Training Requests
+              </h2>
+
+              <p class="module-subtitle">
+                Streamline training requests and approvals, track skill development,
+                and gain organizational insights into employee capabilities to foster continuous learning.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Training Request Submission Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Training Request Submission</h3>
+                    <p>
+                      Employees can submit formal training requests aligned with their career goals or job requirements.
+                      Requests follow a structured approval process ensuring management review and alignment with
+                      organizational objectives.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-plus"></i> Employee training request submission</li>
+                      <li><i class="fas fa-user-check"></i> Supervisor approval workflow</li>
+                      <li><i class="fas fa-user-tie"></i> HR final processing and validation</li>
+                      <li><i class="fas fa-clock"></i> Structured approval for timely decisions</li>
+                    </ul>
+                  </div>
+
+                  <!-- Training Tracking & Reporting Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Training Tracking & Reporting</h3>
+                    <p>
+                      All approved training requests are tracked within the system, providing management
+                      with insights into employee skill sets, completed trainings, and areas requiring further
+                      development.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-users"></i> Overview of employee trainings</li>
+                      <li><i class="fas fa-clipboard-list"></i> Track completed and pending requests</li>
+                      <li><i class="fas fa-chart-pie"></i> Skills & competencies analysis</li>
+                      <li><i class="fas fa-tasks"></i> Support workforce development planning</li>
+                    </ul>
+                  </div>
+
+                  <!-- Skill Development Insights Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Skill Development Insights</h3>
+                    <p>
+                      Analyze employee skill levels and identify gaps to make informed decisions about role assignments,
+                      development opportunities, and succession planning. Supports organizational growth and continuous
+                      learning.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-graduate"></i> Identify current competencies</li>
+                      <li><i class="fas fa-project-diagram"></i> Map skills to organizational roles</li>
+                      <li><i class="fas fa-search"></i> Detect skill gaps & training needs</li>
+                      <li><i class="fas fa-chart-bar"></i> Data-driven development planning</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+
+                <div class="image-wrapper">
+                  <img src="images/My Training Request - Pending.png" alt="My Training Request" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Create Training Request.png" alt="Create Training Request" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Subordinate Training Request - Pending.png" alt="Training Request"
+                    class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Training Request - Supervisor Approval Pending.png" alt="Training Request Approval"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Training Request - Supervisor Processed.png" alt="Training Request Process"
+                    class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+
+          </section>
         </div>
 
-      </div>
-    </div>
+        <div class="module-content" id="recruitment">
+          <section class="employee-module-section">
 
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-user-plus"></i>
+                <span>Recruitment Module</span>
+              </div>
 
-      <div class="image-wrapper">
-        <img src="images/Leave Type Settings.png" 
-             alt="Leave Type Settings" 
-             class="zoomable-image">
-      </div>
+              <h2 class="module-main-title">
+                Streamlined Hiring & Intelligent Candidate Management
+              </h2>
 
-      <div class="image-wrapper">
-        <img src="images/Add Leave Type.png" 
-             alt="Add Leave Type" 
-             class="zoomable-image">
-      </div>
+              <p class="module-subtitle">
+                Manage the entire recruitment lifecycle from vacancy creation to onboarding.
+                Track candidates, conduct interviews, send job offers, and seamlessly transition
+                selected candidates into employees — all within one integrated system.
+              </p>
+            </div>
 
-      <div class="image-wrapper">
-        <img src="images/Manage Employee Leave Balances.png" 
-             alt="Employee Leave Balance" 
-             class="zoomable-image">
-      </div>
-<div class="image-wrapper">
-        <img src="images/My Leaves.png" 
-             alt="My Leaves" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Create Leave.png" 
-             alt="Create Leave" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Leave Detail - Pending.png" 
-             alt="Leave Detail" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Subordinates Processed Leaves.png" 
-             alt="Subordinates Leaves" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Processed Leave Details.png" 
-             alt="Processed Leave" 
-             class="zoomable-image">
-      </div>
-    </div>
+            <!-- Module Content -->
+            <div class="module-container">
 
-  </div>
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
 
-</section>
-      </div>
+                  <!-- Vacancy Management -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Vacancy Management</h3>
+                    <p>
+                      Create, configure, and control job openings with structured approval workflows and real-time
+                      status tracking.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-edit"></i> Create & configure job vacancies</li>
+                      <li><i class="fas fa-user-shield"></i> Internal approval workflow</li>
+                      <li><i class="fas fa-hourglass-half"></i> Pending Status</li>
+                      <li><i class="fas fa-bullhorn"></i> Published Status</li>
+                      <li><i class="fas fa-times-circle"></i> Closed Status</li>
+                    </ul>
+                  </div>
 
-      <!-- ATTENDANCE -->
-      <div class="module-content" id="attendance">
-        <section class="employee-module-section">
+                  <!-- Candidate Application Management -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Candidate Application Management</h3>
+                    <p>
+                      Centralized candidate database to manage resumes, documents, and applicant information
+                      efficiently.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-upload"></i> Resume & document uploads</li>
+                      <li><i class="fas fa-id-card"></i> Candidate profile management</li>
+                      <li><i class="fas fa-search"></i> Advanced filtering & search</li>
+                      <li><i class="fas fa-history"></i> Application tracking history</li>
+                    </ul>
+                  </div>
 
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-clock"></i>
-      <span>Time & Attendance Module</span>
-    </div>
+                  <!-- Candidate Pipeline -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Structured Candidate Pipeline</h3>
+                    <p>
+                      Monitor candidate progression through clearly defined recruitment stages within each vacancy.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user"></i> Applied Candidates</li>
+                      <li><i class="fas fa-user-check"></i> Shortlisted Candidates</li>
+                      <li><i class="fas fa-star"></i> Finalised Candidates</li>
+                      <li><i class="fas fa-user-plus"></i> Onboarding Candidates</li>
+                    </ul>
+                  </div>
 
-    <h2 class="module-main-title">
-      Streamlined Workforce Management & Attendance Automation
-    </h2>
+                  <!-- Interview Management -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Interview Scheduling & Evaluation</h3>
+                    <p>
+                      Manage interview rounds with automated scheduling, interviewer assignment, and structured
+                      evaluation forms.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-calendar-alt"></i> Schedule multiple interview rounds</li>
+                      <li><i class="fas fa-user-tie"></i> Assign interviewers</li>
+                      <li><i class="fas fa-clipboard-check"></i> Digital evaluation scoring</li>
+                      <li><i class="fas fa-check-circle"></i> Interview result tracking</li>
+                    </ul>
+                  </div>
 
-    <p class="module-subtitle">
-      Automate attendance tracking, overtime management, schedule configuration, 
-      and payroll integration with a centralized system designed to improve 
-      accuracy, transparency, and workforce productivity.
-    </p>
-  </div>
+                  <!-- Interview Feedback & Decision -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-poll"></i>
+                    </div>
+                    <h3>Interview Feedback & Decision Making</h3>
+                    <p>
+                      Consolidate interviewer feedback to support transparent and data-driven hiring decisions.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-star-half-alt"></i> Rating-based assessments</li>
+                      <li><i class="fas fa-comments"></i> Structured interviewer comments</li>
+                      <li><i class="fas fa-chart-line"></i> Comparative candidate analysis</li>
+                      <li><i class="fas fa-gavel"></i> Final hiring approval</li>
+                    </ul>
+                  </div>
 
-  <!-- Module Content -->
-  <div class="module-container">
+                  <!-- Job Offer Management -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Job Offer Management</h3>
+                    <p>
+                      Generate, send, and track job offers with full negotiation and acceptance workflow management.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-paper-plane"></i> Send Offer Letter</li>
+                      <li><i class="fas fa-handshake"></i> Salary negotiation tracking</li>
+                      <li><i class="fas fa-check"></i> Offer Accepted</li>
+                      <li><i class="fas fa-times"></i> Offer Declined</li>
+                    </ul>
+                  </div>
 
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
+                  <!-- Onboarding Process -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Employee Onboarding</h3>
+                    <p>
+                      Seamlessly transition hired candidates into employees with automated onboarding workflows.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-id-badge"></i> Employee profile creation</li>
+                      <li><i class="fas fa-folder-open"></i> Document submission & verification</li>
+                      <li><i class="fas fa-tasks"></i> Onboarding checklist tracking</li>
+                      <li><i class="fas fa-building"></i> Department & role assignment</li>
+                    </ul>
+                  </div>
 
-        <!-- Daily Time Record -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-calendar-day"></i>
-          </div>
-          <h3>Daily Time Record & Attendance Analytics</h3>
-          <p>
-            Track employee clock-ins, clock-outs, breaks, late hours, and overtime 
-            automatically. The system calculates irregularities based on assigned 
-            schedules and provides detailed daily attendance insights.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-sign-in-alt"></i> Real-time clock-in / clock-out tracking</li>
-            <li><i class="fas fa-hourglass-half"></i> Late & irregular hour calculation</li>
-            <li><i class="fas fa-chart-line"></i> Attendance analytics & insights</li>
-            <li><i class="fas fa-file-alt"></i> Detailed daily attendance records</li>
-          </ul>
-        </div>     
+                </div>
+              </div>
 
-        <!-- Notes Management Card -->
-<div class="mdlfeaturecard">
-  <div class="mdlfeatureicon">
-    <i class="fas fa-sticky-note"></i>
-  </div>
-  <h3>Attendance Notes Management</h3>
-  <p>
-    HR Info allows employees and HR to record valid working time adjustments via Notes. 
-    Notes can be submitted for offline work, on-site work, or when unable to clock in/out. 
-    HR can configure multiple note types and assign privileges accordingly.
-  </p>
-  <ul class="tab-list">
-    <li><i class="fas fa-user-edit"></i> Employee note submission with privileges</li>
-    <li><i class="fas fa-cogs"></i> HR-managed note types & classifications</li>
-    <li><i class="fas fa-user-clock"></i> Accurate attendance adjustments</li>
-    <li><i class="fas fa-check-circle"></i> Classification: Personal & Official Notes</li>
-  </ul>
-</div>
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+                <div class="image-wrapper">
+                  <img src="images/Create Vacancy.png" alt="Create Vacancy" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Vacancy - Pending.png" alt="Candidate Management" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Vacancy - Published.png" alt="Interview Process" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Vacancy Detail - Applied Candidates.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Vacancy Detail - Shortlisted Candidates.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Vacancy Detail - Finalised Candidates With Negotiation Accepted.png"
+                    alt="Job Offer and Onboarding" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Vacancy Detail - Onboarding Candidates.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Candidates.png" alt="Job Offer and Onboarding" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Interviews - With All.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Interviews - Completed.png" alt="Job Offer and Onboarding" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/View Offer.png" alt="Job Offer and Onboarding" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Job Offer Letter - Sent.png" alt="Job Offer and Onboarding" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Job Offer Letter - Sent Pending.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Job Offer Letter - Sent Negotiation.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Job Offer Letter - Negotiation Details.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Job Offer Letter - Accepted.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Onboarding Assing to Position.png" alt="Job Offer and Onboarding"
+                    class="zoomable-image">
+                </div>
+              </div>
 
-<!-- Notes Settings Card -->
-<div class="mdlfeaturecard">
-  <div class="mdlfeatureicon">
-    <i class="fas fa-sliders-h"></i>
-  </div>
-  <h3>Notes Settings</h3>
-  <p>
-    System allows multiple classified notes for attendance. Personal notes are limited to accumulated working hours, 
-    while Official notes have no restrictions. HR can assign note types to specific employees ensuring compliance and flexibility.
-  </p>
-  <ul class="tab-list">
-    <li><i class="fas fa-user-shield"></i> HR-controlled note privilege assignment</li>
-    <li><i class="fas fa-calendar-check"></i> Personal notes validated by schedule hours</li>
-    <li><i class="fas fa-unlock-alt"></i> Official notes without accumulated restrictions</li>
-    <li><i class="fas fa-tasks"></i> Supports multiple note types per organization</li>
-  </ul>
-</div>
-
-<!-- Attendance Settings - Schedule Management Card -->
-<div class="mdlfeaturecard">
-  <div class="mdlfeatureicon">
-    <i class="fas fa-calendar-alt"></i>
-  </div>
-  <h3>Attendance & Schedule Management</h3>
-  <p>
-    HR can configure various schedule types, including full-time, part-time, and shift-based arrangements. 
-    Schedules can be assigned to employees ensuring operational efficiency and workforce flexibility.
-  </p>
-  <ul class="tab-list">
-    <li><i class="fas fa-cogs"></i> Create and manage multiple schedule types</li>
-    <li><i class="fas fa-user-plus"></i> Assign schedules to respective employees</li>
-    <li><i class="fas fa-clock"></i> Support operational flexibility across roles</li>
-    <li><i class="fas fa-chart-bar"></i> Optimize workforce allocation and attendance tracking</li>
-  </ul>
-</div>
-
-<!-- Holiday Settings Card -->
-<div class="mdlfeaturecard">
-  <div class="mdlfeatureicon">
-    <i class="fas fa-umbrella-beach"></i>
-  </div>
-  <h3>Holiday Settings</h3>
-  <p>
-    HR can configure recognized holidays in the system, allowing employees to log non-working days. 
-    This ensures compliance, accurate attendance recording, and improved payroll and workforce management.
-  </p>
-  <ul class="tab-list">
-    <li><i class="fas fa-calendar-day"></i> Configure organization-wide holidays</li>
-    <li><i class="fas fa-user-clock"></i> Integrate holidays into daily time records</li>
-    <li><i class="fas fa-balance-scale"></i> Ensure compliance with labor regulations</li>
-    <li><i class="fas fa-smile"></i> Enhance employee clarity and satisfaction</li>
-  </ul>
-</div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
-
-      <div class="image-wrapper">
-        <img src="images/Attendance Logs.png" 
-             alt="Daily Time Record Overview" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Notes - Create.png" 
-             alt="Create Notes" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Time and Attendance Settings.png" 
-             alt="Attendance Settings" 
-             class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Time and Attendance Settings - Schedule Management.png" 
-             alt="Employee Schedule Management" 
-             class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Employee schedule.png" 
-             alt="Manage Employee Schedules" 
-             class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Manage Schedule.png" 
-             alt="Manage Schedule" 
-             class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Time and Attendance Settings - Note Settings.png" 
-             alt="Manage Notes" 
-             class="zoomable-image">
-      </div>
-<div class="image-wrapper">
-        <img src="images/Time and Attendance Settings - Holiday Settings.png" 
-             alt="Manage Holidays" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Note List - Pending.png" 
-             alt="Manage Notes" 
-             class="zoomable-image">
-      </div>
-    </div>
-
-  </div>
-
-</section>
-      </div>
-
-      <!-- OVERTIME -->
-      <div class="module-content" id="overtime">
-        <section class="employee-module-section">
-
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-clock"></i>
-      <span>Overtime Management Module</span>
-    </div>
-
-    <h2 class="module-main-title">
-      Streamlined Overtime Tracking & Automated Claims
-    </h2>
-
-    <p class="module-subtitle">
-      Automate overtime tracking, claims submission, and department-specific settings 
-      with a centralized system designed to ensure accuracy, transparency, and fairness 
-      in managing extra work hours.
-    </p>
-  </div>
-
-  <!-- Module Content -->
-  <div class="module-container">
-
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
-
-        <!-- Overtime Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h3>Overtime Tracking & Overview</h3>
-          <p>
-            Automatically calculate and display monthly overtime hours for each employee. 
-            Employees can review accumulated overtime, submit claims, and HR can process approvals efficiently, 
-            ensuring accurate compensation and transparency.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-chart-pie"></i> Automated monthly overtime calculations</li>
-            <li><i class="fas fa-user-clock"></i> Employee review & claim submission</li>
-            <li><i class="fas fa-tasks"></i> Quick HR review & approval workflow</li>
-            <li><i class="fas fa-hand-holding-usd"></i> Accurate financial calculation of overtime</li>
-          </ul>
+            </div>
+          </section>
         </div>
 
-        <!-- Overtime Settings Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <h3>Overtime Settings</h3>
-          <p>
-            Configure organization-wide and department-specific overtime rules. Ensure compliance, flexibility, 
-            and fair management of extra work hours for all employees.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-globe"></i> Uniform application for all employees</li>
-            <li><i class="fas fa-sliders-h"></i> Configurable values & policies</li>
-            <li><i class="fas fa-building"></i> Department-specific overtime rules</li>
-            <li><i class="fas fa-balance-scale"></i> Transparent pay calculation per department</li>
-          </ul>
+        <!-- GENERAL SETTINGS -->
+        <div class="module-content" id="settings">
+          <section class="employee-module-section">
+
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-cogs"></i>
+                <span>General Settings Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Comprehensive Customization Settings for Enhanced HR Management
+              </h2>
+
+              <p class="module-subtitle">
+                Extensive configuration options allow organizations to tailor system behavior,
+                define roles, manage menus, set salary structures, and ensure data consistency
+                across all HR processes.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Role Management Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Role Management</h3>
+                    <p>
+                      Define and manage user roles with specific permissions, ensuring employees
+                      access only the necessary information and tools relevant to their job functions.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-users"></i> Assign and manage user roles</li>
+                      <li><i class="fas fa-key"></i> Configure role-based access permissions</li>
+                      <li><i class="fas fa-lock"></i> Enhance data security and compliance</li>
+                      <li><i class="fas fa-tasks"></i> Ensure operational efficiency across departments</li>
+                    </ul>
+                  </div>
+
+                  <!-- Menus Customization Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-bars"></i>
+                    </div>
+                    <h3>Menus Customization</h3>
+                    <p>
+                      Customize navigation menus for departments or roles, providing employees
+                      with a streamlined interface that reflects relevant tools and information.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-layer-group"></i> Tailor navigation per role</li>
+                      <li><i class="fas fa-tasks"></i> Streamline user experience</li>
+                      <li><i class="fas fa-chart-line"></i> Highlight critical tools & modules</li>
+                      <li><i class="fas fa-cogs"></i> Improve productivity with organized menus</li>
+                    </ul>
+                  </div>
+
+                  <!-- Salary Structure Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Salary Structure Management</h3>
+                    <p>
+                      Create and manage complex salary frameworks including pay scales, bonuses,
+                      and allowances to ensure fair and competitive compensation across the organization.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-money-bill-wave"></i> Define pay scales & allowances</li>
+                      <li><i class="fas fa-coins"></i> Manage bonus and incentive structures</li>
+                      <li><i class="fas fa-file-invoice-dollar"></i> Maintain consistent remuneration policies</li>
+                      <li><i class="fas fa-balance-scale"></i> Ensure equity & competitiveness</li>
+                    </ul>
+                  </div>
+
+                  <!-- Employee Profile Tab Settings Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-id-badge"></i>
+                    </div>
+                    <h3>Manage Employee Profile Tab Settings</h3>
+                    <p>
+                      Control visibility of profile sections like About, Position, Salary, Document,
+                      and Others for different roles, ensuring privacy and security.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-eye-slash"></i> Configure section visibility per role</li>
+                      <li><i class="fas fa-user-cog"></i> Control access to sensitive employee information</li>
+                      <li><i class="fas fa-users"></i> Ensure role-based privacy compliance</li>
+                      <li><i class="fas fa-lock"></i> Enhance organizational data security</li>
+                    </ul>
+                  </div>
+
+                  <!-- Email Template Management Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Manage Email Templates</h3>
+                    <p>
+                      Customize automated email communications for leave requests, payroll,
+                      performance reviews, and announcements, ensuring consistency and professionalism.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-edit"></i> Create & edit email templates</li>
+                      <li><i class="fas fa-paper-plane"></i> Automate notifications & alerts</li>
+                      <li><i class="fas fa-calendar-alt"></i> Schedule recurring emails</li>
+                      <li><i class="fas fa-bullhorn"></i> Ensure professional communication</li>
+                    </ul>
+                  </div>
+
+                  <!-- Lookup Settings Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Manage Lookup Settings</h3>
+                    <p>
+                      Standardize dropdown fields across the platform, maintaining data consistency
+                      and ensuring users can select accurate and relevant values.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-list"></i> Configure system-wide lookup values</li>
+                      <li><i class="fas fa-check-circle"></i> Ensure data consistency</li>
+                      <li><i class="fas fa-cogs"></i> Manage module-specific dropdowns</li>
+                      <li><i class="fas fa-database"></i> Simplify data entry & reporting</li>
+                    </ul>
+                  </div>
+
+                  <!-- Audit Trail Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Audit Trail Settings</h3>
+                    <p>
+                      Maintain a complete record of user actions within the system for enhanced
+                      security and compliance. Track modifications and identify unauthorized changes.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-shield"></i> Monitor user activities</li>
+                      <li><i class="fas fa-search"></i> Track system modifications</li>
+                      <li><i class="fas fa-exclamation-triangle"></i> Detect unauthorized changes</li>
+                      <li><i class="fas fa-lock"></i> Ensure accountability & compliance</li>
+                    </ul>
+                  </div>
+
+                  <!-- System Log Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-server"></i>
+                    </div>
+                    <h3>System Log Settings</h3>
+                    <p>
+                      Record and display user login details and system activity to enhance security,
+                      transparency, and auditing capabilities across the platform.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-history"></i> Track all login attempts</li>
+                      <li><i class="fas fa-user-lock"></i> Monitor user activity</li>
+                      <li><i class="fas fa-file-alt"></i> Maintain detailed logs for audits</li>
+                      <li><i class="fas fa-shield-alt"></i> Support security compliance</li>
+                    </ul>
+                  </div>
+
+                  <!-- Hierarchy Chart Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Hierarchy Chart Analytics</h3>
+                    <p>
+                      Visual representation of organizational structure with occupied employee details
+                      and position information, helping HR quickly assess workforce distribution.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-chart-network"></i> Graphical org chart representation</li>
+                      <li><i class="fas fa-user-check"></i> Occupied position visualization</li>
+                      <li><i class="fas fa-briefcase"></i> Position-based employee mapping</li>
+                      <li><i class="fas fa-search-plus"></i> Quick workforce insights</li>
+                    </ul>
+                  </div>
+
+                  <!-- Manage Announcement Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Manage Announcements</h3>
+                    <p>
+                      Create and publish announcements for employees upon login, ensuring that
+                      critical information and alerts are communicated efficiently.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-bell"></i> Broadcast important messages</li>
+                      <li><i class="fas fa-user-friends"></i> Target specific roles or departments</li>
+                      <li><i class="fas fa-calendar-alt"></i> Schedule announcement visibility</li>
+                      <li><i class="fas fa-envelope"></i> Ensure effective employee communication</li>
+                    </ul>
+                  </div>
+
+                  <!-- Employee Details Management Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Manage Employee Details</h3>
+                    <p>
+                      Control employee email accounts, login access, and role assignments
+                      to maintain system security and ensure proper authorization.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-lock"></i> Manage employee login access</li>
+                      <li><i class="fas fa-users-cog"></i> Role assignment & permissions</li>
+                      <li><i class="fas fa-id-badge"></i> Maintain employee profiles</li>
+                      <li><i class="fas fa-shield-alt"></i> Ensure system-wide compliance</li>
+                    </ul>
+                  </div>
+
+                  <!-- Payslip Settings Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Payslip Settings</h3>
+                    <p>
+                      Configure payslip generator with company info, logos, currency, and tax
+                      details to ensure accurate and standardized payroll documentation.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-building"></i> Set company details and logo</li>
+                      <li><i class="fas fa-money-bill-wave"></i> Configure currency & tax info</li>
+                      <li><i class="fas fa-file-alt"></i> Generate standardized payslips</li>
+                      <li><i class="fas fa-cogs"></i> Automate payroll settings integration</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+                <!-- Add relevant screenshots here -->
+                <div class="image-wrapper">
+                  <img src="images/Settings Home - Core Settings.png" alt="Role Management" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Settings Home - Application Settings.png" alt="Role Management"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Settings Home - Notification Settings.png" alt="Role Management"
+                    class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Settings Home - System Settings.png" alt="Role Management" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Manage Roles.png" alt="Menus Customization" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Role Details.png" alt="Menus Customization" class="zoomable-image">
+                </div>
+
+                <div class="image-wrapper">
+                  <img src="images/Manage Menus.png" alt="Menus Customization" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Menus - Child Menus.png" alt="Menus Customization" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Salary Structure.png" alt="Salary Structure" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Add Salary.png" alt="Employee Profile Tab Settings" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Email Settings.png" alt="Email Template Management" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Email Templates.png" alt="Email Template Management" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Lookups.png" alt="Lookup Settings" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Audit Trail Settings.png" alt="Audit Trail" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/System Logs Settings.png" alt="System Log" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Hierarchy Chart.png" alt="Hierarchy Chart" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Announcements.png" alt="Manage Announcement" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Employee Details.png" alt="Manage Employee Details" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Payslip Settings.png" alt="Payslip Settings" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Manage Profile Tab.png" alt="Payslip Settings" class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+          </section>
         </div>
 
-        <!-- Overtime Summary Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-file-invoice-dollar"></i>
-          </div>
-          <h3>Overtime Summary</h3>
-          <p>
-            HR can overview all processed overtime applications, including total hours and financial implications, 
-            providing clear insights for reporting and payroll purposes.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-users"></i> Summary of all employees' overtime</li>
-            <li><i class="fas fa-clock"></i> Total processed overtime hours</li>
-            <li><i class="fas fa-dollar-sign"></i> Financial implications calculation</li>
-            <li><i class="fas fa-chart-line"></i> Insights for payroll and reporting</li>
-          </ul>
+        <!-- REPORTS -->
+        <div class="module-content" id="reports">
+          <section class="employee-module-section">
+
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-file-alt"></i>
+                <span>Reports Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Instant Access to Essential HR Reports
+              </h2>
+
+              <p class="module-subtitle">
+                Quickly access standard HR reports and generate custom reports tailored to organizational needs,
+                ensuring data-driven insights and informed decision-making.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Standard Reports Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Standard Reports</h3>
+                    <p>
+                      Access a range of pre-defined HR reports including attendance, payroll summaries, leave balances,
+                      and performance evaluations. These reports provide immediate insights without extensive setup.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-check"></i> Employee attendance reports</li>
+                      <li><i class="fas fa-money-bill-wave"></i> Payroll summaries & analysis</li>
+                      <li><i class="fas fa-calendar-alt"></i> Leave balances & utilization</li>
+                      <li><i class="fas fa-trophy"></i> Performance evaluation metrics</li>
+                    </ul>
+                  </div>
+
+                  <!-- Custom Reports Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Custom Reports</h3>
+                    <p>
+                      Create reports tailored to your organizational needs. Select relevant fields, apply filters,
+                      and configure layouts to meet exact specifications, enabling data analysis for specialized
+                      requirements.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-filter"></i> Apply filters and criteria to datasets</li>
+                      <li><i class="fas fa-table"></i> Choose relevant data fields for reporting</li>
+                      <li><i class="fas fa-cogs"></i> Configure report layout and design</li>
+                      <li><i class="fas fa-chart-line"></i> Generate actionable insights</li>
+                    </ul>
+                  </div>
+
+                  <!-- Report Privileges Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Report Privileges</h3>
+                    <p>
+                      Control access to reports based on user roles, ensuring sensitive HR data is only accessible to
+                      authorized personnel.
+                      Define role-based visibility and maintain data security and compliance with privacy regulations.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-user-lock"></i> Assign report access by role</li>
+                      <li><i class="fas fa-eye"></i> Ensure sensitive data is secure</li>
+                      <li><i class="fas fa-users"></i> Provide tailored reporting for managers and executives</li>
+                      <li><i class="fas fa-tasks"></i> Streamline report delivery & accountability</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+                <div class="image-wrapper">
+                  <img src="images/Report List.png" alt="Standard Reports" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Report Details.png" alt="Custom Reports" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Report Privileges.png" alt="Report Privileges" class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+          </section>
         </div>
 
-        <!-- Overtime Process Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-forward"></i>
-          </div>
-          <h3>Overtime Process & Workflow</h3>
-          <p>
-            The overtime workflow ensures proper submission, approval, and processing with rejection options at all stages. 
-            Email notifications keep employees, supervisors, and HR informed. Submissions are locked after processing until deleted.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-clock"></i> Employee self-submission</li>
-            <li><i class="fas fa-user-check"></i> Supervisor approval & rejection</li>
-            <li><i class="fas fa-user-tie"></i> HR processing & final approval</li>
-            <li><i class="fas fa-envelope"></i> Email notifications at all stages</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
-
-      <div class="image-wrapper">
-        <img src="images/Overtime.png" 
-             alt="Overtime" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Time and Attendance Settings - Common Overtime Settings.png" 
-             alt="Overtime Settings Configuration" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Time and Attendance Settings - Department Based Overtime Settings.png" 
-             alt="Department Specific Overtime" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Overtime - Pending.png" 
-             alt="Overtime Pending" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Overtime List - Subordinates.png" 
-             alt="Overtime List" 
-             class="zoomable-image">
-      </div>
-<div class="image-wrapper">
-        <img src="images/Overtime List - Overtime processor.png" 
-             alt="Overtime Process" 
-             class="zoomable-image">
-      </div>
-<div class="image-wrapper">
-        <img src="images/Overtime Summary - Overtime Processor.png" 
-             alt="Overtime Summary" 
-             class="zoomable-image">
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-      </div>
-
-      <!-- TRAINING -->
-      <div class="module-content" id="training">
-       <section class="employee-module-section">
-
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-chalkboard-teacher"></i>
-      <span>Training & Development Module</span>
-    </div>
-
-    <h2 class="module-main-title">
-      Empowering Employee Growth Through Structured Training Requests
-    </h2>
-
-    <p class="module-subtitle">
-      Streamline training requests and approvals, track skill development, 
-      and gain organizational insights into employee capabilities to foster continuous learning.
-    </p>
-  </div>
-
-  <!-- Module Content -->
-  <div class="module-container">
-
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
-
-        <!-- Training Request Submission Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-file-alt"></i>
-          </div>
-          <h3>Training Request Submission</h3>
-          <p>
-            Employees can submit formal training requests aligned with their career goals or job requirements. 
-            Requests follow a structured approval process ensuring management review and alignment with organizational objectives.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-plus"></i> Employee training request submission</li>
-            <li><i class="fas fa-user-check"></i> Supervisor approval workflow</li>
-            <li><i class="fas fa-user-tie"></i> HR final processing and validation</li>
-            <li><i class="fas fa-clock"></i> Structured approval for timely decisions</li>
-          </ul>
-        </div>
-
-        <!-- Training Tracking & Reporting Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3>Training Tracking & Reporting</h3>
-          <p>
-            All approved training requests are tracked within the system, providing management 
-            with insights into employee skill sets, completed trainings, and areas requiring further development.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-users"></i> Overview of employee trainings</li>
-            <li><i class="fas fa-clipboard-list"></i> Track completed and pending requests</li>
-            <li><i class="fas fa-chart-pie"></i> Skills & competencies analysis</li>
-            <li><i class="fas fa-tasks"></i> Support workforce development planning</li>
-          </ul>
-        </div>
-
-        <!-- Skill Development Insights Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <h3>Skill Development Insights</h3>
-          <p>
-            Analyze employee skill levels and identify gaps to make informed decisions about role assignments, 
-            development opportunities, and succession planning. Supports organizational growth and continuous learning.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-graduate"></i> Identify current competencies</li>
-            <li><i class="fas fa-project-diagram"></i> Map skills to organizational roles</li>
-            <li><i class="fas fa-search"></i> Detect skill gaps & training needs</li>
-            <li><i class="fas fa-chart-bar"></i> Data-driven development planning</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
-
-      <div class="image-wrapper">
-        <img src="images/My Training Request - Pending.png" 
-             alt="My Training Request" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Create Training Request.png" 
-             alt="Create Training Request" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Subordinate Training Request - Pending.png" 
-             alt="Training Request" 
-             class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Training Request - Supervisor Approval Pending.png" 
-             alt="Training Request Approval" 
-             class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Training Request - Supervisor Processed.png" 
-             alt="Training Request Process" 
-             class="zoomable-image">
-      </div>
-    </div>
-
-  </div>
-
-</section>
-      </div>
-
-      <div class="module-content" id="recruitment">
-<section class="employee-module-section">
-
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-user-plus"></i>
-      <span>Recruitment Module</span>
-    </div>
-
-    <h2 class="module-main-title">
-      Streamlined Hiring & Intelligent Candidate Management
-    </h2>
-
-    <p class="module-subtitle">
-      Manage the entire recruitment lifecycle from vacancy creation to onboarding. 
-      Track candidates, conduct interviews, send job offers, and seamlessly transition 
-      selected candidates into employees — all within one integrated system.
-    </p>
-  </div>
-
-  <!-- Module Content -->
-  <div class="module-container">
-
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
-
-  <!-- Vacancy Management -->
-  <div class="mdlfeaturecard">
-    <div class="mdlfeatureicon">
-      <i class="fas fa-briefcase"></i>
-    </div>
-    <h3>Vacancy Management</h3>
-    <p>
-      Create, configure, and control job openings with structured approval workflows and real-time status tracking.
-    </p>
-    <ul class="tab-list">
-      <li><i class="fas fa-edit"></i> Create & configure job vacancies</li>
-      <li><i class="fas fa-user-shield"></i> Internal approval workflow</li>
-      <li><i class="fas fa-hourglass-half"></i> Pending Status</li>
-      <li><i class="fas fa-bullhorn"></i> Published Status</li>
-      <li><i class="fas fa-times-circle"></i> Closed Status</li>
-    </ul>
-  </div>
-
-  <!-- Candidate Application Management -->
-  <div class="mdlfeaturecard">
-    <div class="mdlfeatureicon">
-      <i class="fas fa-file-alt"></i>
-    </div>
-    <h3>Candidate Application Management</h3>
-    <p>
-      Centralized candidate database to manage resumes, documents, and applicant information efficiently.
-    </p>
-    <ul class="tab-list">
-      <li><i class="fas fa-upload"></i> Resume & document uploads</li>
-      <li><i class="fas fa-id-card"></i> Candidate profile management</li>
-      <li><i class="fas fa-search"></i> Advanced filtering & search</li>
-      <li><i class="fas fa-history"></i> Application tracking history</li>
-    </ul>
-  </div>
-
-  <!-- Candidate Pipeline -->
-  <div class="mdlfeaturecard">
-    <div class="mdlfeatureicon">
-      <i class="fas fa-users"></i>
-    </div>
-    <h3>Structured Candidate Pipeline</h3>
-    <p>
-      Monitor candidate progression through clearly defined recruitment stages within each vacancy.
-    </p>
-    <ul class="tab-list">
-      <li><i class="fas fa-user"></i> Applied Candidates</li>
-      <li><i class="fas fa-user-check"></i> Shortlisted Candidates</li>
-      <li><i class="fas fa-star"></i> Finalised Candidates</li>
-      <li><i class="fas fa-user-plus"></i> Onboarding Candidates</li>
-    </ul>
-  </div>
-
-  <!-- Interview Management -->
-  <div class="mdlfeaturecard">
-    <div class="mdlfeatureicon">
-      <i class="fas fa-comments"></i>
-    </div>
-    <h3>Interview Scheduling & Evaluation</h3>
-    <p>
-      Manage interview rounds with automated scheduling, interviewer assignment, and structured evaluation forms.
-    </p>
-    <ul class="tab-list">
-      <li><i class="fas fa-calendar-alt"></i> Schedule multiple interview rounds</li>
-      <li><i class="fas fa-user-tie"></i> Assign interviewers</li>
-      <li><i class="fas fa-clipboard-check"></i> Digital evaluation scoring</li>
-      <li><i class="fas fa-check-circle"></i> Interview result tracking</li>
-    </ul>
-  </div>
-
-  <!-- Interview Feedback & Decision -->
-  <div class="mdlfeaturecard">
-    <div class="mdlfeatureicon">
-      <i class="fas fa-poll"></i>
-    </div>
-    <h3>Interview Feedback & Decision Making</h3>
-    <p>
-      Consolidate interviewer feedback to support transparent and data-driven hiring decisions.
-    </p>
-    <ul class="tab-list">
-      <li><i class="fas fa-star-half-alt"></i> Rating-based assessments</li>
-      <li><i class="fas fa-comments"></i> Structured interviewer comments</li>
-      <li><i class="fas fa-chart-line"></i> Comparative candidate analysis</li>
-      <li><i class="fas fa-gavel"></i> Final hiring approval</li>
-    </ul>
-  </div>
-
-  <!-- Job Offer Management -->
-  <div class="mdlfeaturecard">
-    <div class="mdlfeatureicon">
-      <i class="fas fa-file-signature"></i>
-    </div>
-    <h3>Job Offer Management</h3>
-    <p>
-      Generate, send, and track job offers with full negotiation and acceptance workflow management.
-    </p>
-    <ul class="tab-list">
-      <li><i class="fas fa-paper-plane"></i> Send Offer Letter</li>
-      <li><i class="fas fa-handshake"></i> Salary negotiation tracking</li>
-      <li><i class="fas fa-check"></i> Offer Accepted</li>
-      <li><i class="fas fa-times"></i> Offer Declined</li>
-    </ul>
-  </div>
-
-  <!-- Onboarding Process -->
-  <div class="mdlfeaturecard">
-    <div class="mdlfeatureicon">
-      <i class="fas fa-user-cog"></i>
-    </div>
-    <h3>Employee Onboarding</h3>
-    <p>
-      Seamlessly transition hired candidates into employees with automated onboarding workflows.
-    </p>
-    <ul class="tab-list">
-      <li><i class="fas fa-id-badge"></i> Employee profile creation</li>
-      <li><i class="fas fa-folder-open"></i> Document submission & verification</li>
-      <li><i class="fas fa-tasks"></i> Onboarding checklist tracking</li>
-      <li><i class="fas fa-building"></i> Department & role assignment</li>
-    </ul>
-  </div>
-
-</div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
-      <div class="image-wrapper">
-        <img src="images/Create Vacancy.png" alt="Create Vacancy" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Vacancy - Pending.png" alt="Candidate Management" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Vacancy - Published.png" alt="Interview Process" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Vacancy Detail - Applied Candidates.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Vacancy Detail - Shortlisted Candidates.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Vacancy Detail - Finalised Candidates With Negotiation Accepted.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Vacancy Detail - Onboarding Candidates.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Candidates.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Interviews - With All.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Interviews - Completed.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/View Offer.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Job Offer Letter - Sent.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Job Offer Letter - Sent Pending.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Job Offer Letter - Sent Negotiation.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Job Offer Letter - Negotiation Details.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Job Offer Letter - Accepted.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Onboarding Assing to Position.png" alt="Job Offer and Onboarding" class="zoomable-image">
-      </div>
-    </div>
-
-  </div>
-</section>
-      </div>
-
-      <!-- GENERAL SETTINGS -->
-      <div class="module-content" id="settings">
-        <section class="employee-module-section">
-
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-cogs"></i>
-      <span>General Settings Module</span>
-    </div>
-
-    <h2 class="module-main-title">
-      Comprehensive Customization Settings for Enhanced HR Management
-    </h2>
-
-    <p class="module-subtitle">
-      Extensive configuration options allow organizations to tailor system behavior, 
-      define roles, manage menus, set salary structures, and ensure data consistency 
-      across all HR processes.
-    </p>
-  </div>
-
-  <!-- Module Content -->
-  <div class="module-container">
-
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
-
-        <!-- Role Management Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-user-shield"></i>
-          </div>
-          <h3>Role Management</h3>
-          <p>
-            Define and manage user roles with specific permissions, ensuring employees 
-            access only the necessary information and tools relevant to their job functions.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-users"></i> Assign and manage user roles</li>
-            <li><i class="fas fa-key"></i> Configure role-based access permissions</li>
-            <li><i class="fas fa-lock"></i> Enhance data security and compliance</li>
-            <li><i class="fas fa-tasks"></i> Ensure operational efficiency across departments</li>
-          </ul>
-        </div>
-
-        <!-- Menus Customization Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-bars"></i>
-          </div>
-          <h3>Menus Customization</h3>
-          <p>
-            Customize navigation menus for departments or roles, providing employees 
-            with a streamlined interface that reflects relevant tools and information.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-layer-group"></i> Tailor navigation per role</li>
-            <li><i class="fas fa-tasks"></i> Streamline user experience</li>
-            <li><i class="fas fa-chart-line"></i> Highlight critical tools & modules</li>
-            <li><i class="fas fa-cogs"></i> Improve productivity with organized menus</li>
-          </ul>
-        </div>
-
-        <!-- Salary Structure Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-dollar-sign"></i>
-          </div>
-          <h3>Salary Structure Management</h3>
-          <p>
-            Create and manage complex salary frameworks including pay scales, bonuses, 
-            and allowances to ensure fair and competitive compensation across the organization.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-money-bill-wave"></i> Define pay scales & allowances</li>
-            <li><i class="fas fa-coins"></i> Manage bonus and incentive structures</li>
-            <li><i class="fas fa-file-invoice-dollar"></i> Maintain consistent remuneration policies</li>
-            <li><i class="fas fa-balance-scale"></i> Ensure equity & competitiveness</li>
-          </ul>
-        </div>
-
-        <!-- Employee Profile Tab Settings Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-id-badge"></i>
-          </div>
-          <h3>Manage Employee Profile Tab Settings</h3>
-          <p>
-            Control visibility of profile sections like About, Position, Salary, Document, 
-            and Others for different roles, ensuring privacy and security.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-eye-slash"></i> Configure section visibility per role</li>
-            <li><i class="fas fa-user-cog"></i> Control access to sensitive employee information</li>
-            <li><i class="fas fa-users"></i> Ensure role-based privacy compliance</li>
-            <li><i class="fas fa-lock"></i> Enhance organizational data security</li>
-          </ul>
-        </div>
-
-        <!-- Email Template Management Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <h3>Manage Email Templates</h3>
-          <p>
-            Customize automated email communications for leave requests, payroll, 
-            performance reviews, and announcements, ensuring consistency and professionalism.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-edit"></i> Create & edit email templates</li>
-            <li><i class="fas fa-paper-plane"></i> Automate notifications & alerts</li>
-            <li><i class="fas fa-calendar-alt"></i> Schedule recurring emails</li>
-            <li><i class="fas fa-bullhorn"></i> Ensure professional communication</li>
-          </ul>
-        </div>
-
-        <!-- Lookup Settings Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>Manage Lookup Settings</h3>
-          <p>
-            Standardize dropdown fields across the platform, maintaining data consistency 
-            and ensuring users can select accurate and relevant values.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-list"></i> Configure system-wide lookup values</li>
-            <li><i class="fas fa-check-circle"></i> Ensure data consistency</li>
-            <li><i class="fas fa-cogs"></i> Manage module-specific dropdowns</li>
-            <li><i class="fas fa-database"></i> Simplify data entry & reporting</li>
-          </ul>
-        </div>
-
-        <!-- Audit Trail Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-clipboard-check"></i>
-          </div>
-          <h3>Audit Trail Settings</h3>
-          <p>
-            Maintain a complete record of user actions within the system for enhanced 
-            security and compliance. Track modifications and identify unauthorized changes.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-shield"></i> Monitor user activities</li>
-            <li><i class="fas fa-search"></i> Track system modifications</li>
-            <li><i class="fas fa-exclamation-triangle"></i> Detect unauthorized changes</li>
-            <li><i class="fas fa-lock"></i> Ensure accountability & compliance</li>
-          </ul>
-        </div>
-
-        <!-- System Log Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h3>System Log Settings</h3>
-          <p>
-            Record and display user login details and system activity to enhance security, 
-            transparency, and auditing capabilities across the platform.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-history"></i> Track all login attempts</li>
-            <li><i class="fas fa-user-lock"></i> Monitor user activity</li>
-            <li><i class="fas fa-file-alt"></i> Maintain detailed logs for audits</li>
-            <li><i class="fas fa-shield-alt"></i> Support security compliance</li>
-          </ul>
-        </div>
-
-        <!-- Hierarchy Chart Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-sitemap"></i>
-          </div>
-          <h3>Hierarchy Chart Analytics</h3>
-          <p>
-            Visual representation of organizational structure with occupied employee details 
-            and position information, helping HR quickly assess workforce distribution.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-chart-network"></i> Graphical org chart representation</li>
-            <li><i class="fas fa-user-check"></i> Occupied position visualization</li>
-            <li><i class="fas fa-briefcase"></i> Position-based employee mapping</li>
-            <li><i class="fas fa-search-plus"></i> Quick workforce insights</li>
-          </ul>
-        </div>
-
-        <!-- Manage Announcement Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-bullhorn"></i>
-          </div>
-          <h3>Manage Announcements</h3>
-          <p>
-            Create and publish announcements for employees upon login, ensuring that 
-            critical information and alerts are communicated efficiently.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-bell"></i> Broadcast important messages</li>
-            <li><i class="fas fa-user-friends"></i> Target specific roles or departments</li>
-            <li><i class="fas fa-calendar-alt"></i> Schedule announcement visibility</li>
-            <li><i class="fas fa-envelope"></i> Ensure effective employee communication</li>
-          </ul>
-        </div>
-
-        <!-- Employee Details Management Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-user-cog"></i>
-          </div>
-          <h3>Manage Employee Details</h3>
-          <p>
-            Control employee email accounts, login access, and role assignments 
-            to maintain system security and ensure proper authorization.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-lock"></i> Manage employee login access</li>
-            <li><i class="fas fa-users-cog"></i> Role assignment & permissions</li>
-            <li><i class="fas fa-id-badge"></i> Maintain employee profiles</li>
-            <li><i class="fas fa-shield-alt"></i> Ensure system-wide compliance</li>
-          </ul>
-        </div>
-
-        <!-- Payslip Settings Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-file-invoice-dollar"></i>
-          </div>
-          <h3>Payslip Settings</h3>
-          <p>
-            Configure payslip generator with company info, logos, currency, and tax 
-            details to ensure accurate and standardized payroll documentation.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-building"></i> Set company details and logo</li>
-            <li><i class="fas fa-money-bill-wave"></i> Configure currency & tax info</li>
-            <li><i class="fas fa-file-alt"></i> Generate standardized payslips</li>
-            <li><i class="fas fa-cogs"></i> Automate payroll settings integration</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
-      <!-- Add relevant screenshots here -->
-       <div class="image-wrapper">
-        <img src="images/Settings Home - Core Settings.png" alt="Role Management" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Settings Home - Application Settings.png" alt="Role Management" class="zoomable-image">
-      </div>       
-       <div class="image-wrapper">
-        <img src="images/Settings Home - Notification Settings.png" alt="Role Management" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Settings Home - System Settings.png" alt="Role Management" class="zoomable-image">
-      </div>
-
-       <div class="image-wrapper">
-        <img src="images/Manage Roles.png" alt="Menus Customization" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Role Details.png" alt="Menus Customization" class="zoomable-image">
-      </div>
-
-      <div class="image-wrapper">
-        <img src="images/Manage Menus.png" alt="Menus Customization" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Manage Menus - Child Menus.png" alt="Menus Customization" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Salary Structure.png" alt="Salary Structure" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Add Salary.png" alt="Employee Profile Tab Settings" class="zoomable-image">
-      </div>
-       <div class="image-wrapper">
-        <img src="images/Email Settings.png" alt="Email Template Management" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Email Templates.png" alt="Email Template Management" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Lookups.png" alt="Lookup Settings" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Audit Trail Settings.png" alt="Audit Trail" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/System Logs Settings.png" alt="System Log" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Hierarchy Chart.png" alt="Hierarchy Chart" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Announcements.png" alt="Manage Announcement" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Employee Details.png" alt="Manage Employee Details" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Payslip Settings.png" alt="Payslip Settings" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Manage Profile Tab.png" alt="Payslip Settings" class="zoomable-image">
-      </div>
-    </div>
-
-  </div>
-</section>
-      </div>
-
-      <!-- REPORTS -->
-      <div class="module-content" id="reports">
-        <section class="employee-module-section">
-
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-file-alt"></i>
-      <span>Reports Module</span>
-    </div>
-
-    <h2 class="module-main-title">
-      Instant Access to Essential HR Reports
-    </h2>
-
-    <p class="module-subtitle">
-      Quickly access standard HR reports and generate custom reports tailored to organizational needs, 
-      ensuring data-driven insights and informed decision-making.
-    </p>
-  </div>
-
-  <!-- Module Content -->
-  <div class="module-container">
-
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
-
-        <!-- Standard Reports Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-chart-pie"></i>
-          </div>
-          <h3>Standard Reports</h3>
-          <p>
-            Access a range of pre-defined HR reports including attendance, payroll summaries, leave balances, 
-            and performance evaluations. These reports provide immediate insights without extensive setup.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-check"></i> Employee attendance reports</li>
-            <li><i class="fas fa-money-bill-wave"></i> Payroll summaries & analysis</li>
-            <li><i class="fas fa-calendar-alt"></i> Leave balances & utilization</li>
-            <li><i class="fas fa-trophy"></i> Performance evaluation metrics</li>
-          </ul>
-        </div>
-
-        <!-- Custom Reports Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-edit"></i>
-          </div>
-          <h3>Custom Reports</h3>
-          <p>
-            Create reports tailored to your organizational needs. Select relevant fields, apply filters, 
-            and configure layouts to meet exact specifications, enabling data analysis for specialized requirements.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-filter"></i> Apply filters and criteria to datasets</li>
-            <li><i class="fas fa-table"></i> Choose relevant data fields for reporting</li>
-            <li><i class="fas fa-cogs"></i> Configure report layout and design</li>
-            <li><i class="fas fa-chart-line"></i> Generate actionable insights</li>
-          </ul>
-        </div>
-
-        <!-- Report Privileges Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-user-shield"></i>
-          </div>
-          <h3>Report Privileges</h3>
-          <p>
-            Control access to reports based on user roles, ensuring sensitive HR data is only accessible to authorized personnel. 
-            Define role-based visibility and maintain data security and compliance with privacy regulations.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-user-lock"></i> Assign report access by role</li>
-            <li><i class="fas fa-eye"></i> Ensure sensitive data is secure</li>
-            <li><i class="fas fa-users"></i> Provide tailored reporting for managers and executives</li>
-            <li><i class="fas fa-tasks"></i> Streamline report delivery & accountability</li>
-          </ul>
+        <!-- PAYSLIP -->
+        <div class="module-content" id="payslip">
+          <section class="employee-module-section">
+
+            <!-- Module Header -->
+            <div class="module-header">
+              <div class="module-badge">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Payslip Generator Module</span>
+              </div>
+
+              <h2 class="module-main-title">
+                Effortless Payslip Generation & Instant Downloads
+              </h2>
+
+              <p class="module-subtitle">
+                Automate payroll processing with accurate payslip generation, reflecting all salary components,
+                deductions, taxes, and allowances. Download payslips individually or in bulk, ensuring timely payroll
+                distribution.
+              </p>
+            </div>
+
+            <!-- Module Content -->
+            <div class="module-container">
+
+              <!-- LEFT SIDE -->
+              <div class="module-left">
+                <div class="feature-cards">
+
+                  <!-- Payslip Generation Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Payslip Generation</h3>
+                    <p>
+                      HR can generate payslips automatically for all employees, incorporating base salary, allowances,
+                      overtime, deductions, and tax contributions. The process reduces manual errors and ensures
+                      compliance with company policies.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-calculator"></i> Accurate payroll calculation for all components</li>
+                      <li><i class="fas fa-user-check"></i> Automatic inclusion of overtime and deductions</li>
+                      <li><i class="fas fa-shield-alt"></i> Compliance with organizational salary structures</li>
+                      <li><i class="fas fa-clock"></i> Timely processing for payroll cycles</li>
+                    </ul>
+                  </div>
+
+                  <!-- Payslip Download Card -->
+                  <div class="mdlfeaturecard">
+                    <div class="mdlfeatureicon">
+                      <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Instant Download & Distribution</h3>
+                    <p>
+                      Once generated, payslips are available for immediate download individually or in bulk,
+                      facilitating fast and accurate payroll distribution to employees.
+                    </p>
+                    <ul class="tab-list">
+                      <li><i class="fas fa-file-download"></i> Download individual or bulk payslips</li>
+                      <li><i class="fas fa-envelope"></i> Quick dissemination to employees</li>
+                      <li><i class="fas fa-user-clock"></i> Supports payroll deadlines</li>
+                      <li><i class="fas fa-eye"></i> Transparent salary record for employees</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="module-right">
+                <div class="image-wrapper">
+                  <img src="images/Payslip Settings.png" alt="Generate Payslips" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Payslip Generator.png" alt="Generate Payslips" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Payslip Report.png" alt="Download Payslips" class="zoomable-image">
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/Payslip List.png" alt="Payslip Overview" class="zoomable-image">
+                </div>
+              </div>
+
+            </div>
+          </section>
         </div>
 
       </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
-      <div class="image-wrapper">
-        <img src="images/Report List.png" alt="Standard Reports" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Report Details.png" alt="Custom Reports" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Report Privileges.png" alt="Report Privileges" class="zoomable-image">
-      </div>
-    </div>
-
-  </div>
-</section>
-      </div>
-
-      <!-- PAYSLIP -->
-      <div class="module-content" id="payslip">
-        <section class="employee-module-section">
-
-  <!-- Module Header -->
-  <div class="module-header">
-    <div class="module-badge">
-      <i class="fas fa-file-invoice-dollar"></i>
-      <span>Payslip Generator Module</span>
-    </div>
-
-    <h2 class="module-main-title">
-      Effortless Payslip Generation & Instant Downloads
-    </h2>
-
-    <p class="module-subtitle">
-      Automate payroll processing with accurate payslip generation, reflecting all salary components, 
-      deductions, taxes, and allowances. Download payslips individually or in bulk, ensuring timely payroll distribution.
-    </p>
-  </div>
-
-  <!-- Module Content -->
-  <div class="module-container">
-
-    <!-- LEFT SIDE -->
-    <div class="module-left">
-      <div class="feature-cards">
-
-        <!-- Payslip Generation Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-file-alt"></i>
-          </div>
-          <h3>Payslip Generation</h3>
-          <p>
-            HR can generate payslips automatically for all employees, incorporating base salary, allowances, 
-            overtime, deductions, and tax contributions. The process reduces manual errors and ensures compliance with company policies.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-calculator"></i> Accurate payroll calculation for all components</li>
-            <li><i class="fas fa-user-check"></i> Automatic inclusion of overtime and deductions</li>
-            <li><i class="fas fa-shield-alt"></i> Compliance with organizational salary structures</li>
-            <li><i class="fas fa-clock"></i> Timely processing for payroll cycles</li>
-          </ul>
-        </div>
-
-        <!-- Payslip Download Card -->
-        <div class="mdlfeaturecard">
-          <div class="mdlfeatureicon">
-            <i class="fas fa-download"></i>
-          </div>
-          <h3>Instant Download & Distribution</h3>
-          <p>
-            Once generated, payslips are available for immediate download individually or in bulk, 
-            facilitating fast and accurate payroll distribution to employees.
-          </p>
-          <ul class="tab-list">
-            <li><i class="fas fa-file-download"></i> Download individual or bulk payslips</li>
-            <li><i class="fas fa-envelope"></i> Quick dissemination to employees</li>
-            <li><i class="fas fa-user-clock"></i> Supports payroll deadlines</li>
-            <li><i class="fas fa-eye"></i> Transparent salary record for employees</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="module-right">
-       <div class="image-wrapper">
-        <img src="images/Payslip Settings.png" alt="Generate Payslips" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Payslip Generator.png" alt="Generate Payslips" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Payslip Report.png" alt="Download Payslips" class="zoomable-image">
-      </div>
-      <div class="image-wrapper">
-        <img src="images/Payslip List.png" alt="Payslip Overview" class="zoomable-image">
-      </div>
-    </div>
-
-  </div>
-</section>
-      </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
   <div class="hero-divider"></div>
-<section id="pricing" class="pricing-section">
+  <section id="pricing" class="pricing-section">
 
-  <div class="pricing-header">
-    <div class="section-badge">
-      <i class="fas fa-coins"></i>
-      <span>Flexible Pricing</span>
-    </div>
-
-    <h2 class="services-title">
-      Build Your <span>HR Info Plan</span>
-    </h2>
-
-    <p class="pricing-subtitle">
-      Simple pricing. Per User / Per Month. Scale anytime.
-    </p>
-  </div>
-
-  <div class="pricing-wrapper">
-
-    <!-- LEFT SIDE -->
-    <div class="pricing-left">
-
-      <!-- User Slider -->
-      <div class="user-slider-box">
-        <label>
-          <i class="fas fa-users"></i>
-          Number of Employees:
-          <strong><span id="userCountLabel">10</span></strong>
-        </label>
-        <input type="range" id="userCount" min="1" max="1000" value="10" />
+    <div class="pricing-header">
+      <div class="section-badge">
+        <i class="fas fa-coins"></i>
+        <span>Flexible Pricing</span>
       </div>
 
-      <div class="pricing-container">
+      <h2 class="services-title">
+        Build Your <span>HR Info Plan</span>
+      </h2>
 
-        <!-- ================= EMPLOYEE MODULE (Mandatory) ================= -->
-        <div class="pricing-card expandable mandatory">
-
-          <div class="card-top">
-            <i class="fas fa-id-badge module-icon"></i>
-            <h3>Employee Module</h3>
-            <p>$0.30 <span>Per User / Per Month</span></p>
-          </div>
-
-          <div class="feature-list">
-            <div class="feature-strip"><i class="fas fa-database"></i><span>Centralized Employee Database</span></div>
-            <div class="feature-strip"><i class="fas fa-user-edit"></i><span>Employee Change Request Workflow</span></div>
-            <div class="feature-strip"><i class="fas fa-user-shield"></i><span>Role-Based Visibility</span></div>
-            <div class="feature-strip"><i class="fas fa-lock"></i><span>Login & Access Control</span></div>
-            <div class="feature-strip"><i class="fas fa-folder-open"></i><span>Documents & Salary Management</span></div>
-          </div>
-
-        </div>
-
-        <!-- ================= ORGANIZATION CHART (Mandatory) ================= -->
-        <div class="pricing-card expandable mandatory">
-
-          <div class="card-top">
-            <i class="fas fa-sitemap module-icon"></i>
-            <h3>Organization Chart</h3>
-            <p>$0.20 <span>Per User / Per Month</span></p>
-          </div>
-
-          <div class="feature-list">
-            <div class="feature-strip"><i class="fas fa-layer-group"></i><span>Department & Location Hierarchy</span></div>
-            <div class="feature-strip"><i class="fas fa-project-diagram"></i><span>Structured Reporting Levels</span></div>
-            <div class="feature-strip"><i class="fas fa-user-cog"></i><span>Position Assignment Control</span></div>
-            <div class="feature-strip"><i class="fas fa-check-circle"></i><span>Automated Approval Workflow</span></div>
-          </div>
-
-        </div>
-
-        <!-- ================= LEAVE MANAGEMENT SYSTEM (LMS) ================= -->
-<div class="pricing-card expandable">
-
-  <div class="card-top">
-    <i class="fas fa-calendar-alt module-icon"></i>
-    <h3>Leave Management System (LMS)</h3>
-    <p>$0.50 <span>Per User / Per Month</span></p>
-    <label class="switch">
-      <input type="checkbox" class="module" data-price="0.5">
-      <span class="slider"></span>
-    </label>
-  </div>
-
-  <div class="feature-list">
-
-    <div class="feature-strip">
-      <i class="fas fa-paper-plane"></i>
-      <span>Online Leave Application & Approval Workflow</span>
-    </div>
-
-    <div class="feature-strip">
-      <i class="fas fa-balance-scale"></i>
-      <span>Real-Time Leave Balance Tracking</span>
-    </div>
-
-    <div class="feature-strip">
-      <i class="fas fa-sync-alt"></i>
-      <span>Automatic Leave Accrual Calculation</span>
-    </div>
-
-    <div class="feature-strip">
-      <i class="fas fa-user-clock"></i>
-      <span>Supervisor & HR Multi-Level Approval</span>
-    </div>
-
-    <div class="feature-strip">
-      <i class="fas fa-chart-pie"></i>
-      <span>Leave Reports & Policy Compliance</span>
-    </div>
-
-  </div>
-
-</div>
-
-        <!-- ================= TIME & ATTENDANCE ================= -->
-        <div class="pricing-card expandable">
-
-          <div class="card-top">
-            <i class="fas fa-clock module-icon"></i>
-            <h3>Time & Attendance</h3>
-            <p>$0.65 <span>Per User / Per Month</span></p>
-            <label class="switch">
-              <input type="checkbox" class="module" data-price="0.65">
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="feature-list">
-            <div class="feature-strip"><i class="fas fa-fingerprint"></i><span>Biometric Integration</span></div>
-            <div class="feature-strip"><i class="fas fa-calendar-check"></i><span>Daily Attendance Logs</span></div>
-            <div class="feature-strip"><i class="fas fa-business-time"></i><span>Overtime Calculation</span></div>
-            <div class="feature-strip"><i class="fas fa-chart-line"></i><span>Attendance Reports</span></div>
-          </div>
-
-        </div>
-
-        <!-- ================= TRAINING & DEVELOPMENT ================= -->
-        <div class="pricing-card expandable">
-
-          <div class="card-top">
-            <i class="fas fa-chalkboard-teacher module-icon"></i>
-            <h3>Training & Development</h3>
-            <p>$0.30 <span>Per User / Per Month</span></p>
-            <label class="switch">
-              <input type="checkbox" class="module" data-price="0.3">
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="feature-list">
-            <div class="feature-strip"><i class="fas fa-tasks"></i><span>Training Request Workflow</span></div>
-            <div class="feature-strip"><i class="fas fa-chart-bar"></i><span>Skill Development Tracking</span></div>
-            <div class="feature-strip"><i class="fas fa-users-cog"></i><span>Performance Alignment</span></div>
-            <div class="feature-strip"><i class="fas fa-file-alt"></i><span>Development Reports</span></div>
-          </div>
-
-        </div>
-
-        <!-- ================= RECRUITMENT ================= -->
-        <div class="pricing-card expandable">
-
-          <div class="card-top">
-            <i class="fas fa-user-plus module-icon"></i>
-            <h3>Recruitment</h3>
-            <p>$0.50 <span>Per User / Per Month</span></p>
-            <label class="switch">
-              <input type="checkbox" class="module" data-price="0.5">
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="feature-list">
-            <div class="feature-strip"><i class="fas fa-briefcase"></i><span>Vacancy Management</span></div>
-            <div class="feature-strip"><i class="fas fa-user-check"></i><span>Applicant Tracking</span></div>
-            <div class="feature-strip"><i class="fas fa-comments"></i><span>Interview Workflow</span></div>
-            <div class="feature-strip"><i class="fas fa-file-signature"></i><span>Offer Management</span></div>
-          </div>
-
-        </div>
-
-        <!-- ================= PAYSLIP GENERATOR ================= -->
-        <div class="pricing-card expandable">
-
-          <div class="card-top">
-            <i class="fas fa-file-invoice-dollar module-icon"></i>
-            <h3>Payslip Generator</h3>
-            <p>$0.20 <span>Per User / Per Month</span></p>
-            <label class="switch">
-              <input type="checkbox" class="module" data-price="0.2">
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="feature-list">
-            <div class="feature-strip"><i class="fas fa-calculator"></i><span>Automated Payslip Creation</span></div>
-            <div class="feature-strip"><i class="fas fa-file-pdf"></i><span>Secure PDF Download</span></div>
-            <div class="feature-strip"><i class="fas fa-money-bill-wave"></i><span>Salary Breakdown</span></div>
-            <div class="feature-strip"><i class="fas fa-history"></i><span>Payroll History Records</span></div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="pricing-right">
-
-      <div class="pricing-summary">
-        <h4>Total Monthly Cost</h4>
-        <div class="price-display">
-          $<span id="totalPrice">0.00</span>
-        </div>
-        <p>Based on selected modules & users</p>
-      </div>
-
-      <div class="enterprise-card">
-        <h4><i class="fas fa-building"></i> Enterprise License</h4>
-        <p>
-          Need custom integrations, unlimited users,
-          priority SLA support, or on-premise deployment?
-          Contact our team for a tailored enterprise solution.
-        </p>
-
-        <!-- Enterprise License Contact -->
-<a href="mailto:support@yourdomain.com?subject=Enterprise License Inquiry - HR Info Platform&body=Hello HR Info Team,%0D%0A%0D%0AWe would like to inquire about the Enterprise License plan.%0D%0ACompany Name:%0D%0AEstimated Users:%0D%0ARequirements:%0D%0A"
-   class="btn btn-enterprise">
-  <i class="fas fa-envelope"></i> Contact Support
-</a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
- <div class="hero-divider"></div>
-
- <!-- ================= OTHER SERVICES SECTION ================= -->
-<section id="services" class="services-section">
-
-  <div class="services-header">
-    <div class="section-badge">
-      <i class="fas fa-layer-group"></i>
-      <span>Other Services</span>
-    </div>
-
-    <h2 class="services-title">
-      Digital Solutions Beyond <span>HR Info</span>
-    </h2>
-
-    <p class="services-subtitle">
-      We help businesses grow with powerful digital tools, modern websites,
-      and smart marketing strategies.
-    </p>
-  </div>
-
-  <div class="services-wrapper">
-
-    <!-- ================= CMS ================= -->
-    <div class="service-card">
-      <div class="service-icon cms">
-        <i class="fas fa-edit"></i>
-      </div>
-
-      <h3>Content Management System (CMS)</h3>
-      <p class="service-desc">
-        Easily create, manage, and update your website content without coding.
-        Our CMS solutions give you full control with an intuitive interface.
+      <p class="pricing-subtitle">
+        Simple pricing. Per User / Per Month. Scale anytime.
       </p>
-
-      <div class="service-features">
-        <div><i class="fas fa-check-circle"></i> User-Friendly Interface</div>
-        <div><i class="fas fa-check-circle"></i> Templates & Themes</div>
-        <div><i class="fas fa-check-circle"></i> Plugins & Extensions</div>
-        <div><i class="fas fa-check-circle"></i> User Roles & Permissions</div>
-        <div><i class="fas fa-check-circle"></i> Built-in SEO Optimization</div>
-      </div>
-
-      <div class="service-hover-content">
-        <p>
-          Manage text, images, videos, forms, and more — all from a powerful
-          dashboard designed for simplicity and performance.
-        </p>
-      </div>
     </div>
 
+    <div class="pricing-wrapper">
 
-    <!-- ================= WEBSITE DESIGN ================= -->
-    <div class="service-card">
-      <div class="service-icon design">
-        <i class="fas fa-laptop-code"></i>
+      <!-- LEFT SIDE -->
+      <div class="pricing-left">
+
+        <!-- User Slider -->
+        <div class="user-slider-box">
+          <label>
+            <i class="fas fa-users"></i>
+            Number of Employees:
+            <strong><span id="userCountLabel">10</span></strong>
+          </label>
+          <input type="range" id="userCount" min="1" max="1000" value="10" />
+        </div>
+
+        <div class="pricing-container">
+
+          <!-- ================= EMPLOYEE MODULE (Mandatory) ================= -->
+          <div class="pricing-card expandable mandatory">
+
+            <div class="card-top">
+              <i class="fas fa-id-badge module-icon"></i>
+              <h3>Employee Module</h3>
+              <p>$0.30 <span>Per User / Per Month</span></p>
+            </div>
+
+            <div class="feature-list">
+              <div class="feature-strip"><i class="fas fa-database"></i><span>Centralized Employee Database</span></div>
+              <div class="feature-strip"><i class="fas fa-user-edit"></i><span>Employee Change Request Workflow</span>
+              </div>
+              <div class="feature-strip"><i class="fas fa-user-shield"></i><span>Role-Based Visibility</span></div>
+              <div class="feature-strip"><i class="fas fa-lock"></i><span>Login & Access Control</span></div>
+              <div class="feature-strip"><i class="fas fa-folder-open"></i><span>Documents & Salary Management</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ================= ORGANIZATION CHART (Mandatory) ================= -->
+          <div class="pricing-card expandable mandatory">
+
+            <div class="card-top">
+              <i class="fas fa-sitemap module-icon"></i>
+              <h3>Organization Chart</h3>
+              <p>$0.20 <span>Per User / Per Month</span></p>
+            </div>
+
+            <div class="feature-list">
+              <div class="feature-strip"><i class="fas fa-layer-group"></i><span>Department & Location Hierarchy</span>
+              </div>
+              <div class="feature-strip"><i class="fas fa-project-diagram"></i><span>Structured Reporting Levels</span>
+              </div>
+              <div class="feature-strip"><i class="fas fa-user-cog"></i><span>Position Assignment Control</span></div>
+              <div class="feature-strip"><i class="fas fa-check-circle"></i><span>Automated Approval Workflow</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ================= LEAVE MANAGEMENT SYSTEM (LMS) ================= -->
+          <div class="pricing-card expandable">
+
+            <div class="card-top">
+              <i class="fas fa-calendar-alt module-icon"></i>
+              <h3>Leave Management System (LMS)</h3>
+              <p>$0.50 <span>Per User / Per Month</span></p>
+              <label class="switch">
+                <input type="checkbox" class="module" data-price="0.5">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="feature-list">
+
+              <div class="feature-strip">
+                <i class="fas fa-paper-plane"></i>
+                <span>Online Leave Application & Approval Workflow</span>
+              </div>
+
+              <div class="feature-strip">
+                <i class="fas fa-balance-scale"></i>
+                <span>Real-Time Leave Balance Tracking</span>
+              </div>
+
+              <div class="feature-strip">
+                <i class="fas fa-sync-alt"></i>
+                <span>Automatic Leave Accrual Calculation</span>
+              </div>
+
+              <div class="feature-strip">
+                <i class="fas fa-user-clock"></i>
+                <span>Supervisor & HR Multi-Level Approval</span>
+              </div>
+
+              <div class="feature-strip">
+                <i class="fas fa-chart-pie"></i>
+                <span>Leave Reports & Policy Compliance</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ================= TIME & ATTENDANCE ================= -->
+          <div class="pricing-card expandable">
+
+            <div class="card-top">
+              <i class="fas fa-clock module-icon"></i>
+              <h3>Time & Attendance</h3>
+              <p>$0.65 <span>Per User / Per Month</span></p>
+              <label class="switch">
+                <input type="checkbox" class="module" data-price="0.65">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="feature-list">
+              <div class="feature-strip"><i class="fas fa-fingerprint"></i><span>Biometric Integration</span></div>
+              <div class="feature-strip"><i class="fas fa-calendar-check"></i><span>Daily Attendance Logs</span></div>
+              <div class="feature-strip"><i class="fas fa-business-time"></i><span>Overtime Calculation</span></div>
+              <div class="feature-strip"><i class="fas fa-chart-line"></i><span>Attendance Reports</span></div>
+            </div>
+
+          </div>
+
+          <!-- ================= TRAINING & DEVELOPMENT ================= -->
+          <div class="pricing-card expandable">
+
+            <div class="card-top">
+              <i class="fas fa-chalkboard-teacher module-icon"></i>
+              <h3>Training & Development</h3>
+              <p>$0.30 <span>Per User / Per Month</span></p>
+              <label class="switch">
+                <input type="checkbox" class="module" data-price="0.3">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="feature-list">
+              <div class="feature-strip"><i class="fas fa-tasks"></i><span>Training Request Workflow</span></div>
+              <div class="feature-strip"><i class="fas fa-chart-bar"></i><span>Skill Development Tracking</span></div>
+              <div class="feature-strip"><i class="fas fa-users-cog"></i><span>Performance Alignment</span></div>
+              <div class="feature-strip"><i class="fas fa-file-alt"></i><span>Development Reports</span></div>
+            </div>
+
+          </div>
+
+          <!-- ================= RECRUITMENT ================= -->
+          <div class="pricing-card expandable">
+
+            <div class="card-top">
+              <i class="fas fa-user-plus module-icon"></i>
+              <h3>Recruitment</h3>
+              <p>$0.50 <span>Per User / Per Month</span></p>
+              <label class="switch">
+                <input type="checkbox" class="module" data-price="0.5">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="feature-list">
+              <div class="feature-strip"><i class="fas fa-briefcase"></i><span>Vacancy Management</span></div>
+              <div class="feature-strip"><i class="fas fa-user-check"></i><span>Applicant Tracking</span></div>
+              <div class="feature-strip"><i class="fas fa-comments"></i><span>Interview Workflow</span></div>
+              <div class="feature-strip"><i class="fas fa-file-signature"></i><span>Offer Management</span></div>
+            </div>
+
+          </div>
+
+          <!-- ================= PAYSLIP GENERATOR ================= -->
+          <div class="pricing-card expandable">
+
+            <div class="card-top">
+              <i class="fas fa-file-invoice-dollar module-icon"></i>
+              <h3>Payslip Generator</h3>
+              <p>$0.20 <span>Per User / Per Month</span></p>
+              <label class="switch">
+                <input type="checkbox" class="module" data-price="0.2">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="feature-list">
+              <div class="feature-strip"><i class="fas fa-calculator"></i><span>Automated Payslip Creation</span></div>
+              <div class="feature-strip"><i class="fas fa-file-pdf"></i><span>Secure PDF Download</span></div>
+              <div class="feature-strip"><i class="fas fa-money-bill-wave"></i><span>Salary Breakdown</span></div>
+              <div class="feature-strip"><i class="fas fa-history"></i><span>Payroll History Records</span></div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
-      <h3>Professional Website Designing</h3>
-      <p class="service-desc">
-        Modern, responsive, and SEO-optimized websites tailored to your business goals.
+      <!-- RIGHT SIDE -->
+      <div class="pricing-right">
+
+        <div class="pricing-summary">
+          <h4>Total Monthly Cost</h4>
+          <div class="price-display">
+            $<span id="totalPrice">0.00</span>
+          </div>
+          <p>Based on selected modules & users</p>
+        </div>
+
+        <div class="enterprise-card">
+          <h4><i class="fas fa-building"></i> Enterprise License</h4>
+          <p>
+            Need custom integrations, unlimited users,
+            priority SLA support, or on-premise deployment?
+            Contact our team for a tailored enterprise solution.
+          </p>
+
+          <!-- Enterprise License Contact -->
+          <a href="#contact-us" class="btn btn-enterprise">
+            <i class="fas fa-envelope"></i> Contact Support
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <div class="hero-divider"></div>
+
+  <!-- ================= OTHER SERVICES SECTION ================= -->
+  <section id="services" class="services-section">
+
+    <div class="services-header">
+      <div class="section-badge">
+        <i class="fas fa-layer-group"></i>
+        <span>Other Services</span>
+      </div>
+
+      <h2 class="services-title">
+        Digital Solutions Beyond <span>HR Info</span>
+      </h2>
+
+      <p class="services-subtitle">
+        We help businesses grow with powerful digital tools, modern websites,
+        and smart marketing strategies.
       </p>
-
-      <div class="service-features">
-        <div><i class="fas fa-check-circle"></i> Responsive Web Design</div>
-        <div><i class="fas fa-check-circle"></i> Custom UI/UX Design</div>
-        <div><i class="fas fa-check-circle"></i> SEO-Optimized Structure</div>
-        <div><i class="fas fa-check-circle"></i> E-Commerce Ready</div>
-        <div><i class="fas fa-check-circle"></i> Fast Performance</div>
-      </div>
-
-      <div class="service-hover-content">
-        <p>
-          We build visually stunning and conversion-focused websites
-          that engage users and deliver measurable results.
-        </p>
-      </div>
     </div>
 
+    <div class="services-wrapper">
 
-    <!-- ================= SEO & SOCIAL ================= -->
-    <div class="service-card">
-      <div class="service-icon seo">
-        <i class="fas fa-chart-line"></i>
+      <!-- ================= CMS ================= -->
+      <div class="service-card">
+        <div class="service-icon cms">
+          <i class="fas fa-edit"></i>
+        </div>
+
+        <h3>Content Management System (CMS)</h3>
+        <p class="service-desc">
+          Easily create, manage, and update your website content without coding.
+          Our CMS solutions give you full control with an intuitive interface.
+        </p>
+
+        <div class="service-features">
+          <div><i class="fas fa-check-circle"></i> User-Friendly Interface</div>
+          <div><i class="fas fa-check-circle"></i> Templates & Themes</div>
+          <div><i class="fas fa-check-circle"></i> Plugins & Extensions</div>
+          <div><i class="fas fa-check-circle"></i> User Roles & Permissions</div>
+          <div><i class="fas fa-check-circle"></i> Built-in SEO Optimization</div>
+        </div>
+
+        <div class="service-hover-content">
+          <p>
+            Manage text, images, videos, forms, and more — all from a powerful
+            dashboard designed for simplicity and performance.
+          </p>
+        </div>
       </div>
 
-      <h3>SEO & Social Media Support</h3>
-      <p class="service-desc">
-        Increase visibility, grow engagement, and drive more traffic
-        through strategic SEO and social media marketing.
+
+      <!-- ================= WEBSITE DESIGN ================= -->
+      <div class="service-card">
+        <div class="service-icon design">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+
+        <h3>Professional Website Designing</h3>
+        <p class="service-desc">
+          Modern, responsive, and SEO-optimized websites tailored to your business goals.
+        </p>
+
+        <div class="service-features">
+          <div><i class="fas fa-check-circle"></i> Responsive Web Design</div>
+          <div><i class="fas fa-check-circle"></i> Custom UI/UX Design</div>
+          <div><i class="fas fa-check-circle"></i> SEO-Optimized Structure</div>
+          <div><i class="fas fa-check-circle"></i> E-Commerce Ready</div>
+          <div><i class="fas fa-check-circle"></i> Fast Performance</div>
+        </div>
+
+        <div class="service-hover-content">
+          <p>
+            We build visually stunning and conversion-focused websites
+            that engage users and deliver measurable results.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ================= SEO & SOCIAL ================= -->
+      <div class="service-card">
+        <div class="service-icon seo">
+          <i class="fas fa-chart-line"></i>
+        </div>
+
+        <h3>SEO & Social Media Support</h3>
+        <p class="service-desc">
+          Increase visibility, grow engagement, and drive more traffic
+          through strategic SEO and social media marketing.
+        </p>
+
+        <div class="service-features">
+          <div><i class="fas fa-check-circle"></i> SEO Optimization</div>
+          <div><i class="fas fa-check-circle"></i> Social Media Strategy</div>
+          <div><i class="fas fa-check-circle"></i> Content Creation</div>
+          <div><i class="fas fa-check-circle"></i> Analytics & Reporting</div>
+        </div>
+
+        <div class="service-hover-content">
+          <p>
+            From ranking higher on Google to engaging audiences on social platforms,
+            we help your brand stand out in the digital space.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="hero-divider"></div>
+
+  <section id="clients" class="clients-section">
+
+    <!-- Parallax Background -->
+    <div class="parallax-bg"></div>
+
+    <div class="clients-header">
+      <div class="section-badge">
+        <i class="fas fa-handshake"></i>
+        <span>Our Clients</span>
+      </div>
+
+      <h2 class="clients-title">
+        Trusted by Leading Companies <span>Worldwide</span>
+      </h2>
+
+      <p class="clients-subtitle">
+        We take pride in delivering high-quality HR solutions to our esteemed clients.
       </p>
+    </div>
 
-      <div class="service-features">
-        <div><i class="fas fa-check-circle"></i> SEO Optimization</div>
-        <div><i class="fas fa-check-circle"></i> Social Media Strategy</div>
-        <div><i class="fas fa-check-circle"></i> Content Creation</div>
-        <div><i class="fas fa-check-circle"></i> Analytics & Reporting</div>
+    <!-- Animated Counters -->
+    <div class="clients-counters">
+      <div class="counter-box">
+        <h3 id="clientsCount">0</h3>
+        <p>Clients Served</p>
       </div>
-
-      <div class="service-hover-content">
-        <p>
-          From ranking higher on Google to engaging audiences on social platforms,
-          we help your brand stand out in the digital space.
-        </p>
+      <div class="counter-box">
+        <h3 id="projectsCount">0</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="counter-box">
+        <h3 id="countriesCount">0</h3>
+        <p>Countries Served</p>
       </div>
     </div>
 
-  </div>
-</section>
-
- <div class="hero-divider"></div>
-
-<section id="clients" class="clients-section">
-
-  <!-- Parallax Background -->
-  <div class="parallax-bg"></div>
-
-  <div class="clients-header">
-    <div class="section-badge">
-      <i class="fas fa-handshake"></i>
-      <span>Our Clients</span>
+    <!-- Filter Buttons -->
+    <div class="clients-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="bahrain">Bahrain</button>
+      <button class="filter-btn" data-filter="media">Media</button>
+      <button class="filter-btn" data-filter="trading">Trading</button>
     </div>
 
-    <h2 class="clients-title">
-      Trusted by Leading Companies <span>Worldwide</span>
-    </h2>
+    <!-- Clients Logo Carousel -->
+    <div class="clients-carousel swiper-container">
+      <div class="swiper-wrapper">
 
-    <p class="clients-subtitle">
-      We take pride in delivering high-quality HR solutions to our esteemed clients.
-    </p>
-  </div>
+        <div class="swiper-slide client-card" data-category="trading">
+          <div class="client-inner">
+            <img src="images/mcflogo.png" alt="MADHA Carpentry Factory W.L.L">
 
-  <!-- Animated Counters -->
-  <div class="clients-counters">
-    <div class="counter-box">
-      <h3 id="clientsCount">0</h3>
-      <p>Clients Served</p>
-    </div>
-    <div class="counter-box">
-      <h3 id="projectsCount">0</h3>
-      <p>Projects Completed</p>
-    </div>
-    <div class="counter-box">
-      <h3 id="countriesCount">0</h3>
-      <p>Countries Served</p>
-    </div>
-  </div>
+            <h3>MADHA Carpentry Factory W.L.L</h3>
 
-  <!-- Filter Buttons -->
-  <div class="clients-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="bahrain">Bahrain</button>
-    <button class="filter-btn" data-filter="media">Media</button>
-    <button class="filter-btn" data-filter="trading">Trading</button>
-  </div>
-
-  <!-- Clients Logo Carousel -->
-  <div class="clients-carousel swiper-container">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide client-card" data-category="trading">
-        <a href="https://mcfwll.com/" target="_blank">
-          <img src="images/mcflogo.png" alt="MADHA Carpentry Factory W.L.L">
-          <p>MADHA Carpentry Factory W.L.L</p>
-        </a>
-      </div>
-
-      <div class="swiper-slide client-card" data-category="trading">
-        <a href="https://palmerabh.com/" target="_blank">
-          <img src="images/PGTLogotransparent.png" alt="Palmera General Trading Bahrain">
-          <p>Palmera General Trading Bahrain</p>
-        </a>
-      </div>
-
-      <div class="swiper-slide client-card" data-category="media">
-        <a href="#" target="_blank">
-          <img src="images/TOBDown.jpg" alt="Times of Bahrain | Manama">
-          <p>Times of Bahrain | Manama</p>
-        </a>
-      </div>
-
-      <div class="swiper-slide client-card" data-category="media">
-        <a href="#" target="_blank">
-          <img src="images/AMMedia.jfif" alt="AM Media Bahrain">
-          <p>AM Media Bahrain</p>
-        </a>
-      </div>
-
-      <!-- Add more clients here -->
-
-    </div>
-  </div>
-
-  <!-- Testimonials Carousel -->
-  <div class="testimonials-wrapper swiper-container">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide testimonial-card">
-        <p>"HR Info has transformed our HR processes. Highly recommend!"</p>
-        <h4>- John Doe, MADHA Carpentry Factory W.L.L</h4>
-      </div>
-
-      <div class="swiper-slide testimonial-card">
-        <p>"Seamless integration and amazing support from the team."</p>
-        <h4>- Jane Smith, Palmera General Trading Bahrain</h4>
-      </div>
-
-      <div class="swiper-slide testimonial-card">
-        <p>"The platform is intuitive and saved us countless hours."</p>
-        <h4>- Ali Khan, Times of Bahrain</h4>
-      </div>
-
-      <!-- Add more testimonials here -->
-
-    </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-
-</section>
-<div class="hero-divider"></div>
-<section id="contact-us" class="contact-section">
-
-  <!-- Parallax background -->
-  <div class="contact-bg"></div>
-   <!-- Particles container -->
-  <canvas id="contact-particles" class="contact-particles"></canvas>
-
-  <!-- Section Header -->
-  <div class="contact-header">
-    <div class="section-badge animated-gradient">
-      <i class="fas fa-envelope"></i>
-      <span>Contact Us</span>
-    </div>
-    <h2 class="contact-title">Let’s Get In Touch!</h2>
-    <p class="contact-subtitle">
-      We value your interest in our HR Info Software and are here to provide you with the information and support you need. 
-      Whether you have questions about our services, want a demo, or need technical assistance, we’re always ready to assist.
-    </p>
-  </div>
-
-  <div class="contact-wrapper">
-
-    <!-- Contact Form -->
-    <div class="contact-form-wrapper tilt-card pre-fade">
-      <h3>Request a Free Demo</h3>
-      <p>Fill out the form below to request a free demo, and we’ll be in touch to schedule a personalized walkthrough.</p>
-      <form id="demoForm">
-        <div class="input-group">
-          <i class="fas fa-user"></i>
-          <input type="text" name="name" placeholder="Your Name" required>
+            <a href="https://mcfwll.com/" target="_blank" class="visit-btn">
+              <i class="fas fa-globe"></i> Visit Website
+            </a>
+          </div>
         </div>
-        <div class="input-group">
-          <i class="fas fa-envelope"></i>
-          <input type="email" name="email" placeholder="Your Email" required>
+
+        <div class="swiper-slide client-card" data-category="trading">
+          <div class="client-inner">
+            <img src="images/PGTLogotransparent.png" alt="Palmera General Trading Bahrain">
+
+            <h3>Palmera General Trading Bahrain</h3>
+
+            <a href="https://palmerabh.com/" target="_blank" class="visit-btn">
+              <i class="fas fa-globe"></i> Visit Website
+            </a>
+          </div>
         </div>
-        <div class="input-group">
-          <i class="fas fa-comment-alt"></i>
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <div class="swiper-slide client-card" data-category="media">
+          <div class="client-inner">
+            <img src="images/TOBDown.jpg" alt="Times of Bahrain | Manama">
+
+            <h3>Times of Bahrain | Manama</h3>
+
+            <a href="#" class="visit-btn">
+              <i class="fas fa-globe"></i> Visit Website
+            </a>
+          </div>
         </div>
-        <!-- Demo Form Submit -->
-<button type="submit" class="btn btn-gradient">
-  <i class="fas fa-paper-plane"></i> Send Request
-</button>
-      </form>
+
+        <div class="swiper-slide client-card" data-category="media">
+          <div class="client-inner">
+            <img src="images/AMMedia.jfif" alt="AM Media Bahrain">
+
+            <h3>AM Media Bahrain</h3>
+
+            <a href="#" class="visit-btn">
+              <i class="fas fa-globe"></i> Visit Website
+            </a>
+          </div>
+        </div>
+
+        <!-- Add more clients here -->
+
+      </div>
     </div>
 
-    <!-- Contact Info Cards -->
-    <div class="contact-info-wrapper">
+    <!-- Testimonials Carousel -->
+    <div class="testimonials-wrapper swiper-container">
+      <div class="swiper-wrapper">
 
-      <div class="contact-card tilt-card pre-fade">
-        <i class="fas fa-phone-alt"></i>
-        <h4>Phone Support</h4>
-        <p>Call us at <a href="tel:+97333375769">+973 33375769</a></p>
+        <div class="swiper-slide testimonial-card">
+          <p>"HR Info has transformed our HR processes. Highly recommend!"</p>
+          <h4>- Surya Manikandan, MADHA Carpentry Factory W.L.L</h4>
+        </div>
+
+        <div class="swiper-slide testimonial-card">
+          <p>"Seamless integration and amazing support from the team."</p>
+          <h4>- Abishekh, Palmera General Trading Bahrain</h4>
+        </div>
+
+        <div class="swiper-slide testimonial-card">
+          <p>"The platform is intuitive and saved us countless hours."</p>
+          <h4>- Anvar Moideen, Times of Bahrain</h4>
+        </div>
+
+        <!-- Add more testimonials here -->
+
       </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
-      <div class="contact-card tilt-card pre-fade">
+  </section>
+  <div class="hero-divider"></div>
+
+
+  <section id="contact-us" class="contact-section">
+
+    <!-- Parallax background -->
+    <div class="contact-bg"></div>
+    <canvas id="contact-particles" class="contact-particles"></canvas>
+
+    <!-- Header -->
+    <div class="contact-header">
+      <div class="section-badge animated-gradient">
         <i class="fas fa-envelope"></i>
-        <h4>Email</h4>
-        <p>Send us an email at <a href="mailto:hrinfo0104@gmail.com">hrinfo0104@gmail.com</a></p>
+        <span>Contact Us</span>
       </div>
-
-      <div class="contact-card tilt-card pre-fade">
-        <i class="fab fa-whatsapp"></i>
-        <h4>WhatsApp</h4>
-        <p><a href="https://wa.me/97333375769" target="_blank">Chat Now</a></p>
-      </div>
-
-      <div class="contact-card tilt-card pre-fade">
-        <i class="fas fa-comments"></i>
-        <h4>Live Chat</h4>
-        <p>Available during business hours for real-time assistance.</p>
-      </div>
-
-      <div class="contact-card tilt-card pre-fade">
-        <i class="fas fa-map-marker-alt"></i>
-        <h4>Office Location</h4>
-        <p>Visit us at Al-Hoora, Kingdom of Bahrain</p>
-      </div>
-
-      <div class="contact-card tilt-card partners-card pre-fade">
-  <i class="fas fa-handshake"></i>
-  <h4>Looking for Partners & Supporters</h4>
-  <p>If you’re interested in collaborating with HR Info, contact us for partnership opportunities.</p>
-  <!-- Partner Inquiry -->
-  <a href="mailto:hrinfo0104@gmail.com?subject=Partner Inquiry - HR Info" class="btn">
-    <i class="fas fa-handshake"></i> Contact Us
-  </a>
-</div>
-
-      <!-- Social Links -->
-      <div class="social-links tilt-card pre-fade">
-        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-
+      <h2 class="contact-title">Let’s Get In Touch!</h2>
+      <p class="contact-subtitle">
+        We value your interest in our HR Info Software and are here to provide you with the information and support you
+        need.
+        Whether you have questions about our services, want a demo, or need technical assistance, we’re always ready to
+        assist.
+      </p>
     </div>
 
-  </div>
+    <!-- Wrapper -->
+    <div class="contact-wrapper">
 
-  <!-- Footer -->
-  <div class="contact-footer">
-    <p>&copy; 2024 HR Info. All rights reserved.</p>
-  </div>
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper">
 
-</section>
+        <!-- NEW TOP INFO BLOCK -->
+        <div class="form-top-info">
+          <div class="form-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Book Your Free Demo</h3>
+          <p>See how HR Info can simplify your HR operations with a personalized walkthrough.</p>
+
+          <div class="form-highlights">
+            <div><i class="fas fa-check-circle"></i> Quick Setup</div>
+            <div><i class="fas fa-shield-alt"></i> Secure System</div>
+            <div><i class="fas fa-clock"></i> 24/7 Support</div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <form id="demoForm">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="demo_name" placeholder="Your Name" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="demo_email" placeholder="Your Email" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-comment-alt"></i>
+            <textarea id="demo_message" rows="4" placeholder="Message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gradient">
+            <i class="fas fa-paper-plane"></i> Send Request
+          </button>
+        </form>
+
+        <!-- WhatsApp QR Card -->
+        <div class="contact-card qr-card">
+          <i class="fab fa-whatsapp"></i>
+          <h4>Scan to Chat on WhatsApp</h4>
+
+          <div class="qr-box">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/97333375769" 
+       alt="WhatsApp QR Code">
+</div>
+
+          <p>Scan this QR code to start chatting with us instantly.</p>
+        </div>
+
+        <!-- Download QR Card -->
+        <div class="contact-card qr-card">
+          <i class="fas fa-download"></i>
+          <h4>Download Our App / Brochure</h4>
+
+          <div class="qr-box">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://hrinfo.live/HRInfoBrochure.pdf" 
+       alt="Download Brochure QR">
+</div>
+
+          <p>Scan to download our mobile app or company brochure.</p>
+        </div>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="contact-info-wrapper">
+        <div class="contact-card">
+          <i class="fas fa-phone-alt"></i>
+          <h4>Phone Support</h4>
+          <p>
+            <a href="tel:+97333375769" class="btn btn-phone">
+              <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <h4>Email</h4>
+          <p>
+            <a href="mailto:hrinfo0104@gmail.com" class="btn btn-email">
+              <i class="fas fa-envelope"></i> Send Email
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fab fa-whatsapp"></i>
+          <h4>WhatsApp</h4>
+          <p>
+            <a href="https://wa.me/97333375769" target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Chat Now
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fas fa-comments"></i>
+          <h4>Live Chat</h4>
+          <p>Available during business hours for real-time assistance.</p>
+        </div>
+
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Office Location</h4>
+          <p>Visit us at Al-Hoora, Kingdom of Bahrain</p>
+        </div>
+
+        <div class="contact-card partners-card tilt-card">
+          <i class="fas fa-handshake"></i>
+          <h4>Looking for Partners & Supporters</h4>
+          <p>If you’re interested in collaborating with HR Info, contact us for partnership opportunities.</p>
+          <!-- <a href="mailto:hrinfo0104@gmail.com?subject=Partner Inquiry - HR Info" class="btn btn-partner">
+            <i class="fas fa-handshake"></i> Contact Us
+          </a> -->
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61560269961489" target="_blank"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/sethuraman-rajaram-1449a3306/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/hrinfo0104/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-footer">
+      <p>&copy; 2024 HR Info. All rights reserved.</p>
+    </div>
+
+  </section>
 
   <!-- Modal for Zoom -->
   <div id="image-modal" class="image-modal">
@@ -2512,6 +2585,69 @@
     <div id="caption"></div>
   </div>
 
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      emailjs.init("QX8-V1e_DKrE0W1cq");
+
+      const form = document.getElementById("demoForm");
+      const btn = form.querySelector("button");
+
+      // Track input values safely
+      let nameVal = '', emailVal = '', messageVal = '';
+
+      const nameInput = document.getElementById('demo_name');
+      const emailInput = document.getElementById('demo_email');
+      const messageInput = document.getElementById('demo_message');
+
+      nameInput.addEventListener('input', e => nameVal = e.target.value.trim());
+      emailInput.addEventListener('input', e => emailVal = e.target.value.trim());
+      messageInput.addEventListener('input', e => messageVal = e.target.value.trim());
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        btn.innerHTML = "Sending...";
+        btn.disabled = true;
+
+        console.log("DEBUG values:", { nameVal, emailVal, messageVal });
+
+        if (!nameVal || !emailVal || !messageVal) {
+          alert("Please fill in all fields");
+          btn.innerHTML = "Send Request";
+          btn.disabled = false;
+          return;
+        }
+
+        const templateParams = {
+          name: nameVal,
+          email: emailVal,
+          message: messageVal,
+          time: new Date().toLocaleString(),
+          to_email: "hrinfo0104@gmail.com",
+          cc_email: "sethuraman0104@gmail.com"
+        };
+
+        emailjs.send("service_l23b05l", "template_kg29v1o", templateParams)
+          .then(() => {
+            btn.innerHTML = "✅ Sent!";
+            form.reset();
+            nameVal = emailVal = messageVal = '';
+            setTimeout(() => {
+              btn.innerHTML = "Send Request";
+              btn.disabled = false;
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("EmailJS error:", err);
+            alert("❌ Failed to send email");
+            btn.innerHTML = "Send Request";
+            btn.disabled = false;
+          });
+      });
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <script src="script.js"></script>
