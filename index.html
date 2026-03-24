@@ -115,8 +115,8 @@
           <i class="fas fa-paper-plane"></i> Request Demo
         </button>
         <button class="btn btn-outline" id="downloadBrochure">
-  <i class="fas fa-file-download"></i> Download Brochure
-</button>
+          <i class="fas fa-file-download"></i> Download Brochure
+        </button>
       </div>
     </div>
   </section>
@@ -2176,9 +2176,7 @@
   </section>
   <div class="hero-divider"></div>
 
-  <!-- ================= OTHER SERVICES SECTION ================= -->
   <section id="services" class="services-section">
-
     <div class="services-header">
       <div class="section-badge">
         <i class="fas fa-layer-group"></i>
@@ -2487,9 +2485,9 @@
           <h4>Scan to Chat on WhatsApp</h4>
 
           <div class="qr-box">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/97333375769" 
-       alt="WhatsApp QR Code">
-</div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/97333375769"
+              alt="WhatsApp QR Code">
+          </div>
 
           <p>Scan this QR code to start chatting with us instantly.</p>
         </div>
@@ -2500,11 +2498,12 @@
           <h4>Download Our App / Brochure</h4>
 
           <div class="qr-box">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://hrinfo.live/HRInfoBrochure.pdf" 
-       alt="Download Brochure QR">
-</div>
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://hrinfo.live/HRInfoBrochure.pdf"
+              alt="Download Brochure QR">
+          </div>
 
-          <p>Scan to download our mobile app or company brochure.</p>
+          <p>Scan to download our Product Brochure.</p>
         </div>
       </div>
 
@@ -2522,12 +2521,29 @@
 
         <div class="contact-card">
           <i class="fas fa-envelope"></i>
-          <h4>Email</h4>
-          <p>
-            <a href="mailto:hrinfo0104@gmail.com" class="btn btn-email">
-              <i class="fas fa-envelope"></i> Send Email
-            </a>
-          </p>
+          <h4>Email Contact</h4>
+
+          <div class="email-list">
+            <div class="email-item">
+              <span class="email-label">
+                <i class="fas fa-headset"></i> Support
+              </span>
+              <a href="mailto:support@hrinfo.live" class="email-link">support@hrinfo.live</a>
+            </div>
+
+            <div class="email-item">
+              <span class="email-label">
+                <i class="fas fa-circle-info"></i> Info
+              </span>
+              <a href="mailto:info@hrinfo.live" class="email-link">info@hrinfo.live</a>
+            </div>
+          </div>
+
+          <a href="mailto:info@hrinfo.live,support@hrinfo.live,hrinfo0104@gmail.com,sethuraman0104@gmail.com"
+            class="btn btn-email">
+            <i class="fas fa-envelope"></i>
+            <span>Contact Us</span>
+          </a>
         </div>
 
         <div class="contact-card">
@@ -2584,7 +2600,9 @@
     <img class="modal-content" id="modal-img">
     <div id="caption"></div>
   </div>
-
+  <button id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
@@ -2625,8 +2643,8 @@
           email: emailVal,
           message: messageVal,
           time: new Date().toLocaleString(),
-          to_email: "hrinfo0104@gmail.com",
-          cc_email: "sethuraman0104@gmail.com"
+          to_email: "hrinfo0104@gmail.com,info@hrinfo.live",
+          cc_email: "sethuraman0104@gmail.com,support@hrinfo.live"
         };
 
         emailjs.send("service_l23b05l", "template_kg29v1o", templateParams)

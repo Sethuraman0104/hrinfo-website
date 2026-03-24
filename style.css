@@ -2209,16 +2209,33 @@ input:checked + .slider:before {
   animation: gradientMove 6s ease infinite;
 }
 
-/* Email */
-.btn-email {
-  background: linear-gradient(135deg, #F43F5E, #B91C1C, #f87171);
-  animation: gradientMove 6s ease infinite;
-}
-
 /* Partner */
 .btn-partner {
   background: linear-gradient(135deg, #10b981, #06b6d4, #2563eb);
   animation: gradientMove 6s ease infinite;
+}
+
+
+.btn-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* space between icon and text */
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #F43F5E, #B91C1C, #f87171);
+  animation: gradientMove 6s ease infinite;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* icon alignment */
+.btn-email i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ===========================
@@ -2350,4 +2367,118 @@ input:checked + .slider:before {
   .qr-card p {
     font-size: 13px;
   }
+}
+
+/* Email List */
+.contact-card .email-list {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Each Email Row */
+.contact-card .email-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* Hover on email row */
+.contact-card .email-item:hover {
+  background: #eef2ff;
+}
+
+/* Label */
+.contact-card .email-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Email link */
+.contact-card .email-link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.contact-card .email-link:hover {
+  text-decoration: underline;
+}
+
+#scrollTopBtn {
+  position: fixed;           /* Fixed position on screen */
+  bottom: 40px;              /* 40px from bottom */
+  right: 40px;               /* 40px from right */
+  z-index: 9999;             /* On top of everything */
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  
+  /* Initially hidden */
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.4s ease;
+}
+
+/* Show button */
+#scrollTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover animation */
+#scrollTopBtn:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: translateY(-3px);
+}
+
+#priceBreakdown {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f5f7ff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+  transition: all 0.3s ease;
+}
+
+#priceBreakdown div {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e7ff;
+  transition: background 0.2s ease;
+}
+
+#priceBreakdown div:last-child {
+  border-bottom: none;
+}
+
+#priceBreakdown div:hover {
+  background: #e0e7ff;
+  border-radius: 8px;
+}
+
+#priceBreakdown hr {
+  border: none;
+  border-top: 2px solid #c7d2fe;
+  margin: 10px 0;
+}
+
+#priceBreakdown strong {
+  font-weight: 600;
+  color: #4f46e5;
 }

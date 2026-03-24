@@ -209,53 +209,127 @@ window.addEventListener('click', e => {
   }
 });
 
- const mandatoryPrice = 0.5;
-  const userSlider = document.getElementById("userCount");
-  const userLabel = document.getElementById("userCountLabel");
-  const modules = document.querySelectorAll(".module");
-  const totalPriceEl = document.getElementById("totalPrice");
+//  const mandatoryPrice = 0.5;
+//   const userSlider = document.getElementById("userCount");
+//   const userLabel = document.getElementById("userCountLabel");
+//   const modules = document.querySelectorAll(".module");
+//   const totalPriceEl = document.getElementById("totalPrice");
 
-  function animateValue(start, end, duration) {
-    let startTime = null;
+//   function animateValue(start, end, duration) {
+//     let startTime = null;
 
-    function animation(currentTime) {
-      if (!startTime) startTime = currentTime;
-      let progress = Math.min((currentTime - startTime) / duration, 1);
-      let value = progress * (end - start) + start;
-      totalPriceEl.textContent = value.toFixed(2);
-      if (progress < 1) {
-        requestAnimationFrame(animation);
-      }
-    }
+//     function animation(currentTime) {
+//       if (!startTime) startTime = currentTime;
+//       let progress = Math.min((currentTime - startTime) / duration, 1);
+//       let value = progress * (end - start) + start;
+//       totalPriceEl.textContent = value.toFixed(2);
+//       if (progress < 1) {
+//         requestAnimationFrame(animation);
+//       }
+//     }
 
-    requestAnimationFrame(animation);
+//     requestAnimationFrame(animation);
+//   }
+
+//   function calculateTotal() {
+//     let users = parseInt(userSlider.value);
+//     userLabel.textContent = users;
+
+//     let totalPerUser = mandatoryPrice;
+
+//     modules.forEach(module => {
+//       if (module.checked) {
+//         totalPerUser += parseFloat(module.dataset.price);
+//       }
+//     });
+
+//     let finalTotal = users * totalPerUser;
+//     let current = parseFloat(totalPriceEl.textContent) || 0;
+
+//     animateValue(current, finalTotal, 400);
+//   }
+
+//   modules.forEach(module => {
+//     module.addEventListener("change", calculateTotal);
+//   });
+
+//   userSlider.addEventListener("input", calculateTotal);
+
+//   calculateTotal();
+
+
+const mandatoryPrice = 0.5; 
+const userSlider = document.getElementById("userCount");
+const userLabel = document.getElementById("userCountLabel");
+const modules = document.querySelectorAll(".module");
+const totalPriceEl = document.getElementById("totalPrice");
+
+// Ensure breakdown container exists
+let breakdownContainer = document.getElementById("priceBreakdown");
+if(!breakdownContainer) {
+  breakdownContainer = document.createElement("div");
+  breakdownContainer.id = "priceBreakdown";
+  document.querySelector(".pricing-summary").appendChild(breakdownContainer);
+}
+
+function animateValue(start, end, duration) {
+  let startTime = null;
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    let progress = Math.min((currentTime - startTime)/duration,1);
+    let value = progress*(end-start)+start;
+    totalPriceEl.textContent = value.toFixed(2);
+    if(progress<1) requestAnimationFrame(animation);
   }
+  requestAnimationFrame(animation);
+}
 
-  function calculateTotal() {
-    let users = parseInt(userSlider.value);
-    userLabel.textContent = users;
+function calculateTotal() {
+  const users = parseInt(userSlider.value);
+  userLabel.textContent = users;
+  let breakdownHTML = "";
+  let totalPerUser = 0;
 
-    let totalPerUser = mandatoryPrice;
-
-    modules.forEach(module => {
-      if (module.checked) {
-        totalPerUser += parseFloat(module.dataset.price);
-      }
-    });
-
-    let finalTotal = users * totalPerUser;
-    let current = parseFloat(totalPriceEl.textContent) || 0;
-
-    animateValue(current, finalTotal, 400);
-  }
-
-  modules.forEach(module => {
-    module.addEventListener("change", calculateTotal);
+  // Mandatory modules
+  const mandatoryModules = document.querySelectorAll(".pricing-card.mandatory");
+  mandatoryModules.forEach(mod => {
+    const priceText = mod.querySelector(".card-top p").textContent.trim().replace("$","").split(" ")[0];
+    const price = parseFloat(priceText);
+    const name = mod.querySelector("h3").textContent.trim();
+    const subtotal = price * users;
+    totalPerUser += price;
+    breakdownHTML += `<div><span>${name}: $${price.toFixed(2)} × ${users} users</span><span>$${subtotal.toFixed(2)}</span></div>`;
   });
 
-  userSlider.addEventListener("input", calculateTotal);
+  // Optional modules
+  modules.forEach(module => {
+    if(module.checked) {
+      const card = module.closest(".pricing-card");
+      const name = card.querySelector("h3").textContent.trim();
+      const price = parseFloat(module.dataset.price);
+      const subtotal = price * users;
+      totalPerUser += price;
+      breakdownHTML += `<div><span>${name}: $${price.toFixed(2)} × ${users} users</span><span>$${subtotal.toFixed(2)}</span></div>`;
+    }
+  });
 
-  calculateTotal();
+  const total = users * totalPerUser;
+  breakdownHTML += `<hr><div><strong>Total:</strong><span>$${total.toFixed(2)}</span></div>`;
+  const discount = total * 0.10;
+  breakdownHTML += `<div><span>Discount (10%):</span><span>-$${discount.toFixed(2)}</span></div>`;
+  const finalCost = total - discount;
+  breakdownHTML += `<div><strong>Final Cost:</strong><span>$${finalCost.toFixed(2)}</span></div>`;
+
+  breakdownContainer.innerHTML = breakdownHTML;
+
+  const current = parseFloat(totalPriceEl.textContent) || 0;
+  animateValue(current, finalCost, 400);
+}
+
+// Events
+modules.forEach(module => module.addEventListener("change", calculateTotal));
+userSlider.addEventListener("input", calculateTotal);
+calculateTotal();
 
   
   const clientSwiper = new Swiper('.clients-carousel', {
@@ -406,4 +480,23 @@ document.getElementById('downloadBrochure').addEventListener('click', function()
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+});
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+// Show button after scrolling 100px (lower threshold for testing)
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+// Scroll to top on click
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
