@@ -2482,3 +2482,64 @@ input:checked + .slider:before {
   font-weight: 600;
   color: #4f46e5;
 }
+
+.footer-visitors {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Main box */
+.visitor-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  border-radius: 40px;
+
+  /* MATCH YOUR SITE */
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.visitor-box:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.5);
+}
+
+/* Icon */
+.visitor-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Text */
+.visitor-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.visitor-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+}
+
+.visitor-count {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}

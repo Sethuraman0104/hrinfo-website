@@ -500,3 +500,36 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBSOZ-VyCWOKmhxW9bqlcfH3IUNUF6tbVs",
+  authDomain: "hrinfo-visitors.firebaseapp.com",
+  projectId: "hrinfo-visitors",
+  storageBucket: "hrinfo-visitors.firebasestorage.app",
+  messagingSenderId: "368968256559",
+  appId: "1:368968256559:web:cde86771a96c18d8b78ada",
+  measurementId: "G-T95XDLRR3E"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.database().ref('visitors');
+
+// Count only once per session
+if (!sessionStorage.getItem("counted")) {
+  db.transaction(current => (current || 0) + 1);
+  sessionStorage.setItem("counted", "true");
+}
+
+// Live update UI
+db.on('value', snapshot => {
+  let value = snapshot.val() || 0;
+  let el = document.getElementById('visitorCount');
+
+  el.style.transform = "scale(1.2)";
+  el.textContent = value;
+
+  setTimeout(() => {
+    el.style.transform = "scale(1)";
+  }, 200);
+});
