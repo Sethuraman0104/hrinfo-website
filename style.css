@@ -2568,3 +2568,112 @@ input:checked + .slider:before {
 .deployment-note strong {
   color: #000;
 }
+
+.video-section {
+  position: relative;
+  padding: 120px 8%;
+  overflow: hidden;
+
+  background: linear-gradient(-45deg, #eef4ff, #f8fbff, #e6f0ff, #f0f7ff);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* GRID like features */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* VIDEO CARD (glass style like feature-card) */
+.video-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+
+  padding-bottom: 15px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+}
+
+/* Hover same as features */
+.video-card:hover {
+  transform: translateY(-15px) scale(1.05) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 25px 50px rgba(0,102,255,0.25);
+}
+
+/* Thumbnail */
+.thumb {
+  position: relative;
+}
+
+.thumb img {
+  width: 100%;
+  display: block;
+}
+
+/* PLAY BUTTON (modern) */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 60px;
+  height: 60px;
+
+  background: linear-gradient(135deg, #ff0000, #ff4d4d);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 20px;
+
+  box-shadow: 0 10px 25px rgba(255,0,0,0.4);
+  transition: 0.3s;
+}
+
+.video-card:hover .play-btn {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Title */
+.video-card h3 {
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Button aligned */
+.channel-btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.channel-btn a {
+  display: inline-block;
+  padding: 14px 30px;
+
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: #fff;
+
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.channel-btn a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(255,0,0,0.4);
+}
